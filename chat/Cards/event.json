@@ -1,0 +1,99 @@
+{
+  "$schema": "https://microsoft.github.io/AdaptiveCards/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.0",
+  "body": [
+    {
+      "speak": "<s>Eventor event details</s>",
+      "type": "ColumnSet",
+      "columns": [
+        {
+          "type": "Column",
+          "size": "4",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "Event 6891",
+              "weight": "bolder",
+              "size": "extraLarge"
+            },
+            {
+              "type": "TextBlock",
+              "text": "2018 State League #14 (Long)",
+              "weight": "bold",
+              "wrap": true
+            },
+            {
+              "type": "TextBlock",
+              "text": "Organiser: Goldseekers Orienteers / Orienteering NSW",
+              "wrap": true
+            },
+            {
+              "type": "TextBlock",
+              "text": "Event date: Sunday 19 August 2018",
+              "color": "warning",
+              "wrap": true
+            }
+          ]
+        },
+        {
+          "type": "Column",
+          "size": "1",
+          "items": [
+            {
+              "type": "Image",
+              "url": "http://www.orange-nsw.com/files/LogoLinks/ExperienceOrangeExpo/GoldseekersOrienteering_Llk.gif",
+              "size": "auto"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "TextBlock",
+      "text": "Status: Entries Closed",
+      "color": "attention"
+    },
+    {
+      "type": "TextBlock",
+      "text": "Description:"
+    },
+    {
+      "type": "TextBlock",
+      "text": "Ophir South. The terrain is predominantly open eucalypt forest with rolling spur gully, and areas of detailed gold mining, steep rocky gullies, and rock detail. Venue: Ophir South .From Bathurst, drive towards Orange, taking the Northern Distributor road to the right, prior to entering Orange itself. Turn right at the round about onto Ophir Rd and take the right hand turn into Banjo Patterson Way. Travel time about 1 hr. From Orange, drive north on Ophir Rd, take the right hand turn onto Banjo Patterson Way. Travel time about 30mins.",
+      "style": "text",
+      "maxLength": 0,
+      "id": "eventLocation",
+      "speak": "Ophir South. The terrain is predominantly open eucalypt forest with rolling spur gully, and areas of detailed gold mining, steep rocky gullies, and rock detail. Venue: Ophir South .From Bathurst, drive towards Orange, taking the Northern Distributor road to the right, prior to entering Orange itself. Turn right at the round about onto Ophir Rd and take the right hand turn into Banjo Patterson Way. Travel time about 1 hr. From Orange, drive north on Ophir Rd, take the right hand turn onto Banjo Patterson Way. Travel time about 30mins.",
+      "wrap": true
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.Submit",
+      "title": "Information",
+      "data": {
+        "confirmationList": "yes"
+      }
+    },
+    {
+      "type": "Action.Http",
+      "method": "POST",
+      "title": "Information Document",
+      "url": "https://eventor.orienteering.asn.au/Documents/Event/4719/Information-flyer"
+    },
+    {
+      "type": "Action.Submit",
+      "title": "View",
+      "data": {
+        "confirmationList": "yes"
+      }
+    },
+    {
+      "type": "Action.Http",
+      "method": "POST",
+      "title": "View event",
+      "url": "eventor.orienteering.asn.au/Events/Show/6891"
+    }
+  ]
+}

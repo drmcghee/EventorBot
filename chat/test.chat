@@ -1,0 +1,23 @@
+user=Olly Orienteer
+bot=EventorBot
+
+bot: Hi!
+user: yo!
+bot: [Typing][Delay=3000]
+Greetings!
+What would you like to do?
+* update - You can update your account
+* List - You can list your data
+* help - you can get help
+
+user: I need the bot framework logo.
+
+bot:
+Here you go.
+[Attachment=https://www.kayee.nl/wp-content/uploads/2017/05/bot-framework-logo-session.png]
+[AttachmentLayout=carousel]
+
+user: thanks
+bot:
+Here's a form for you
+[Attachment=card.json adaptivecard]

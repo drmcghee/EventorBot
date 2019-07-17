@@ -1,0 +1,31 @@
+user=Olly Orienteer
+bot=EventorBot
+
+bot: Hi! Welcome to Eventor
+user: Hello
+
+bot: [Typing][Delay=3000]
+Greetings!
+What would you like to do?
+* find - You can find upcoming events
+* info - detailed information card for an event
+* club - all activities for an organisation (club) in a given period of time.
+* closing - You can find events where registration is closing soon
+* register - You can register for any event
+* my - get your next event informaiton
+* help - you can get help on the commands above
+
+user: find events in next week
+bot: which state?  NSW|QLD|VIC|SA|WA|NT|ACT
+
+user: NSW
+bot:
+Event Information
+[Attachment=./cards/eventsimple.json adaptivecard]
+[Attachment=./cards/eventsimple.json adaptivecard]
+[Attachment=./cards/eventsimple.json adaptivecard]
+[AttachmentLayout=list]
+
+user: Event 6891
+bot:
+[Attachment=./cards/event.json adaptivecard]

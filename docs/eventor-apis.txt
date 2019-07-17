@@ -1,0 +1,5 @@
+https://eventor.orienteering.org/api/documentation
+ 
+https://eventor.orienteering.org/Documents/API_guide_to_IOF%20Eventor.pdf
+ 
+http://act.orienteering.asn.au/gfolder/admin/Eventor-Making-Life-Easy.pdf

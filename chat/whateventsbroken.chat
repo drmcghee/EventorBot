@@ -1,0 +1,34 @@
+user=Olly Orienteer
+bot=EventorBot
+
+bot: hi
+
+bot: Hi! Welcome to Eventor
+user: Hello
+
+bot: Do you like cheese? [Suggestions=Yes|No]
+
+bot: [Typing][Delay=3000]
+Greetings!
+What would you like to do?
+* find - You can find upcoming events
+* info - for an event
+* club - all activities for an organisation (club) in a given period of time.
+* closing - You can find events where registration is closing soon
+* register - You can register for any event
+* my - get your next event informaiton
+* help - you can get help on the commands above
+
+user: find events in next week
+
+
+
+user: more info please
+bot:
+Here you go.
+[Attachment=https://www.kayee.nl/wp-content/uploads/2017/05/bot-framework-logo-session.png]
+
+
+bot: which state? NSW|QLD|VIC|QLD
+bot: 
+user: NSW
