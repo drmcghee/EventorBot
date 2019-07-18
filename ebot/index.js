@@ -12,7 +12,7 @@ const { BotFrameworkAdapter, UserState, MemoryStorage, ActivityHandler, Conversa
 
 // Import our custom bot class that provides a turn handling function.
 const { EventorBot } = require('./bots/bot');
-const { ListDialog } = require('./dialogs/listDialog');
+const { ListDialog } = require('./dialogs/ListEventsDialog');
 
 // Import required bot configuration.
 const ENV_FILE = path.join(__dirname, '.env');
@@ -23,6 +23,8 @@ dotenv.config({ path: ENV_FILE });
 const adapter = new BotFrameworkAdapter({
     appId: process.env.MicrosoftAppId,
     appPassword: process.env.MicrosoftAppPassword
+    // appId: null,
+    // appPassword: null
 });
 
 // Catch-all for errors.
@@ -32,20 +34,25 @@ adapter.onTurnError = async (context, error) => {
     // Send a message to the user
     await context.sendActivity(`Oops. Something went wrong!`);
     // Clear out state
-    await conversationState.delete(context);
+    await conversationState.clear(context);
+    // Save state changes.
+    await conversationState.saveChanges(context);
 };
 
-// Define the state store for your bot.
-// See https://aka.ms/about-bot-state to learn more about using MemoryStorage.
-// A bot requires a state storage system to persist the dialog and user state between messages.
+// Define a state store for your bot. See https://aka.ms/about-bot-state to learn more about using MemoryStorage.
+// A bot requires a state store to persist the dialog and user state between messages.
+let conversationState, userState;
+
+// For local development, in-memory storage is used.
+// CAUTION: The Memory Storage used here is for local bot debugging only. When the bot
+// is restarted, anything stored in memory will be gone.
 const memoryStorage = new MemoryStorage();
-// Create conversation state with in-memory storage provider.
-const conversationState = new ConversationState(memoryStorage);
-const userState = new UserState(memoryStorage);
+conversationState = new ConversationState(memoryStorage);
+userState = new UserState(memoryStorage);
 
 // Create the main dialog.
-const dialog = new ListDialog(userState);
-const bot = new EventorBot(conversationState, userState, dialog);
+//const dialog = new ListEventsDialog(userState);
+const bot = new EventorBot(conversationState);
 
 // Create HTTP server
 const server = restify.createServer();

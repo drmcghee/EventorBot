@@ -61,7 +61,7 @@ class ListDialog extends ComponentDialog {
         // WaterfallStep always finishes with the end of the Waterfall or with another dialog; here it is a Prompt Dialog.
         // Running a prompt here means the next WaterfallStep will be run when the users response is received.
         return await step.prompt(CHOICE_PROMPT, {
-            prompt: 'Please enter your mode of transport.',
+            prompt: 'Please enter your state:',
             choices: ChoiceFactory.toChoices(['NSW', 'QLD', 'VIC', 'SA', 'WA', 'NT', 'ACT'])
         });
     }
@@ -70,6 +70,9 @@ class ListDialog extends ComponentDialog {
         step.values.state = step.result.value;
 
         let msg = `I have your state as  ${ step.values.state }`;
+
+        // Call eventor api to get state events for next week!
+        
 
         // WaterfallStep always finishes with the end of the Waterfall or with another dialog, here it is the end.
         return await step.endDialog();
