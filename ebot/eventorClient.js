@@ -3,10 +3,11 @@ var https = require('https');
 
 
 module.exports = {
-    eventSearch: function (query, callback) {
-        this.loadData('/api/events?fromDate=2019-01-01&toDate=2019-01-30',callback); 
+    eventSearch: function (fromDate, toDate, callback) {
+        query = `/api/events?fromDate=${fromDate}&toDate=${toDate}`
+        this.loadData(query,callback); 
     },
-    stateSearch: function(query, callback) {
+    orgSearch: function(callback) {
         var orgs = this.loadData('/api/organisations', callback)
     },
 

@@ -12,7 +12,7 @@ const { BotFrameworkAdapter, UserState, MemoryStorage, ActivityHandler, Conversa
 
 // Import our custom bot class that provides a turn handling function.
 const { EventorBot } = require('./bots/bot');
-const { ListDialog } = require('./dialogs/ListEventsDialog');
+const { ListEventsDialog } = require('./dialogs/ListEventsDialog');
 
 // Import required bot configuration.
 const ENV_FILE = path.join(__dirname, '.env');

@@ -37,34 +37,16 @@ class ListEventsDialog extends ComponentDialog {
         this.initialDialogId = WATERFALL_DIALOG;
     }
 
-    /**
-     * The run method handles the incoming activity (in the form of a TurnContext) and passes it through the dialog system.
-     * If no dialog is active, it will start the default dialog.
-     * @param {*} turnContext
-     * @param {*} accessor
-     */
-    async run(turnContext, accessor) {
-        const dialogSet = new DialogSet(accessor);
-        dialogSet.add(this);
-
-        const dialogContext = await dialogSet.createContext(turnContext);
-        const results = await dialogContext.continueDialog();
-        if (results.status === DialogTurnStatus.empty) {
-            await dialogContext.beginDialog(this.id);
-        }
-    }
-
-    async stateStep(step) {
+     async stateStep(step) {
         // WaterfallStep always finishes with the end of the Waterfall or with another dialog; here it is a Prompt Dialog.
         // Running a prompt here means the next WaterfallStep will be run when the users response is received.
         return await step.prompt( STATE_PROMPT, {
             prompt: 'List events for which state?',
             choices: ChoiceFactory.toChoices(['NSW', 'QLD', 'VIC', 'SA', 'WA', 'NT', 'ACT'])
         });
-    }
+    } 
 
-
-    async timeStep(step) {
+     async timeStep(step) {
         step.values.state = step.result.value;
 
         // WaterfallStep always finishes with the end of the Waterfall or with another dialog; here it is a Prompt Dialog.
@@ -75,31 +57,34 @@ class ListEventsDialog extends ComponentDialog {
         });
     }   
 
+    async orgSearch() {
+        eventorClient.orgSearch(query, function(orgsFound)
+            {
+                var len = orgsFound.OrganisationList["Organisation"].length
+                var eventmessage = `Found ${len} Organisations!`
+                console.log(eventmessage)
+            })
+    }
+
+    async eventSearch() {
+        eventorClient.eventSearch("2019-07-18", "2019-07-30", function(eventsFound)
+            {
+                //console.log('IN json result =%s',JSON.stringify(eventsFound))
+                var len = eventsFound.EventList["Event"].length
+                var eventmessage = `Found ${len} Events!`
+                console.log(eventmessage)
+
+                return  eventsFound
+            })
+    }
 
     async listStep(step) {
         step.values.state = step.result.value;
 
-        var query = step.result.response;
-
-        eventorClient.eventSearch(query, function(eventsFound)
-            {
-                //console.log('IN json result =%s',JSON.stringify(eventsFound))
-                var len = eventsFound.EventList["Event"].length
-                console.log("Found %s Events!!!!", len)
-
-                //step.context.sendActivity(`${len} Results!!!!`);
-            })
-
-        //console.log('OUTer json')
-        //events.EventList["Event"].length
-        //console.log('OUT json result =%s',JSON.stringify(events))
-        //var len =  events.EventList["Event"].length
-
-          //step.context.sendActivity("%s Results!!!!", len);
-
-        // WaterfallStep always finishes with the end of the Waterfall or with another dialog; here it is a Prompt Dialog.
-        // Running a prompt here means the next WaterfallStep will be run when the users response is received.
-        //return
+        var events = this.eventSearch();
+        var len = eventsFound.EventList["Event"].length
+        var eventmessage = `Found ${len} Events!`
+        step.context.sendActivity(eventmessage);
     }
 }
 

@@ -49,46 +49,6 @@ class EventorBot extends ActivityHandler {
         });
         
 
-        //     const text = context.activity.text;
-            
-        //     // ??? how to catch the correct words and call the right dialog?
-        //     await context.sendActivity(`Helping you '${ text }'`);
-
-        //     // Create an array with the valid options
-        //     const validOptions = ['list', 'help'];
-
-        //     // If the `text` is in the Array, a valid color was selected and send agreement.
-        //     var choice = "";
-        //     if (validOptions.includes(text)) 
-        //     {
-        //         for (var option in validOptions) 
-        //         {
-        //             if (option.indexOf(text) !== -1)
-        //             {
-        //                 switch(option){
-        //                     case 'list':
-        //                         choice = option;
-        //                         await this.dialog.run(context, this.dialogState);
-        //                         break;
-        //                     case 'help':
-        //                         choice = option;
-        //                         await context.sendActivity(`HELP!!`);
-        //                         break;
-        //                 }
-        //             }
-        //         }
-        //     } 
-            
-        //     if (choice =='') 
-        //     {
-        //         await context.sendActivity("I'm sorry, I dont understand. Please try 'help' for a list of commands");
-        //     }
-
-
-        //     // By calling next() you ensure that the next BotHandler is run.
-        //     await next();
-        // });
-
         this.onMembersAdded(async (context, next) => {
             const dialogContext = await this.dialogs.createContext(context);
             const membersAdded = context.activity.membersAdded;
