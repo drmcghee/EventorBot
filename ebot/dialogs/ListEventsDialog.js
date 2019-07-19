@@ -80,19 +80,26 @@ class ListEventsDialog extends ComponentDialog {
         step.values.state = step.result.value;
 
         var query = step.result.response;
-        eventorClient.executeSearch(query, function(eventsFound)
+
+        eventorClient.eventSearch(query, function(eventsFound)
             {
-                results(eventsFound)
+                //console.log('IN json result =%s',JSON.stringify(eventsFound))
+                var len = eventsFound.EventList["Event"].length
+                console.log("Found %s Events!!!!", len)
+
+                //step.context.sendActivity(`${len} Results!!!!`);
             })
 
+        //console.log('OUTer json')
+        //events.EventList["Event"].length
+        //console.log('OUT json result =%s',JSON.stringify(events))
+        //var len =  events.EventList["Event"].length
+
+          //step.context.sendActivity("%s Results!!!!", len);
 
         // WaterfallStep always finishes with the end of the Waterfall or with another dialog; here it is a Prompt Dialog.
         // Running a prompt here means the next WaterfallStep will be run when the users response is received.
-    }
-
-    async results(eventsFound)
-    {
-        return step.context.sendActivity("Results!!!!");
+        //return
     }
 }
 

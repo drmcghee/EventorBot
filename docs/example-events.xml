@@ -1,0 +1,2892 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EventList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Event eventForm="IndSingleDay">
+        <EventId>7390</EventId>
+        <Name>MTBO 5 Goat Farm (Darlington)</Name>
+        <EventClassificationId>5</EventClassificationId>
+        <EventStatusId>4</EventStatusId>
+        <DisciplineId>2</DisciplineId>
+        <StartDate>
+            <Date>2019-07-28</Date>
+            <Clock>01:00:00</Clock>
+        </StartDate>
+        <FinishDate>
+            <Date>2019-07-28</Date>
+            <Clock>05:00:00</Clock>
+        </FinishDate>
+        <Organiser>
+            <OrganisationId>74</OrganisationId>
+        </Organiser>
+        <ClassTypeId>2</ClassTypeId>
+        <EventRace raceLightCondition="Day" raceDistance="Long">
+            <EventRaceId>7673</EventRaceId>
+            <EventId>7390</EventId>
+            <Name></Name>
+            <RaceDate>
+                <Date>2019-07-28</Date>
+                <Clock>01:00:00</Clock>
+            </RaceDate>
+            <EventCenterPosition x="116.07499" y="-31.91804" unit="WGS-84" />
+        </EventRace>
+        <WebURL>https://wa.orienteering.asn.au/events/event-calendar/mountain-bike-mtbo</WebURL>
+        <PunchingUnitType value="SI" />
+        <ModifyDate>
+            <Date>2019-06-04</Date>
+            <Clock>02:35:36</Clock>
+        </ModifyDate>
+        <ModifiedBy>
+            <PersonId>1581</PersonId>
+        </ModifiedBy>
+        <HashTableEntry>
+            <Key>Eventor_EntryOnTheDay</Key>
+            <Value>1</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_Message</Key>
+            <Value>Assembly area is adjacent to Darlington Lesser Hall, Owen Road, Darlington.
+
+Rego 9:00am-11:00am
+Starts 9:30am-11:30am
+Course closure 1:00pm
+
+Courses
+Short ~10km
+Medium ~20km
+Long ~30km
+
+Each course has a mountain bike or trail run option.</Value>
+        </HashTableEntry>
+    </Event>
+    <Event eventForm="IndSingleDay">
+        <EventId>7406</EventId>
+        <Name>QLD Schools Champs Sprint - Redbank Plains SHS</Name>
+        <EventClassificationId>3</EventClassificationId>
+        <EventStatusId>5</EventStatusId>
+        <DisciplineId>1</DisciplineId>
+        <StartDate>
+            <Date>2019-07-27</Date>
+            <Clock>01:00:00</Clock>
+        </StartDate>
+        <FinishDate>
+            <Date>2019-07-27</Date>
+            <Clock>02:45:00</Clock>
+        </FinishDate>
+        <Organiser>
+            <OrganisationId>6</OrganisationId>
+        </Organiser>
+        <ClassTypeId>2</ClassTypeId>
+        <EventRace raceLightCondition="Day" raceDistance="Sprint">
+            <EventRaceId>7689</EventRaceId>
+            <EventId>7406</EventId>
+            <Name></Name>
+            <RaceDate>
+                <Date>2019-07-27</Date>
+                <Clock>01:00:00</Clock>
+            </RaceDate>
+            <EventCenterPosition x="152.86803" y="-27.64914" unit="WGS-84" />
+        </EventRace>
+        <PunchingUnitType value="SI" />
+        <ModifyDate>
+            <Date>2019-07-01</Date>
+            <Clock>04:54:09</Clock>
+        </ModifyDate>
+        <ModifiedBy>
+            <PersonId>484</PersonId>
+        </ModifiedBy>
+        <HashTableEntry>
+            <Key>Eventor_Message</Key>
+            <Value>This is the first of 3 races in the Qld Schools Orienteering Championships.
+DARLING DOWNS TEAM MEMBERS who are club members will be entered by their team manager.  DARLING DOWNS TEAM MEMBERS WHO ARE NOT CLUB MEMBERS need to enter themselves.
+Race 1 is a SPRINT at Redbank SHS and surrounding parkland.  Meet Redbank Recreation reserve, . 
+Sprint Starts 11am to 11:30am.  Public races 11:45 to midday.  Course close 12:45.
+This race is suitable for both experienced and inexperienced competitors. 
+
+Entry Fees
+$10 sprint - Sat 11:00am (SI hire from 10:30am) Redbank Plains SHS
+$10 relay - Sat 3:00pm (briefing at 2:45pm), Kholo Rd.
+$16 individual long distance - Sun 9:45am, Kholo Rd. 
+= $36 Total</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_PaymentEventId</Key>
+            <Value>1479</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_EntryChangeDeadlines</Key>
+            <Value>2019-07-15 13:59:00;EventClass,EventRaces,NumberOfCompetitors,Person,Organisation,PunchingCard,ServiceRequests</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_EntryTermsAndConditions</Key>
+            <Value>In entering this Orienteering event, I/we recognise that the sport of orienteering has certain inherent risks due to its conduct in the natural environment. Included in these risks are injury due to rough terrain and obstacles and the effects of heat, cold and exhaustion.  I/we are also aware there is no personal accident insurance on my participation in the sport and that I/we take part at my/our own risk.
+Privacy Statement: You may be photographed during this event. If you do not agree to having your photograph published, please advise the event organiser.</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_EventClassChangeKeepsEntryDate</Key>
+            <Value>1</Value>
+        </HashTableEntry>
+    </Event>
+    <Event eventForm="IndSingleDay">
+        <EventId>7407</EventId>
+        <Name>Qld Schools Orienteering Champs Individual Long - Kholo Rd</Name>
+        <EventClassificationId>1</EventClassificationId>
+        <EventStatusId>5</EventStatusId>
+        <DisciplineId>1</DisciplineId>
+        <StartDate>
+            <Date>2019-07-27</Date>
+            <Clock>23:45:00</Clock>
+        </StartDate>
+        <FinishDate>
+            <Date>2019-07-28</Date>
+            <Clock>03:00:00</Clock>
+        </FinishDate>
+        <Organiser>
+            <OrganisationId>6</OrganisationId>
+        </Organiser>
+        <ClassTypeId>2</ClassTypeId>
+        <EventRace raceLightCondition="Day" raceDistance="Long">
+            <EventRaceId>7690</EventRaceId>
+            <EventId>7407</EventId>
+            <Name></Name>
+            <RaceDate>
+                <Date>2019-07-27</Date>
+                <Clock>23:45:00</Clock>
+            </RaceDate>
+            <EventCenterPosition x="152.7525" y="-27.54043" unit="WGS-84" />
+        </EventRace>
+        <PunchingUnitType value="SI" />
+        <ModifyDate>
+            <Date>2019-07-01</Date>
+            <Clock>04:58:09</Clock>
+        </ModifyDate>
+        <ModifiedBy>
+            <PersonId>484</PersonId>
+        </ModifiedBy>
+        <HashTableEntry>
+            <Key>Eventor_EntryChangeDeadlines</Key>
+            <Value>2019-07-18 13:58:00;EventClass,EventRaces,NumberOfCompetitors,Person,Organisation,PunchingCard,ServiceRequests</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_EntryTermsAndConditions</Key>
+            <Value>In entering this Orienteering event, I/we recognise that the sport of orienteering has certain inherent risks due to its conduct in the natural environment. Included in these risks are injury due to rough terrain and obstacles and the effects of heat, cold and exhaustion.  I/we are also aware there is no personal accident insurance on my participation in the sport and that I/we take part at my/our own risk.
+Privacy Statement: You may be photographed during this event. If you do not agree to having your photograph published, please advise the event organiser.</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_EventClassChangeKeepsEntryDate</Key>
+            <Value>1</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_Message</Key>
+            <Value>This is Race 3 of the Qld Schools Orienteering Championships. There are two classes for students - Championship classes for experienced orienteers and Standard classes for less experienced competitors who wish to come and experience the excitement of a State Championship. Both classes will score points for their team. Who will win, CITY or COUNTRY? The Red Shirts or The Rest?
+
+DARLING DOWNS TEAM MEMBERS who are club members will be entered by their team manager.  DARLING DOWNS TEAM MEMBERS WHO ARE NOT CLUB MEMBERS need to enter themselves. 
+
+STARTS from 9:45am.
+
+DIRECTIONS: Turn off Warrego freeway north onto Kholo Rd. Cross the Brisbane river.  Continue to head north for two kms, look for o-signs.</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_PaymentEventId</Key>
+            <Value>1480</Value>
+        </HashTableEntry>
+    </Event>
+    <Event eventForm="IndSingleDay">
+        <EventId>7433</EventId>
+        <Name>ACT Metro Series: Junior League #10, University of Canberra</Name>
+        <EventClassificationId>4</EventClassificationId>
+        <EventStatusId>4</EventStatusId>
+        <DisciplineId>1</DisciplineId>
+        <StartDate>
+            <Date>2019-07-27</Date>
+            <Clock>00:30:00</Clock>
+        </StartDate>
+        <FinishDate>
+            <Date>2019-07-27</Date>
+            <Clock>03:00:00</Clock>
+        </FinishDate>
+        <Organiser>
+            <OrganisationId>12</OrganisationId>
+        </Organiser>
+        <EventRace raceLightCondition="Day" raceDistance="Middle">
+            <EventRaceId>7717</EventRaceId>
+            <EventId>7433</EventId>
+            <Name></Name>
+            <RaceDate>
+                <Date>2019-07-27</Date>
+                <Clock>00:30:00</Clock>
+            </RaceDate>
+        </EventRace>
+        <WebURL>http://act.orienteering.asn.au</WebURL>
+        <PunchingUnitType value="SI" />
+        <ModifyDate>
+            <Date>2018-10-18</Date>
+            <Clock>02:48:26</Clock>
+        </ModifyDate>
+        <ModifiedBy>
+            <PersonId>3269</PersonId>
+        </ModifiedBy>
+        <HashTableEntry>
+            <Key>Eventor_EntryOnTheDay</Key>
+            <Value>1</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_Message</Key>
+            <Value>The Metro Series is held in parkland and nature parks close to Canberra. Everyone is welcome and courses are available to suit a wide range of orienteering experience from novice to the more experienced. Courses range from 2km to 5km and very easy to medium navigation difficulty. A ‘Help’ person will be available to provide assistance at the event. Just turn up, no requirement to book ahead.
+--- 
+Enter-on-the-day. Start anytime between 10.30 and 12 noon. Course closure 1pm. Entry fees - member adult $10, member junior $7. $10 non-member juniors and $15 non-member adults. Hire of an electronic timing chip (sportident card) is $5. Cash payment accepted but EFTPOS preferred.
+---
+The ACT Saturday Series includes the ACT Junior League competition. 
+---
+ASSEMBLY AREA 
+TBA.
+---
+COURSES 
+Orange 1, Orange 2, Green, Blue.
+---
+Season pass registration: https://eventor.orienteering.asn.au/Events/Show/8165</Value>
+        </HashTableEntry>
+    </Event>
+    <Event eventForm="IndSingleDay">
+        <EventId>7441</EventId>
+        <Name>ACT Classic Series: ACT League #8, Tidbinbilla Nature Reserve</Name>
+        <EventClassificationId>4</EventClassificationId>
+        <EventStatusId>4</EventStatusId>
+        <DisciplineId>1</DisciplineId>
+        <StartDate>
+            <Date>2019-07-21</Date>
+            <Clock>00:00:00</Clock>
+        </StartDate>
+        <FinishDate>
+            <Date>2019-07-21</Date>
+            <Clock>04:00:00</Clock>
+        </FinishDate>
+        <Organiser>
+            <OrganisationId>17</OrganisationId>
+        </Organiser>
+        <EventRace raceLightCondition="Day" raceDistance="Middle">
+            <EventRaceId>7725</EventRaceId>
+            <EventId>7441</EventId>
+            <Name></Name>
+            <RaceDate>
+                <Date>2019-07-21</Date>
+                <Clock>00:00:00</Clock>
+            </RaceDate>
+            <EventCenterPosition x="148.93122" y="-35.44318" unit="WGS-84" />
+        </EventRace>
+        <WebURL>http://act.orienteering.asn.au</WebURL>
+        <PunchingUnitType value="SI" />
+        <ModifyDate>
+            <Date>2019-07-09</Date>
+            <Clock>04:39:04</Clock>
+        </ModifyDate>
+        <ModifiedBy>
+            <PersonId>3269</PersonId>
+        </ModifiedBy>
+        <HashTableEntry>
+            <Key>Eventor_EntryOnTheDay</Key>
+            <Value>1</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_Message</Key>
+            <Value>DIRECTIONS: 
+---
+From North Canberra – Travel to Tidbinbilla Nature Reserve via Cotter Road and Paddy’s River Road - approx. 40-50 minutes.
+---
+From South Canberra – Travel to Tidbinbilla Nature Reserve via Point Hut Road and Tidbinbilla Road – approx 25-35 mins.
+---
+ENTRY TO TNR:
+---
+Park in the Carpark and go into the Visitor Information Centre to collect an entry ticket. There will be a separate table for orienteers to collect their tickets, rather than at the normal counter.  Put your entry ticket on the car dashboard. 
+TNR have very kindly waived the entry fee for orienteers, but we will be collecting gold coin donations at the parking area.  
+If you have a Tidbinbilla annual pass, enter the reserve as usual.
+---                           
+Travel approx. 800m on Tidbinbilla Ring Road and turn right at the Discovery Playground road. Follow this to the end (Webbs picnic area) and park as directed.
+---
+COURSES: (distance and climb)
+---
+R1 6.8km (320m), 
+R2 5.9km (250m),
+R3 4.8km (200m),
+R4 3.2km (110m),
+O1 4.8km (225m),
+O2 3.7km (145m),
+Green 2.3km (70m),
+Blue 1.9km (35m).
+------
+The Blue course will have some taped legs. Please explain this to children doing this course.
+---
+We highly recommend that you take a whistle with you out on these courses.
+---
+SCHOOLS TEAM SELECTION:
+---
+School students doing the selection races will start first, which may mean other competitors will not be able to begin until around 10.10am.
+---
+ENTRY FEES:
+---
+Member adult $10, member junior $7. non-member adult $15, non-member junior $10. Hire of sportident card $5. 
+---
+Note: EFTPOS payment will not be available at this event, cash only.
+---
+Starts between 10am &amp; 12pm. Course Closure 2pm. </Value>
+        </HashTableEntry>
+    </Event>
+    <Event eventForm="IndSingleDay">
+        <EventId>7694</EventId>
+        <Name>Stringy Bark - Cambridge - Hobart Local Series #5</Name>
+        <EventClassificationId>4</EventClassificationId>
+        <EventStatusId>4</EventStatusId>
+        <DisciplineId>1</DisciplineId>
+        <StartDate>
+            <Date>2019-07-21</Date>
+            <Clock>00:30:00</Clock>
+        </StartDate>
+        <FinishDate>
+            <Date>2019-07-21</Date>
+            <Clock>03:30:00</Clock>
+        </FinishDate>
+        <Organiser>
+            <OrganisationId>58</OrganisationId>
+        </Organiser>
+        <EventRace raceLightCondition="Day" raceDistance="Middle">
+            <EventRaceId>7989</EventRaceId>
+            <EventId>7694</EventId>
+            <Name></Name>
+            <RaceDate>
+                <Date>2019-07-21</Date>
+                <Clock>00:30:00</Clock>
+            </RaceDate>
+            <EventCenterPosition x="147.4143" y="-42.84399" unit="WGS-84" />
+        </EventRace>
+        <WebURL>https://tasorienteering.asn.au</WebURL>
+        <PunchingUnitType value="SI" />
+        <ModifyDate>
+            <Date>2019-07-16</Date>
+            <Clock>10:01:38</Clock>
+        </ModifyDate>
+        <ModifiedBy>
+            <PersonId>456</PersonId>
+        </ModifiedBy>
+        <HashTableEntry>
+            <Key>Eventor_EntryOnTheDay</Key>
+            <Value>1</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_LiveloxEventConfigurations</Key>
+            <Value>40524,1</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_Message</Key>
+            <Value>LATE START to allow the frost to melt in the gully. You may start between 10.30 and 12. Course closure is 1.30pm. </Value>
+        </HashTableEntry>
+    </Event>
+    <Event eventForm="IndSingleDay">
+        <EventId>7712</EventId>
+        <Name>Royal George - OST 10</Name>
+        <EventClassificationId>3</EventClassificationId>
+        <EventStatusId>5</EventStatusId>
+        <DisciplineId>1</DisciplineId>
+        <StartDate>
+            <Date>2019-07-28</Date>
+            <Clock>00:00:00</Clock>
+        </StartDate>
+        <FinishDate>
+            <Date>2019-07-28</Date>
+            <Clock>04:00:00</Clock>
+        </FinishDate>
+        <AlternativeDates>
+            <Sequence>1</Sequence>
+            <StartDate>
+                <Date>2019-07-27</Date>
+                <Clock>14:00:00</Clock>
+            </StartDate>
+            <FinishDate>
+                <Date>2019-07-27</Date>
+                <Clock>14:00:00</Clock>
+            </FinishDate>
+        </AlternativeDates>
+        <Organiser>
+            <OrganisationId>58</OrganisationId>
+        </Organiser>
+        <ClassTypeId>2</ClassTypeId>
+        <EventRace raceLightCondition="Day" raceDistance="Long">
+            <EventRaceId>8007</EventRaceId>
+            <EventId>7712</EventId>
+            <Name></Name>
+            <RaceDate>
+                <Date>2019-07-28</Date>
+                <Clock>00:00:00</Clock>
+            </RaceDate>
+            <EventCenterPosition x="147.88842" y="-41.82714" unit="WGS-84" />
+        </EventRace>
+        <WebURL>http://tasorienteering.asn.au</WebURL>
+        <PunchingUnitType value="SI" />
+        <ModifyDate>
+            <Date>2019-07-15</Date>
+            <Clock>06:25:21</Clock>
+        </ModifyDate>
+        <ModifiedBy>
+            <PersonId>456</PersonId>
+        </ModifiedBy>
+        <HashTableEntry>
+            <Key>Eventor_EntryChangeDeadlines</Key>
+            <Value>2019-07-23 13:59:00;EventClass,EventRaces,NumberOfCompetitors,Person,Organisation,PunchingCard,ServiceRequests</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_EventClassChangeKeepsEntryDate</Key>
+            <Value>1</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_PaymentEventId</Key>
+            <Value>1505</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_ApplyEntryFeeDiscount</Key>
+            <Value>1</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_ConsultationPerformed</Key>
+            <Value>1</Value>
+        </HashTableEntry>
+    </Event>
+    <Event eventForm="IndSingleDay">
+        <EventId>7720</EventId>
+        <Name>Shorewell Park - Burnie/Devonport Local Series #4</Name>
+        <EventClassificationId>4</EventClassificationId>
+        <EventStatusId>4</EventStatusId>
+        <DisciplineId>1</DisciplineId>
+        <StartDate>
+            <Date>2019-07-21</Date>
+            <Clock>00:00:00</Clock>
+        </StartDate>
+        <FinishDate>
+            <Date>2019-07-21</Date>
+            <Clock>04:00:00</Clock>
+        </FinishDate>
+        <Organiser>
+            <OrganisationId>60</OrganisationId>
+        </Organiser>
+        <EventRace raceLightCondition="Day" raceDistance="Middle">
+            <EventRaceId>8015</EventRaceId>
+            <EventId>7720</EventId>
+            <Name></Name>
+            <RaceDate>
+                <Date>2019-07-21</Date>
+                <Clock>00:00:00</Clock>
+            </RaceDate>
+        </EventRace>
+        <WebURL>http://tasorienteering.asn.au</WebURL>
+        <PunchingUnitType value="SI" />
+        <ModifyDate>
+            <Date>2019-07-08</Date>
+            <Clock>05:17:15</Clock>
+        </ModifyDate>
+        <ModifiedBy>
+            <PersonId>7160</PersonId>
+        </ModifiedBy>
+        <HashTableEntry>
+            <Key>Eventor_EntryOnTheDay</Key>
+            <Value>1</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_LiveloxEventConfigurations</Key>
+            <Value>40428,1</Value>
+        </HashTableEntry>
+    </Event>
+    <Event eventForm="IndSingleDay">
+        <EventId>7865</EventId>
+        <Name>Beerburrum West SF MTBO SS 5</Name>
+        <EventClassificationId>5</EventClassificationId>
+        <EventStatusId>5</EventStatusId>
+        <DisciplineId>2</DisciplineId>
+        <StartDate>
+            <Date>2019-07-27</Date>
+            <Clock>22:00:00</Clock>
+        </StartDate>
+        <FinishDate>
+            <Date>2019-07-28</Date>
+            <Clock>02:00:00</Clock>
+        </FinishDate>
+        <Organiser>
+            <OrganisationId>43</OrganisationId>
+        </Organiser>
+        <ClassTypeId>2</ClassTypeId>
+        <EventRace raceLightCondition="Day" raceDistance="Long">
+            <EventRaceId>8164</EventRaceId>
+            <EventId>7865</EventId>
+            <Name></Name>
+            <RaceDate>
+                <Date>2019-07-27</Date>
+                <Clock>22:00:00</Clock>
+            </RaceDate>
+            <EventCenterPosition x="152.89207" y="-26.97087" unit="WGS-84" />
+        </EventRace>
+        <PunchingUnitType value="SI" />
+        <ModifyDate>
+            <Date>2019-07-10</Date>
+            <Clock>06:37:23</Clock>
+        </ModifyDate>
+        <ModifiedBy>
+            <PersonId>2873</PersonId>
+        </ModifiedBy>
+        <HashTableEntry>
+            <Key>Eventor_EntryChangeDeadlines</Key>
+            <Value>2019-07-27 13:59:00;EventClass,EventRaces,NumberOfCompetitors,Person,Organisation,PunchingCard,ServiceRequests</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_EntryTermsAndConditions</Key>
+            <Value>In entering this Orienteering event, I/we recognise that the sport of orienteering has certain inherent risks due to its conduct in the natural environment. Included in these risks are injury due to rough terrain and obstacles and the effects of heat, cold and exhaustion. I/we are also aware there is no personal accident insurance on my participation in the sport and that I/we take part at my/our own risk.
+Privacy Statement
+You may be photographed during this event. If you do not agree to having your photograph published, please advise the event organiser.</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_EventClassChangeKeepsEntryDate</Key>
+            <Value>1</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_Message</Key>
+            <Value>This event moved from Ringtail Creek, Tewantin due to timber harvesting.</Value>
+        </HashTableEntry>
+    </Event>
+    <Event eventForm="IndSingleDay">
+        <EventId>8096</EventId>
+        <Name>IKO local - Rushcutters Bay, Sydney</Name>
+        <EventClassificationId>4</EventClassificationId>
+        <EventStatusId>4</EventStatusId>
+        <DisciplineId>6</DisciplineId>
+        <StartDate>
+            <Date>2019-07-20</Date>
+            <Clock>04:00:00</Clock>
+        </StartDate>
+        <FinishDate>
+            <Date>2019-07-20</Date>
+            <Clock>05:00:00</Clock>
+        </FinishDate>
+        <Organiser>
+            <OrganisationId>26</OrganisationId>
+        </Organiser>
+        <EventRace raceLightCondition="Day" raceDistance="Middle">
+            <EventRaceId>8396</EventRaceId>
+            <EventId>8096</EventId>
+            <Name></Name>
+            <RaceDate>
+                <Date>2019-07-20</Date>
+                <Clock>04:00:00</Clock>
+            </RaceDate>
+            <EventCenterPosition x="151.22916" y="-33.87317" unit="WGS-84" />
+        </EventRace>
+        <WebURL>http://illawarrakareelahorienteers.com/</WebURL>
+        <PunchingUnitType value="SI" />
+        <ModifyDate>
+            <Date>2019-07-16</Date>
+            <Clock>06:07:35</Clock>
+        </ModifyDate>
+        <ModifiedBy>
+            <PersonId>4484</PersonId>
+        </ModifiedBy>
+        <HashTableEntry>
+            <Key>Eventor_EntryOnTheDay</Key>
+            <Value>1</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_Message</Key>
+            <Value>Rushcutters Bay, Sydney, New South Wales.
+Come and experience running/walking amongst the art deco buildings in Potts Point, the historical buildings in Elizabeth Bay and around the picturesque bays of Sydney Harbour.
+Location: Rushcutters Bay Park
+Assembly: Northern end of  Park, at bottom of Holdsworth Ave, near Rushcutters Bay Tennis Centre.
+Map: Rushcutters Bay (1:7,500)  5metre contours
+Courses: 1.8km kids course within the park, 2km, 4km, and 6km line 
+Start times: 2-3pm
+Cost: $10, kids free. SI hire $4
+Course closure: 4pm 
+Toilets &amp; water available
+
+Limited parking in surrounding streets - no parking available in the park itself.  Consider public transport  as an option. By bus (324, 325) it is a 300m walk (4 mins) to assembly area from the bus stop at Bayswater Rd after Waratah St. Or take 311 from Central or Kings Cross stations, alight at Holdsworth Ave stop and walk 100m to assembly area. Alternatively you can travel by train (T4 to Bondi Junction). The assembly area is equidistant from Kings Cross and Edgecliff Stations.
+
+Runners, joggers &amp; walkers all welcome. Beginners are always welcome at our events, and there are always club members on hand to provide some basic coaching. You can go by yourself or as part of a group. 
+
+GENERAL RISK WARNING
+Competing in an orienteering event is subject to risks. These include death, serious injury or illness due to:
+•	rough terrain and obstacles;
+•	overexertion;
+•	heat, cold or other adverse weather conditions; 
+•	plant and animal life; and
+•	accidents with vehicles, other competitors or pedestrians.
+
+There are also risks:
+•	that access to medical, evacuation or search services might be slow; and
+•	of damage to, or loss of, your personal property.</Value>
+        </HashTableEntry>
+    </Event>
+    <Event eventForm="IndSingleDay">
+        <EventId>8097</EventId>
+        <Name>Gara Dam TSR</Name>
+        <EventClassificationId>4</EventClassificationId>
+        <EventStatusId>4</EventStatusId>
+        <DisciplineId>1</DisciplineId>
+        <StartDate>
+            <Date>2019-07-21</Date>
+            <Clock>00:00:00</Clock>
+        </StartDate>
+        <FinishDate>
+            <Date>2019-07-21</Date>
+            <Clock>04:00:00</Clock>
+        </FinishDate>
+        <Organiser>
+            <OrganisationId>30</OrganisationId>
+        </Organiser>
+        <EventRace raceLightCondition="Day" raceDistance="Middle">
+            <EventRaceId>8397</EventRaceId>
+            <EventId>8097</EventId>
+            <Name></Name>
+            <RaceDate>
+                <Date>2019-07-21</Date>
+                <Clock>00:00:00</Clock>
+            </RaceDate>
+            <EventCenterPosition x="151.79741" y="-30.54405" unit="WGS-84" />
+        </EventRace>
+        <WebURL>https://ntoc.asn.au/</WebURL>
+        <PunchingUnitType value="SI" />
+        <ModifyDate>
+            <Date>2019-07-12</Date>
+            <Clock>06:22:50</Clock>
+        </ModifyDate>
+        <ModifiedBy>
+            <PersonId>2261</PersonId>
+        </ModifiedBy>
+        <HashTableEntry>
+            <Key>Eventor_EntryOnTheDay</Key>
+            <Value>1</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_Message</Key>
+            <Value>Location: Gara Dam off Waterfall Way, Armidale
+Starts: 10:00 - 12:00
+Organiser: Felix Burkhard, 0412389173</Value>
+        </HashTableEntry>
+    </Event>
+    <Event eventForm="IndSingleDay">
+        <EventId>8098</EventId>
+        <Name>Highlands Forest Series #4</Name>
+        <EventClassificationId>4</EventClassificationId>
+        <EventStatusId>4</EventStatusId>
+        <DisciplineId>1</DisciplineId>
+        <StartDate>
+            <Date>2019-07-21</Date>
+            <Clock>01:00:00</Clock>
+        </StartDate>
+        <FinishDate>
+            <Date>2019-07-21</Date>
+            <Clock>02:00:00</Clock>
+        </FinishDate>
+        <Organiser>
+            <OrganisationId>31</OrganisationId>
+        </Organiser>
+        <ClassTypeId>2</ClassTypeId>
+        <ClassTypeId>3</ClassTypeId>
+        <ClassTypeId>4</ClassTypeId>
+        <EventRace raceLightCondition="Day" raceDistance="Middle">
+            <EventRaceId>8398</EventRaceId>
+            <EventId>8098</EventId>
+            <Name></Name>
+            <RaceDate>
+                <Date>2019-07-21</Date>
+                <Clock>01:00:00</Clock>
+            </RaceDate>
+            <EventCenterPosition x="150.79325" y="-34.20542" unit="WGS-84" />
+        </EventRace>
+        <WebURL>https://www.shoo.org.au </WebURL>
+        <PunchingUnitType value="SI" />
+        <ModifyDate>
+            <Date>2019-07-09</Date>
+            <Clock>01:42:35</Clock>
+        </ModifyDate>
+        <ModifiedBy>
+            <PersonId>5505</PersonId>
+        </ModifiedBy>
+        <HashTableEntry>
+            <Key>Eventor_EntryOnTheDay</Key>
+            <Value>1</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_Message</Key>
+            <Value>Location: off Illawarra Street, Appin.
+From Appin, head east along Appin Rd. Turn left on the last street as you head out of town (before the Georges River)
+From Bulli, turn Right after crossing the Georges River.
+there are NO TOILETS at the assembly. Please use the toilets in Appin Park (in the main road)
+SNEAKERS Kids Club starts at 10am - this week CONTOURS!</Value>
+        </HashTableEntry>
+    </Event>
+    <Event eventForm="IndSingleDay">
+        <EventId>8099</EventId>
+        <Name>Waggaroos-AWOC Interclub #6</Name>
+        <EventClassificationId>4</EventClassificationId>
+        <EventStatusId>4</EventStatusId>
+        <DisciplineId>1</DisciplineId>
+        <StartDate>
+            <Date>2019-07-21</Date>
+            <Clock>00:00:00</Clock>
+        </StartDate>
+        <FinishDate>
+            <Date>2019-07-21</Date>
+            <Clock>02:00:00</Clock>
+        </FinishDate>
+        <Organiser>
+            <OrganisationId>34</OrganisationId>
+        </Organiser>
+        <EventRace raceLightCondition="Day" raceDistance="Middle">
+            <EventRaceId>8399</EventRaceId>
+            <EventId>8099</EventId>
+            <Name></Name>
+            <RaceDate>
+                <Date>2019-07-21</Date>
+                <Clock>00:00:00</Clock>
+            </RaceDate>
+            <EventCenterPosition x="147.35499" y="-35.40644" unit="WGS-84" />
+        </EventRace>
+        <WebURL>http:// www.waggaroos.asn.au</WebURL>
+        <PunchingUnitType value="SI" />
+        <ModifyDate>
+            <Date>2019-07-09</Date>
+            <Clock>01:41:10</Clock>
+        </ModifyDate>
+        <ModifiedBy>
+            <PersonId>5505</PersonId>
+        </ModifiedBy>
+        <HashTableEntry>
+            <Key>Eventor_EntryOnTheDay</Key>
+            <Value>1</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_Message</Key>
+            <Value>Location: Livingstone National Park; Wolfram</Value>
+        </HashTableEntry>
+    </Event>
+    <Event eventForm="IndSingleDay">
+        <EventId>8100</EventId>
+        <Name>Newcastle OY 5 - RICHMOND VALE (New Map)</Name>
+        <EventClassificationId>4</EventClassificationId>
+        <EventStatusId>4</EventStatusId>
+        <DisciplineId>1</DisciplineId>
+        <StartDate>
+            <Date>2019-07-20</Date>
+            <Clock>23:30:00</Clock>
+        </StartDate>
+        <FinishDate>
+            <Date>2019-07-21</Date>
+            <Clock>03:00:00</Clock>
+        </FinishDate>
+        <Organiser>
+            <OrganisationId>29</OrganisationId>
+        </Organiser>
+        <ClassTypeId>2</ClassTypeId>
+        <EventRace raceLightCondition="Day" raceDistance="Middle">
+            <EventRaceId>8400</EventRaceId>
+            <EventId>8100</EventId>
+            <Name></Name>
+            <RaceDate>
+                <Date>2019-07-20</Date>
+                <Clock>23:30:00</Clock>
+            </RaceDate>
+            <EventCenterPosition x="151.46525" y="-32.84595" unit="WGS-84" />
+        </EventRace>
+        <WebURL>http://www.newcastleorienteering.asn.au/</WebURL>
+        <PunchingUnitType value="SI" />
+        <ModifyDate>
+            <Date>2019-07-17</Date>
+            <Clock>02:30:04</Clock>
+        </ModifyDate>
+        <ModifiedBy>
+            <PersonId>314</PersonId>
+        </ModifiedBy>
+        <HashTableEntry>
+            <Key>Eventor_ConsultationPerformed</Key>
+            <Value>1</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_EntryChangeDeadlines</Key>
+            <Value>2019-07-20 23:29:59;EventClass,EventRaces,NumberOfCompetitors,Person,Organisation,PunchingCard,ServiceRequests</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_EntryOnTheDay</Key>
+            <Value>1</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_Message</Key>
+            <Value>LOCATION: Richmond Vale, Pelaw Main
+MAP: Richmond Vale’s Wombat Trails 1:10 000 New map of new (foot) area.
+
+PLANNING/VETTING: Alex Massey, Denis Lyons
+
+DETAILS: https://bit.ly/2XNwjck</Value>
+        </HashTableEntry>
+    </Event>
+    <Event eventForm="IndSingleDay">
+        <EventId>8101</EventId>
+        <Name>SOS Northside - Duffys Forest</Name>
+        <EventClassificationId>4</EventClassificationId>
+        <EventStatusId>4</EventStatusId>
+        <DisciplineId>1</DisciplineId>
+        <StartDate>
+            <Date>2019-07-26</Date>
+            <Clock>23:30:00</Clock>
+        </StartDate>
+        <FinishDate>
+            <Date>2019-07-27</Date>
+            <Clock>02:00:00</Clock>
+        </FinishDate>
+        <Organiser>
+            <OrganisationId>647</OrganisationId>
+        </Organiser>
+        <EventRace raceLightCondition="Day" raceDistance="Middle">
+            <EventRaceId>8401</EventRaceId>
+            <EventId>8101</EventId>
+            <Name></Name>
+            <RaceDate>
+                <Date>2019-07-26</Date>
+                <Clock>23:30:00</Clock>
+            </RaceDate>
+            <EventCenterPosition x="151.18431" y="-33.67586" unit="WGS-84" />
+        </EventRace>
+        <WebURL>http:// http://www.boldhorizons.com.au/explore-discover-grow/events/saturday-orienteering-series/</WebURL>
+        <PunchingUnitType value="SI" />
+        <ModifyDate>
+            <Date>2019-07-18</Date>
+            <Clock>22:11:54</Clock>
+        </ModifyDate>
+        <ModifiedBy>
+            <PersonId>102</PersonId>
+        </ModifiedBy>
+        <HashTableEntry>
+            <Key>Eventor_EntryTermsAndConditions</Key>
+            <Value>RISK WARNING
+I understand and acknowledge that the activity I am entering may be of an adventurous nature and possibly in a remote bush setting. I am aware that it is inherently subject to risk.  These risks include death, and serious injury or illness due to:
+- Rough terrain and obstacles;	- Over exertion;
+- Heat, cold or other adverse weather conditions;	- Plant and animal life; and
+- Accidents with vehicles, other competitors or pedestrians.
+There are also risks that access to medical, evacuation or search services might be slow and of damage to, or loss of, your personal property.
+I understand that all hazards and dangers associated with these activities cannot be foreseen or may be beyond the control of Bold Horizons and its staff. I understand that the activities arranged by Bold Horizons might require myself/daughter/son/ward/guest to obey instructions and co-operate with its staff. I warrant that myself/daughter/son/ward/guest has an ordinary ability to comprehend instructions given in English.
+
+RISK WAIVER
+I have read the general risk warning and the specific risk warning for this event.  I am aware that orienteering and other activities organized by Bold Horizons are recreational activities that can be dangerous, accept that there is a degree of risk and acknowledge that I participate in this event at my own risk.
+I release Bold Horizons and its employees and associates involved in organising the event from any responsibility or legal liability associated with my presence at, and participation in, the event.
+To the extent that the Competition and Consumer Act 2010 applies this release is limited to responsibility and legal liability for death or personal injury and does not apply to significant personal injury caused by reckless conduct by Bold Horizons and all other parties associated with organising the event.
+
+EVENT STATEMENTS - PLEASE BE AWARE OF THE FOLLOWING:
+There is no health, accident, ambulance, disability or life insurance provided by Bold Horizons.  
+You and any people you are responsible for must all be fit, healthy and in a physical condition appropriate for participation in this event.  Any questions or concerns should be raised with Bold Horizons prior to participation.
+If your or any people you are responsible for suffers injury or illness, Bold Horizons can, at your cost, arrange medical treatment and emergency evacuation services as Bold Horizons deems appropriate for that persons’ safety or well-being.
+You agree to allow the free use of your entry information and photograph or video for any purpose and in perpetuity and agree that they may also be shared with other parties. Please let us know in advance if there are any concerns in this regard and we will do our best to accommodate special requests.
+Whilst Bold Horizons will provide the activity we note that any children attending remain in your care and as such must be appropriately supervised at all times.  We acknowledge that parents and guardians are responsible for deciding whether their children are capable of orienteering by themselves at each event.
+Should any SportIdent sticks or cards be lost at the event, an additional fee will be levied as a replacement cost for these items.  The fee is $50 for SportIdent sticks and $20 for SportIdent cards.
+
+</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_Message</Key>
+            <Value>Location: The Christmas Tree Farm, 6 Namba Rd, Duffys Forest (enter from Birramal Rd)
+
+A special edition SOS Xmas in July edition.  All welcome.
+
+The event will be at the home of Garingal family the Junghans.  Garingal members are invited to stay on after the event for a complimentary BBQ lunch.  Please rsvp to president@garingal.com.au for catering numbers.  BYO drinks, plates, cutlery and seating.
+
+Saturday Orienteering Series is open to everyone. No experience is necessary and courses are ideal for anyone wishing to get some exercise and immerse themselves in a mini adventure. Beginners and experienced orienteers are very welcome. Students, mums, dads, uncles, aunts, friends, grandparents: all ages can run or walk and enjoy the SOS.
+
+Registration is from 9am with starts between 9:30am and 11am.
+
+Enter at the event or purchase a discounted term pass from the link on the Bold Horizons web page. Entry costs $10 for members with their own SPORTident stick or $15 for non-members or runners hiring timing sticks. Pay by card or cash (exact money is appreciated).
+
+If groups of more than 5 are attending we would be grateful if you could contact Barbara on 0418 270 476 in advance so that we can be sure to look after you.
+</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_EntryOnTheDay</Key>
+            <Value>1</Value>
+        </HashTableEntry>
+    </Event>
+    <Event eventForm="IndSingleDay">
+        <EventId>8102</EventId>
+        <Name>SOS Hills District - Baulkham Hills</Name>
+        <EventClassificationId>4</EventClassificationId>
+        <EventStatusId>4</EventStatusId>
+        <DisciplineId>1</DisciplineId>
+        <StartDate>
+            <Date>2019-07-26</Date>
+            <Clock>23:30:00</Clock>
+        </StartDate>
+        <FinishDate>
+            <Date>2019-07-27</Date>
+            <Clock>02:00:00</Clock>
+        </FinishDate>
+        <Organiser>
+            <OrganisationId>647</OrganisationId>
+        </Organiser>
+        <EventRace raceLightCondition="Day" raceDistance="Middle">
+            <EventRaceId>8402</EventRaceId>
+            <EventId>8102</EventId>
+            <Name></Name>
+            <RaceDate>
+                <Date>2019-07-26</Date>
+                <Clock>23:30:00</Clock>
+            </RaceDate>
+            <EventCenterPosition x="150.99001" y="-33.75292" unit="WGS-84" />
+        </EventRace>
+        <WebURL>http:// http://www.boldhorizons.com.au/explore-discover-grow/events/saturday-orienteering-series/</WebURL>
+        <PunchingUnitType value="SI" />
+        <ModifyDate>
+            <Date>2019-07-18</Date>
+            <Clock>21:57:16</Clock>
+        </ModifyDate>
+        <ModifiedBy>
+            <PersonId>102</PersonId>
+        </ModifiedBy>
+        <HashTableEntry>
+            <Key>Eventor_EntryOnTheDay</Key>
+            <Value>1</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_EntryTermsAndConditions</Key>
+            <Value>RISK WARNING
+I understand and acknowledge that the activity I am entering may be of an adventurous nature and possibly in a remote bush setting. I am aware that it is inherently subject to risk.  These risks include death, and serious injury or illness due to:
+- Rough terrain and obstacles;	- Over exertion;
+- Heat, cold or other adverse weather conditions;	- Plant and animal life; and
+- Accidents with vehicles, other competitors or pedestrians.
+There are also risks that access to medical, evacuation or search services might be slow and of damage to, or loss of, your personal property.
+I understand that all hazards and dangers associated with these activities cannot be foreseen or may be beyond the control of Bold Horizons and its staff. I understand that the activities arranged by Bold Horizons might require myself/daughter/son/ward/guest to obey instructions and co-operate with its staff. I warrant that myself/daughter/son/ward/guest has an ordinary ability to comprehend instructions given in English.
+
+RISK WAIVER
+I have read the general risk warning and the specific risk warning for this event.  I am aware that orienteering and other activities organized by Bold Horizons are recreational activities that can be dangerous, accept that there is a degree of risk and acknowledge that I participate in this event at my own risk.
+I release Bold Horizons and its employees and associates involved in organising the event from any responsibility or legal liability associated with my presence at, and participation in, the event.
+To the extent that the Competition and Consumer Act 2010 applies this release is limited to responsibility and legal liability for death or personal injury and does not apply to significant personal injury caused by reckless conduct by Bold Horizons and all other parties associated with organising the event.
+
+EVENT STATEMENTS - PLEASE BE AWARE OF THE FOLLOWING:
+There is no health, accident, ambulance, disability or life insurance provided by Bold Horizons.  
+You and any people you are responsible for must all be fit, healthy and in a physical condition appropriate for participation in this event.  Any questions or concerns should be raised with Bold Horizons prior to participation.
+If your or any people you are responsible for suffers injury or illness, Bold Horizons can, at your cost, arrange medical treatment and emergency evacuation services as Bold Horizons deems appropriate for that persons’ safety or well-being.
+You agree to allow the free use of your entry information and photograph or video for any purpose and in perpetuity and agree that they may also be shared with other parties. Please let us know in advance if there are any concerns in this regard and we will do our best to accommodate special requests.
+Whilst Bold Horizons will provide the activity we note that any children attending remain in your care and as such must be appropriately supervised at all times.  We acknowledge that parents and guardians are responsible for deciding whether their children are capable of orienteering by themselves at each event.
+Should any SportIdent sticks or cards be lost at the event, an additional fee will be levied as a replacement cost for these items.  The fee is $50 for SportIdent sticks and $20 for SportIdent cards.
+
+</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_Message</Key>
+            <Value>Location: Baulkham Hills High School, 419A Windsor Rd, Baulkham Hills.  There is some parking within the school grounds.
+
+Saturday Orienteering Series is open to everyone. No experience is necessary and courses are ideal for anyone wishing to get some exercise and immerse themselves in a mini adventure. Beginners and experienced orienteers are very welcome. Students, mums, dads, uncles, aunts, friends, grandparents: all ages can run or walk and enjoy the SOS.
+
+Registration is from 9am with starts between 9:30am and 11am.
+
+Enter at the event or purchase a discounted term pass from the link on the Bold Horizons web page. Entry costs $10 for members with their own SPORTident stick or $15 for non-members or runners hiring timing sticks. Pay by card or cash (exact money is appreciated).
+
+If groups of more than 5 are attending we would be grateful if you could contact Barbara on 0418 270 476 in advance so that we can be sure to look after you.
+</Value>
+        </HashTableEntry>
+    </Event>
+    <Event eventForm="IndSingleDay">
+        <EventId>8103</EventId>
+        <Name>Metroleague #4 - Galston</Name>
+        <EventClassificationId>4</EventClassificationId>
+        <EventStatusId>5</EventStatusId>
+        <DisciplineId>1</DisciplineId>
+        <StartDate>
+            <Date>2019-07-28</Date>
+            <Clock>00:00:00</Clock>
+        </StartDate>
+        <FinishDate>
+            <Date>2019-07-28</Date>
+            <Clock>02:00:00</Clock>
+        </FinishDate>
+        <Organiser>
+            <OrganisationId>24</OrganisationId>
+        </Organiser>
+        <EventRace raceLightCondition="Day" raceDistance="Middle">
+            <EventRaceId>8403</EventRaceId>
+            <EventId>8103</EventId>
+            <Name></Name>
+            <RaceDate>
+                <Date>2019-07-28</Date>
+                <Clock>00:00:00</Clock>
+            </RaceDate>
+            <EventCenterPosition x="151.03956" y="-33.65754" unit="WGS-84" />
+        </EventRace>
+        <WebURL>http://garingal.com.au</WebURL>
+        <PunchingUnitType value="SI" />
+        <ModifyDate>
+            <Date>2019-07-17</Date>
+            <Clock>01:27:55</Clock>
+        </ModifyDate>
+        <ModifiedBy>
+            <PersonId>2606</PersonId>
+        </ModifiedBy>
+        <HashTableEntry>
+            <Key>Eventor_EntryOnTheDay</Key>
+            <Value>1</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_EntryTermsAndConditions</Key>
+            <Value>Risk Waiver
+We have read the general risk warning and the specific risk warning in the Event Information  for this event. We are aware that orienteering is a recreational activity that can be dangerous, accept that there is a degree of risk and acknowledge that we participate in this event at our own risk.
+We are aware of, and will comply with Orienteering NSW’s Competitors’ Rules.
+We release Orienteering NSW, its affiliated clubs, members and all other parties associated with organising the event from any responsibility or legal liability associated with our  presence at, and participation in, this orienteering event.
+To the extent that the Competition and Consumer Act 2010 applies this release is limited to responsibility and legal liability for death or personal injury and does not apply to significant personal injury caused by reckless conduct by Orienteering NSW, its affiliated clubs, members and all other parties associated with organising the event.
+General Risk Warning
+Competing in an orienteering event is subject to risks. These include death, serious injury or illness due to:
+•	rough terrain and obstacles;
+•	overexertion;
+•	heat, cold or other adverse weather conditions; 
+•	plant and animal life; and
+•	accidents with vehicles, other competitors or pedestrians.
+
+There are also risks:
+•	that access to medical, evacuation or search services might be slow; and
+•	of damage to, or loss of, your personal property.
+Statements
+1.	We are aware there is no health, accident, ambulance, disability or life insurance provided.
+2.	We allow the free use of our names and photo in entry information, results, news, marketing and promotional material pertaining to the event or orienteering. This does not extend to publishing a photo of a person under 18 with their name.
+3.	We will ensure that any children under our control at the event are appropriately supervised at all times. We acknowledge that parents and guardians are responsible for deciding whether their children are capable of orienteering by themselves at each event.
+</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_EventClassChangeKeepsEntryDate</Key>
+            <Value>1</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_Message</Key>
+            <Value>Location: Galston Reserve, Galston Rd, Galston
+
+Sydney MetroLeague No. 4. ALL WELCOME.
+ 
+Map: Galston Reserve 1:7500. 
+All courses available for Enter On Day (EOD). EOD starts for Easy and Very Easy courses from 9:30am. Other EOD courses start after team selections have been finalised. MetroLeague Divisions start at 10.00am. 
+
+Facilities: Toilets, water and picnic areas available. For further information, please see the INFORMATION FLYER (available soon).</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_PaymentEventId</Key>
+            <Value>1491</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_ConsultationPerformed</Key>
+            <Value>1</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_EntryChangeDeadlines</Key>
+            <Value>2019-07-26 13:59:00;EventClass,EventRaces,NumberOfCompetitors,Person,Organisation,PunchingCard,ServiceRequests</Value>
+        </HashTableEntry>
+    </Event>
+    <Event eventForm="IndSingleDay">
+        <EventId>8104</EventId>
+        <Name>Coffs Winter #4</Name>
+        <EventClassificationId>4</EventClassificationId>
+        <EventStatusId>4</EventStatusId>
+        <DisciplineId>6</DisciplineId>
+        <StartDate>
+            <Date>2019-07-28</Date>
+            <Clock>00:00:00</Clock>
+        </StartDate>
+        <FinishDate>
+            <Date>2019-07-28</Date>
+            <Clock>03:00:00</Clock>
+        </FinishDate>
+        <Organiser>
+            <OrganisationId>473</OrganisationId>
+        </Organiser>
+        <EventRace raceLightCondition="Day" raceDistance="Middle">
+            <EventRaceId>8404</EventRaceId>
+            <EventId>8104</EventId>
+            <Name></Name>
+            <RaceDate>
+                <Date>2019-07-28</Date>
+                <Clock>00:00:00</Clock>
+            </RaceDate>
+            <EventCenterPosition x="152.96715" y="-29.7489" unit="WGS-84" />
+        </EventRace>
+        <WebURL>http:// www.bboc.asn.au</WebURL>
+        <PunchingUnitType value="manual" />
+        <ModifyDate>
+            <Date>2019-05-22</Date>
+            <Clock>06:39:28</Clock>
+        </ModifyDate>
+        <ModifiedBy>
+            <PersonId>5505</PersonId>
+        </ModifiedBy>
+        <HashTableEntry>
+            <Key>Eventor_EntryOnTheDay</Key>
+            <Value>1</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_Message</Key>
+            <Value>Location: Bom Bom State Forest</Value>
+        </HashTableEntry>
+    </Event>
+    <Event eventForm="IndSingleDay">
+        <EventId>8149</EventId>
+        <Name>NavDash 6 ECU Mt Lawley Sprint OY</Name>
+        <EventClassificationId>5</EventClassificationId>
+        <EventStatusId>4</EventStatusId>
+        <DisciplineId>1</DisciplineId>
+        <StartDate>
+            <Date>2019-07-20</Date>
+            <Clock>05:00:00</Clock>
+        </StartDate>
+        <FinishDate>
+            <Date>2019-07-20</Date>
+            <Clock>08:00:00</Clock>
+        </FinishDate>
+        <Organiser>
+            <OrganisationId>10</OrganisationId>
+            <OrganisationId>74</OrganisationId>
+        </Organiser>
+        <EventRace raceLightCondition="Day" raceDistance="Sprint">
+            <EventRaceId>8449</EventRaceId>
+            <EventId>8149</EventId>
+            <Name></Name>
+            <RaceDate>
+                <Date>2019-07-20</Date>
+                <Clock>05:00:00</Clock>
+            </RaceDate>
+            <EventCenterPosition x="115.86657" y="-31.91982" unit="WGS-84" />
+        </EventRace>
+        <WebURL>https://wa.orienteering.asn.au/</WebURL>
+        <PunchingUnitType value="SI" />
+        <ModifyDate>
+            <Date>2019-07-04</Date>
+            <Clock>15:14:56</Clock>
+        </ModifyDate>
+        <ModifiedBy>
+            <PersonId>11206</PersonId>
+        </ModifiedBy>
+        <HashTableEntry>
+            <Key>Eventor_EntryOnTheDay</Key>
+            <Value>1</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_Message</Key>
+            <Value>Turn south off Alexander Dr. onto Bradford St. Take the first left to enter the ECU campus and take an immediate left at the roundabout. Follow the road to carpark #1 (P01).</Value>
+        </HashTableEntry>
+    </Event>
+    <Event eventForm="IndSingleDay">
+        <EventId>8150</EventId>
+        <Name>Bush 7 Avon Valley Middle Distance Championships</Name>
+        <EventClassificationId>1</EventClassificationId>
+        <EventStatusId>5</EventStatusId>
+        <DisciplineId>1</DisciplineId>
+        <StartDate>
+            <Date>2019-07-21</Date>
+            <Clock>01:30:00</Clock>
+        </StartDate>
+        <FinishDate>
+            <Date>2019-07-21</Date>
+            <Clock>05:00:00</Clock>
+        </FinishDate>
+        <Organiser>
+            <OrganisationId>10</OrganisationId>
+            <OrganisationId>78</OrganisationId>
+        </Organiser>
+        <ClassTypeId>2</ClassTypeId>
+        <ClassTypeId>4</ClassTypeId>
+        <EventRace raceLightCondition="Day" raceDistance="Middle">
+            <EventRaceId>8450</EventRaceId>
+            <EventId>8150</EventId>
+            <Name></Name>
+            <RaceDate>
+                <Date>2019-07-21</Date>
+                <Clock>01:30:00</Clock>
+            </RaceDate>
+            <EventCenterPosition x="116.26645" y="-31.59538" unit="WGS-84" />
+        </EventRace>
+        <WebURL>https://wa.orienteering.asn.au/</WebURL>
+        <PunchingUnitType value="SI" />
+        <ModifyDate>
+            <Date>2019-07-16</Date>
+            <Clock>09:46:46</Clock>
+        </ModifyDate>
+        <ModifiedBy>
+            <PersonId>1776</PersonId>
+        </ModifiedBy>
+        <HashTableEntry>
+            <Key>Eventor_EventClassChangeKeepsEntryDate</Key>
+            <Value>1</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_Message</Key>
+            <Value>Please see Event Flyer for full details of this event.
+Directions: from Perth via Toodyay Road for 40km to Morangup Road, turn left and continue for 5km to the Avon Valley National Park turn off. Turn left and continue for 8.5km to Quarry Road and assembly area.  Note that the 8.5km within the NP is currently heavily corrugated in places; please exercise particular care when driving this section.
+Park entry payment made at the registration caravan ($6 per head to a maximum of $13 per vehicle - competitors with National Park passes do not pay).</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_PaymentEventId</Key>
+            <Value>1455</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_ApplyEntryFeeDiscount</Key>
+            <Value>1</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>startList_8450</Key>
+            <Value>2019-07-16 09:46:45</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_ConsultationPerformed</Key>
+            <Value>1</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_EntryChangeDeadlines</Key>
+            <Value>2019-07-14 15:59:00;EventClass,EventRaces,NumberOfCompetitors,Person,Organisation,PunchingCard,ServiceRequests</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_EntryOnTheDay</Key>
+            <Value>1</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_EntryTermsAndConditions</Key>
+            <Value>Pre-entry is required for Championship competitors</Value>
+        </HashTableEntry>
+    </Event>
+    <Event eventForm="IndSingleDay">
+        <EventId>8198</EventId>
+        <Name>Bendigo Bush Classic 11 - Sedgwick South</Name>
+        <EventClassificationId>5</EventClassificationId>
+        <EventStatusId>4</EventStatusId>
+        <DisciplineId>1</DisciplineId>
+        <StartDate>
+            <Date>2019-07-20</Date>
+            <Clock>02:30:00</Clock>
+        </StartDate>
+        <FinishDate>
+            <Date>2019-07-20</Date>
+            <Clock>05:00:00</Clock>
+        </FinishDate>
+        <Organiser>
+            <OrganisationId>65</OrganisationId>
+        </Organiser>
+        <EventRace raceLightCondition="Day" raceDistance="Long">
+            <EventRaceId>8498</EventRaceId>
+            <EventId>8198</EventId>
+            <Name></Name>
+            <RaceDate>
+                <Date>2019-07-20</Date>
+                <Clock>02:30:00</Clock>
+            </RaceDate>
+            <EventCenterPosition x="144.35596" y="-36.88191" unit="WGS-84" />
+        </EventRace>
+        <WebURL>http://www.bendigo-orienteers.com.au</WebURL>
+        <PunchingUnitType value="SI" />
+        <ModifyDate>
+            <Date>2019-06-16</Date>
+            <Clock>12:47:56</Clock>
+        </ModifyDate>
+        <ModifiedBy>
+            <PersonId>2366</PersonId>
+        </ModifiedBy>
+        <HashTableEntry>
+            <Key>Eventor_EntryOnTheDay</Key>
+            <Value>1</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_LiveloxEventConfigurations</Key>
+            <Value>40394,1</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_Message</Key>
+            <Value>General regulations for events organised by Bendigo Orienteers:
+- Dogs are not permitted to attend or participate. 
+- In areas managed by Parks Victoria or DELWP (Forests, reserves, and national, state and regional parks) cars must only be parked on roadways or in designated parking areas.
+
+Starts between 12:30 and 2:00pm. Courses close at 3pm.
+
+2019 Entry Fees
+Club Member: Adult $10, Junior/student $5. Members from other orienteering clubs welcome.
+Non Member: Adult $18, Junior/student $6.
+SI Stick hire: $5, Family $10.
+Entry and SI hire for course 5 are free for all ages regardless of membership status.Information on dog restrictions is contained in the map archive
+
+Driving Instructions: From Bendigo travel on the Eppalock Rd towards Strathfieldsaye.  Turn right into Emu Creek Road.  Turn left to continue along Emu Creek Road immediately before the main road turns right (and turns into Storys Rd).  Continue for 4.8 km, turning right into Tolhurst Rd.  Please park on the Left hand Side of Tolhurst Road Only</Value>
+        </HashTableEntry>
+    </Event>
+    <Event eventForm="IndSingleDay">
+        <EventId>8199</EventId>
+        <Name>Bendigo Bush - Royal George Company</Name>
+        <EventClassificationId>5</EventClassificationId>
+        <EventStatusId>4</EventStatusId>
+        <DisciplineId>1</DisciplineId>
+        <StartDate>
+            <Date>2019-07-27</Date>
+            <Clock>02:30:00</Clock>
+        </StartDate>
+        <FinishDate>
+            <Date>2019-07-27</Date>
+            <Clock>05:00:00</Clock>
+        </FinishDate>
+        <Organiser>
+            <OrganisationId>65</OrganisationId>
+        </Organiser>
+        <EventRace raceLightCondition="Day" raceDistance="Long">
+            <EventRaceId>8499</EventRaceId>
+            <EventId>8199</EventId>
+            <Name></Name>
+            <RaceDate>
+                <Date>2019-07-27</Date>
+                <Clock>02:30:00</Clock>
+            </RaceDate>
+            <EventCenterPosition x="144.2441" y="-36.74383" unit="WGS-84" />
+        </EventRace>
+        <WebURL>http://www.bendigo-orienteers.com.au</WebURL>
+        <PunchingUnitType value="SI" />
+        <ModifyDate>
+            <Date>2019-07-18</Date>
+            <Clock>08:56:12</Clock>
+        </ModifyDate>
+        <ModifiedBy>
+            <PersonId>16</PersonId>
+        </ModifiedBy>
+        <HashTableEntry>
+            <Key>Eventor_EntryOnTheDay</Key>
+            <Value>1</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_Message</Key>
+            <Value>Directions. From corner of Albert St and Derwent Gully Road, follow Derwent Gully Road and look for signs. Warning: Do not approach via the Sparrowhawk Rd Derwent Gully Road intersection. The road at that end is generally impassable.
+General regulations for events organised by Bendigo Orienteers:
+- Dogs are not permitted to attend or participate. 
+- In areas managed by Parks Victoria or DELWP (Forests, reserves, and national, state and regional parks) cars must only be parked on roadways or in designated parking areas.
+
+Starts between 12:30 and 2:00pm. Courses close at 3pm.
+
+2019 Entry Fees
+Club Member: Adult $10, Junior/student $5. Members from other orienteering clubs welcome.
+Non Member: Adult $18, Junior/student $6.
+SI Stick hire: $5, Family $10.
+Entry and SI hire for course 5 are free for all ages regardless of membership status. Information on dog restrictions is contained in the map archive</Value>
+        </HashTableEntry>
+    </Event>
+    <Event eventForm="IndSingleDay">
+        <EventId>8318</EventId>
+        <Name>Melbourne PAS Monday Spring Series 3 - Wattle View</Name>
+        <EventClassificationId>4</EventClassificationId>
+        <EventStatusId>3</EventStatusId>
+        <DisciplineId>6</DisciplineId>
+        <StartDate>
+            <Date>2019-07-22</Date>
+            <Clock>09:00:00</Clock>
+        </StartDate>
+        <FinishDate>
+            <Date>2019-07-22</Date>
+            <Clock>10:00:00</Clock>
+        </FinishDate>
+        <Organiser>
+            <OrganisationId>9</OrganisationId>
+        </Organiser>
+        <EventRace raceLightCondition="Night" raceDistance="Middle">
+            <EventRaceId>8618</EventRaceId>
+            <EventId>8318</EventId>
+            <Name></Name>
+            <RaceDate>
+                <Date>2019-07-22</Date>
+                <Clock>09:00:00</Clock>
+            </RaceDate>
+        </EventRace>
+        <WebURL>http://www.vicorienteering.asn.au/parkstreet</WebURL>
+        <PunchingUnitType value="manual" />
+        <ModifyDate>
+            <Date>2019-03-04</Date>
+            <Clock>19:05:07</Clock>
+        </ModifyDate>
+        <ModifiedBy>
+            <PersonId>2140</PersonId>
+        </ModifiedBy>
+        <HashTableEntry>
+            <Key>Eventor_EntryOnTheDay</Key>
+            <Value>1</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_Message</Key>
+            <Value>Start: Fairpark Reserve, Park Boulevard, off Manuka Drive / Suburb: Boronia / Melway: 64 F11 </Value>
+        </HashTableEntry>
+    </Event>
+    <Event eventForm="IndSingleDay">
+        <EventId>8319</EventId>
+        <Name>Melbourne PAS Monday Spring Series 4 - Birralee</Name>
+        <EventClassificationId>4</EventClassificationId>
+        <EventStatusId>3</EventStatusId>
+        <DisciplineId>6</DisciplineId>
+        <StartDate>
+            <Date>2019-07-29</Date>
+            <Clock>09:00:00</Clock>
+        </StartDate>
+        <FinishDate>
+            <Date>2019-07-29</Date>
+            <Clock>10:00:00</Clock>
+        </FinishDate>
+        <Organiser>
+            <OrganisationId>9</OrganisationId>
+        </Organiser>
+        <EventRace raceLightCondition="Night" raceDistance="Middle">
+            <EventRaceId>8619</EventRaceId>
+            <EventId>8319</EventId>
+            <Name></Name>
+            <RaceDate>
+                <Date>2019-07-29</Date>
+                <Clock>09:00:00</Clock>
+            </RaceDate>
+        </EventRace>
+        <WebURL>http://www.vicorienteering.asn.au/parkstreet</WebURL>
+        <PunchingUnitType value="manual" />
+        <ModifyDate>
+            <Date>2019-03-04</Date>
+            <Clock>19:05:48</Clock>
+        </ModifyDate>
+        <ModifiedBy>
+            <PersonId>2140</PersonId>
+        </ModifiedBy>
+        <HashTableEntry>
+            <Key>Eventor_EntryOnTheDay</Key>
+            <Value>1</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_Message</Key>
+            <Value>Start: Wilsons Road Reserve, Wilsons Road / Suburb: Doncaster / Melway: 47 A2 </Value>
+        </HashTableEntry>
+    </Event>
+    <Event eventForm="IndSingleDay">
+        <EventId>8354</EventId>
+        <Name>Melbourne PAS Wednesday Spring Carnival Series 3 - Blackburn North</Name>
+        <EventClassificationId>4</EventClassificationId>
+        <EventStatusId>3</EventStatusId>
+        <DisciplineId>6</DisciplineId>
+        <StartDate>
+            <Date>2019-07-24</Date>
+            <Clock>09:00:00</Clock>
+        </StartDate>
+        <FinishDate>
+            <Date>2019-07-24</Date>
+            <Clock>10:00:00</Clock>
+        </FinishDate>
+        <Organiser>
+            <OrganisationId>64</OrganisationId>
+        </Organiser>
+        <EventRace raceLightCondition="Night" raceDistance="Middle">
+            <EventRaceId>8654</EventRaceId>
+            <EventId>8354</EventId>
+            <Name></Name>
+            <RaceDate>
+                <Date>2019-07-24</Date>
+                <Clock>09:00:00</Clock>
+            </RaceDate>
+        </EventRace>
+        <WebURL>http://www.vicorienteering.asn.au/parkstreet</WebURL>
+        <PunchingUnitType value="manual" />
+        <ModifyDate>
+            <Date>2019-03-04</Date>
+            <Clock>19:22:13</Clock>
+        </ModifyDate>
+        <ModifiedBy>
+            <PersonId>2140</PersonId>
+        </ModifiedBy>
+        <HashTableEntry>
+            <Key>Eventor_EntryOnTheDay</Key>
+            <Value>1</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_Message</Key>
+            <Value>Start: Koonung Park, Heppner Street / Suburb: Blackburn North / Melway: 47 K7 </Value>
+        </HashTableEntry>
+    </Event>
+    <Event eventForm="IndSingleDay">
+        <EventId>8378</EventId>
+        <Name>Melbourne PAS Saturday Series 14 - PARK - Fairbairn Park</Name>
+        <EventClassificationId>4</EventClassificationId>
+        <EventStatusId>4</EventStatusId>
+        <DisciplineId>6</DisciplineId>
+        <StartDate>
+            <Date>2019-07-20</Date>
+            <Clock>04:00:00</Clock>
+        </StartDate>
+        <FinishDate>
+            <Date>2019-07-20</Date>
+            <Clock>05:00:00</Clock>
+        </FinishDate>
+        <Organiser>
+            <OrganisationId>72</OrganisationId>
+        </Organiser>
+        <EventRace raceLightCondition="Day" raceDistance="Middle">
+            <EventRaceId>8678</EventRaceId>
+            <EventId>8378</EventId>
+            <Name></Name>
+            <RaceDate>
+                <Date>2019-07-20</Date>
+                <Clock>04:00:00</Clock>
+            </RaceDate>
+            <EventCenterPosition x="144.90229" y="-37.77529" unit="WGS-84" />
+        </EventRace>
+        <WebURL>http://www.vicorienteering.asn.au/parkstreet</WebURL>
+        <PunchingUnitType value="manual" />
+        <ModifyDate>
+            <Date>2019-07-13</Date>
+            <Clock>10:20:35</Clock>
+        </ModifyDate>
+        <ModifiedBy>
+            <PersonId>16</PersonId>
+        </ModifiedBy>
+        <HashTableEntry>
+            <Key>Eventor_EntryOnTheDay</Key>
+            <Value>1</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_Message</Key>
+            <Value>Start: Cnr Woods and Newsom Streets / Suburb: Ascot Vale / Melway: 28 D9 </Value>
+        </HashTableEntry>
+    </Event>
+    <Event eventForm="IndSingleDay">
+        <EventId>8390</EventId>
+        <Name>Geelong PAS Winter Series 4 - Herne Hill / Hamlyn Heights</Name>
+        <EventClassificationId>4</EventClassificationId>
+        <EventStatusId>4</EventStatusId>
+        <DisciplineId>6</DisciplineId>
+        <StartDate>
+            <Date>2019-07-18</Date>
+            <Clock>09:00:00</Clock>
+        </StartDate>
+        <FinishDate>
+            <Date>2019-07-18</Date>
+            <Clock>10:00:00</Clock>
+        </FinishDate>
+        <Organiser>
+            <OrganisationId>64</OrganisationId>
+        </Organiser>
+        <EventRace raceLightCondition="Night" raceDistance="Middle">
+            <EventRaceId>8690</EventRaceId>
+            <EventId>8390</EventId>
+            <Name></Name>
+            <RaceDate>
+                <Date>2019-07-18</Date>
+                <Clock>09:00:00</Clock>
+            </RaceDate>
+        </EventRace>
+        <WebURL>http://www.vicorienteering.asn.au/parkstreet</WebURL>
+        <PunchingUnitType value="manual" />
+        <ModifyDate>
+            <Date>2019-05-20</Date>
+            <Clock>01:06:21</Clock>
+        </ModifyDate>
+        <ModifiedBy>
+            <PersonId>272</PersonId>
+        </ModifiedBy>
+        <HashTableEntry>
+            <Key>Eventor_Message</Key>
+            <Value>Start: 5 Langibanool Avenue / Suburb: Hamlyn Heights / Melway: 441 D10 </Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_EntryOnTheDay</Key>
+            <Value>1</Value>
+        </HashTableEntry>
+    </Event>
+    <Event eventForm="IndSingleDay">
+        <EventId>8391</EventId>
+        <Name>Geelong PAS Winter Series 5 - The Library</Name>
+        <EventClassificationId>4</EventClassificationId>
+        <EventStatusId>4</EventStatusId>
+        <DisciplineId>6</DisciplineId>
+        <StartDate>
+            <Date>2019-07-25</Date>
+            <Clock>09:00:00</Clock>
+        </StartDate>
+        <FinishDate>
+            <Date>2019-07-25</Date>
+            <Clock>10:00:00</Clock>
+        </FinishDate>
+        <Organiser>
+            <OrganisationId>64</OrganisationId>
+        </Organiser>
+        <EventRace raceLightCondition="Night" raceDistance="Middle">
+            <EventRaceId>8691</EventRaceId>
+            <EventId>8391</EventId>
+            <Name></Name>
+            <RaceDate>
+                <Date>2019-07-25</Date>
+                <Clock>09:00:00</Clock>
+            </RaceDate>
+        </EventRace>
+        <WebURL>http://www.vicorienteering.asn.au/parkstreet</WebURL>
+        <PunchingUnitType value="manual" />
+        <ModifyDate>
+            <Date>2019-05-20</Date>
+            <Clock>01:07:05</Clock>
+        </ModifyDate>
+        <ModifiedBy>
+            <PersonId>272</PersonId>
+        </ModifiedBy>
+        <HashTableEntry>
+            <Key>Eventor_EntryOnTheDay</Key>
+            <Value>1</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_Message</Key>
+            <Value>Start: Sladen Park, Russell Street / Suburb: Newtown / Melway: 401 A9 </Value>
+        </HashTableEntry>
+    </Event>
+    <Event eventForm="IndSingleDay">
+        <EventId>8409</EventId>
+        <Name>Salt Creek</Name>
+        <EventClassificationId>4</EventClassificationId>
+        <EventStatusId>4</EventStatusId>
+        <DisciplineId>1</DisciplineId>
+        <StartDate>
+            <Date>2019-07-21</Date>
+            <Clock>01:00:00</Clock>
+        </StartDate>
+        <FinishDate>
+            <Date>2019-07-21</Date>
+            <Clock>05:30:00</Clock>
+        </FinishDate>
+        <Organiser>
+            <OrganisationId>51</OrganisationId>
+        </Organiser>
+        <EventRace raceLightCondition="Day" raceDistance="Long">
+            <EventRaceId>8709</EventRaceId>
+            <EventId>8409</EventId>
+            <Name></Name>
+            <RaceDate>
+                <Date>2019-07-21</Date>
+                <Clock>01:00:00</Clock>
+            </RaceDate>
+        </EventRace>
+        <PunchingUnitType value="manual" />
+        <ModifyDate>
+            <Date>2019-03-05</Date>
+            <Clock>05:58:31</Clock>
+        </ModifyDate>
+        <ModifiedBy>
+            <PersonId>2102</PersonId>
+        </ModifiedBy>
+        <HashTableEntry>
+            <Key>Eventor_EntryOnTheDay</Key>
+            <Value>1</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_Message</Key>
+            <Value>Eyre Peninsula Relays including Saltbush and Lincoln Orienteers</Value>
+        </HashTableEntry>
+    </Event>
+    <Event eventForm="IndSingleDay">
+        <EventId>8438</EventId>
+        <Name>ACT Midweek Series: North Lyneham</Name>
+        <EventClassificationId>4</EventClassificationId>
+        <EventStatusId>4</EventStatusId>
+        <DisciplineId>1</DisciplineId>
+        <StartDate>
+            <Date>2019-07-24</Date>
+            <Clock>02:00:00</Clock>
+        </StartDate>
+        <FinishDate>
+            <Date>2019-07-24</Date>
+            <Clock>04:00:00</Clock>
+        </FinishDate>
+        <Organiser>
+            <OrganisationId>4</OrganisationId>
+        </Organiser>
+        <EventRace raceLightCondition="Day" raceDistance="Middle">
+            <EventRaceId>8741</EventRaceId>
+            <EventId>8438</EventId>
+            <Name></Name>
+            <RaceDate>
+                <Date>2019-07-24</Date>
+                <Clock>02:00:00</Clock>
+            </RaceDate>
+            <EventCenterPosition x="149.11733" y="-35.23982" unit="WGS-84" />
+        </EventRace>
+        <WebURL>http://act.orienteering.asn.au</WebURL>
+        <PunchingUnitType value="manual" />
+        <ModifyDate>
+            <Date>2019-07-14</Date>
+            <Clock>10:27:13</Clock>
+        </ModifyDate>
+        <ModifiedBy>
+            <PersonId>458</PersonId>
+        </ModifiedBy>
+        <HashTableEntry>
+            <Key>Eventor_EntryOnTheDay</Key>
+            <Value>1</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_Message</Key>
+            <Value>The ACT mid-week series is a low key orienteering event held each Wednesday lunch mostly in Canberra Nature Park.  Everyone is welcome, just turn up, no requirement to book or notify anyone before the event. 
+---
+Courses are about 3km and 5m in length of moderate navigation difficulty. During school holidays we will also have an easy navigation course. NOTE to Schools and groups: Please advise beforehand so we can ensure we have enough maps. 
+---
+Enter-On-The-Day. Start anytime between 12 noon and 1pm. You must return by 2pm. Entry fees are $10 adult and $7 juniors. Cash payment only.
+---
+Assembly: Salkauskas Cres, North Lyneham.
+
+</Value>
+        </HashTableEntry>
+    </Event>
+    <Event eventForm="IndSingleDay">
+        <EventId>8532</EventId>
+        <Name>Wed Evening Training - Barnsley </Name>
+        <EventClassificationId>5</EventClassificationId>
+        <EventStatusId>4</EventStatusId>
+        <DisciplineId>1</DisciplineId>
+        <StartDate>
+            <Date>2019-07-24</Date>
+            <Clock>08:00:00</Clock>
+        </StartDate>
+        <FinishDate>
+            <Date>2019-07-24</Date>
+            <Clock>09:30:00</Clock>
+        </FinishDate>
+        <Organiser>
+            <OrganisationId>29</OrganisationId>
+        </Organiser>
+        <EventRace raceLightCondition="Night" raceDistance="Middle">
+            <EventRaceId>8838</EventRaceId>
+            <EventId>8532</EventId>
+            <Name></Name>
+            <RaceDate>
+                <Date>2019-07-24</Date>
+                <Clock>08:00:00</Clock>
+            </RaceDate>
+            <EventCenterPosition x="151.58067" y="-32.92028" unit="WGS-84" />
+        </EventRace>
+        <WebURL>http://www.newcastleorienteering.asn.au/</WebURL>
+        <ModifyDate>
+            <Date>2019-07-09</Date>
+            <Clock>01:43:26</Clock>
+        </ModifyDate>
+        <ModifiedBy>
+            <PersonId>5505</PersonId>
+        </ModifiedBy>
+        <HashTableEntry>
+            <Key>Eventor_Message</Key>
+            <Value>Location: Parking at Holmesville Skatepark, Appletree Rd, Holmesville
+
+Become a better orienteer by practicing in the dark!
+
+START: Map hand out at 6 pm. 
+COURSE CLOSE: 7.30 pm.
+COURSES: Hard (6 km) and Moderate (4 km) with shortening options. 
+NO PUNCHING
+NO RESULTS
+EQUIPMENT:: Orienteering gear. Head lamp. Compass.
+COST: Gold coin donation to cover map printing costs</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_EntryOnTheDay</Key>
+            <Value>1</Value>
+        </HashTableEntry>
+    </Event>
+    <Event eventForm="IndSingleDay">
+        <EventId>8568</EventId>
+        <Name>Casuarina Coastal Reserve</Name>
+        <EventClassificationId>5</EventClassificationId>
+        <EventStatusId>4</EventStatusId>
+        <DisciplineId>1</DisciplineId>
+        <DisciplineId>2</DisciplineId>
+        <StartDate>
+            <Date>2019-07-20</Date>
+            <Clock>21:30:00</Clock>
+        </StartDate>
+        <FinishDate>
+            <Date>2019-07-21</Date>
+            <Clock>01:30:00</Clock>
+        </FinishDate>
+        <Organiser>
+            <OrganisationId>53</OrganisationId>
+        </Organiser>
+        <EventRace raceLightCondition="Day" raceDistance="Long">
+            <EventRaceId>8878</EventRaceId>
+            <EventId>8568</EventId>
+            <Name></Name>
+            <RaceDate>
+                <Date>2019-07-20</Date>
+                <Clock>21:30:00</Clock>
+            </RaceDate>
+            <EventCenterPosition x="130.89444" y="-12.33323" unit="WGS-84" />
+        </EventRace>
+        <WebURL>http://www.teo.asn.au/event/4279</WebURL>
+        <PunchingUnitType value="manual" />
+        <ModifyDate>
+            <Date>2019-04-25</Date>
+            <Clock>22:43:50</Clock>
+        </ModifyDate>
+        <ModifiedBy>
+            <PersonId>6467</PersonId>
+        </ModifiedBy>
+        <HashTableEntry>
+            <Key>Eventor_EntryOnTheDay</Key>
+            <Value>1</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_Message</Key>
+            <Value>Start location to be determined</Value>
+        </HashTableEntry>
+    </Event>
+    <Event eventForm="IndSingleDay">
+        <EventId>8584</EventId>
+        <Name>Public Sprint - Redbank Plains SHS</Name>
+        <EventClassificationId>4</EventClassificationId>
+        <EventStatusId>5</EventStatusId>
+        <DisciplineId>1</DisciplineId>
+        <StartDate>
+            <Date>2019-07-27</Date>
+            <Clock>01:45:00</Clock>
+        </StartDate>
+        <FinishDate>
+            <Date>2019-07-27</Date>
+            <Clock>02:45:00</Clock>
+        </FinishDate>
+        <Organiser>
+            <OrganisationId>6</OrganisationId>
+        </Organiser>
+        <ClassTypeId>2</ClassTypeId>
+        <EventRace raceLightCondition="Day" raceDistance="Sprint">
+            <EventRaceId>8894</EventRaceId>
+            <EventId>8584</EventId>
+            <Name></Name>
+            <RaceDate>
+                <Date>2019-07-27</Date>
+                <Clock>01:45:00</Clock>
+            </RaceDate>
+            <EventCenterPosition x="152.86776" y="-27.64907" unit="WGS-84" />
+        </EventRace>
+        <PunchingUnitType value="SI" />
+        <ModifyDate>
+            <Date>2019-07-06</Date>
+            <Clock>10:58:40</Clock>
+        </ModifyDate>
+        <ModifiedBy>
+            <PersonId>3234</PersonId>
+        </ModifiedBy>
+        <HashTableEntry>
+            <Key>Eventor_PaymentEventId</Key>
+            <Value>1437</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_ApplyEntryFeeDiscount</Key>
+            <Value>1</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_EntryChangeDeadlines</Key>
+            <Value>2019-07-25 13:59:00;EventClass,EventRaces,NumberOfCompetitors,Person,Organisation,PunchingCard,ServiceRequests</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_EntryOnTheDay</Key>
+            <Value>1</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_EntryTermsAndConditions</Key>
+            <Value>In entering this Orienteering event, I/we recognise that the sport of orienteering has certain inherent risks due to its conduct in the natural environment. Included in these risks are injury due to rough terrain and obstacles and the effects of heat, cold and exhaustion.  I/we are also aware there is no personal accident insurance on my participation in the sport and that I/we take part at my/our own risk.
+Privacy Statement: You may be photographed during this event. If you do not agree to having your photograph published, please advise the event organiser.</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_EventClassChangeKeepsEntryDate</Key>
+            <Value>1</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_Message</Key>
+            <Value>Public race held in conjunction with the Qld Schools Orienteering Championships. Race 1: SPRINT at Redbank Plains SHS, This race is suitable for both experienced and inexperienced competitors. Entry Fee for sprint: Adult $10; Junior $5; Family max $25. Please PRE-ENTER and PRE-PAY. Family discount will automatically calculate during entry process.  
+Course lengths 1km-3km.</Value>
+        </HashTableEntry>
+    </Event>
+    <Event eventForm="IndSingleDay">
+        <EventId>8586</EventId>
+        <Name>Public bush event - Kholo</Name>
+        <EventClassificationId>5</EventClassificationId>
+        <EventStatusId>5</EventStatusId>
+        <DisciplineId>1</DisciplineId>
+        <StartDate>
+            <Date>2019-07-28</Date>
+            <Clock>01:00:00</Clock>
+        </StartDate>
+        <FinishDate>
+            <Date>2019-07-28</Date>
+            <Clock>03:00:00</Clock>
+        </FinishDate>
+        <Organiser>
+            <OrganisationId>6</OrganisationId>
+        </Organiser>
+        <ClassTypeId>2</ClassTypeId>
+        <EventRace raceLightCondition="Day" raceDistance="Long">
+            <EventRaceId>8896</EventRaceId>
+            <EventId>8586</EventId>
+            <Name></Name>
+            <RaceDate>
+                <Date>2019-07-28</Date>
+                <Clock>01:00:00</Clock>
+            </RaceDate>
+            <EventCenterPosition x="152.75184" y="-27.54147" unit="WGS-84" />
+        </EventRace>
+        <PunchingUnitType value="SI" />
+        <ModifyDate>
+            <Date>2019-07-06</Date>
+            <Clock>11:08:48</Clock>
+        </ModifyDate>
+        <ModifiedBy>
+            <PersonId>3234</PersonId>
+        </ModifiedBy>
+        <HashTableEntry>
+            <Key>Eventor_EntryChangeDeadlines</Key>
+            <Value>2019-07-25 13:59:00;EventClass,EventRaces,NumberOfCompetitors,Person,Organisation,PunchingCard,ServiceRequests</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_EntryOnTheDay</Key>
+            <Value>1</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_EntryTermsAndConditions</Key>
+            <Value>In entering this Orienteering event, I/we recognise that the sport of orienteering has certain inherent risks due to its conduct in the natural environment. Included in these risks are injury due to rough terrain and obstacles and the effects of heat, cold and exhaustion.  I/we are also aware there is no personal accident insurance on my participation in the sport and that I/we take part at my/our own risk.
+Privacy Statement: You may be photographed during this event. If you do not agree to having your photograph published, please advise the event organiser.</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_EventClassChangeKeepsEntryDate</Key>
+            <Value>1</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_Message</Key>
+            <Value>Public race held in conjunction with the Qld Schools Orienteering Championships. 
+DIRECTIONS: Take Kholo Road exit from Warrego Highway and travel north. Cross the Brisbane river.  Continue to head north for two kms, look for o-signs. 
+Courses are available for both experienced and inexperienced competitors. Entry Fee: Adult $10; Junior $5; Family max $25.
+Please PRE-ENTER and PRE-PAY. Family discount will automatically calculate during entry process.
+
+APPROXIMATE course lengths (to be confirmed):
+Hard 1 - 6km
+Hard 2 - 5km
+Hard 5 - 3km
+Moderate 1 - 4.5km
+Moderate 2 - 4km
+Easy - 2.5km
+Very Easy - 2km</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_PaymentEventId</Key>
+            <Value>1438</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_ApplyEntryFeeDiscount</Key>
+            <Value>1</Value>
+        </HashTableEntry>
+    </Event>
+    <Event eventForm="IndSingleDay">
+        <EventId>8587</EventId>
+        <Name>Qld Schools Orienteering Champs Hagaby -  Kholo Rd</Name>
+        <EventClassificationId>1</EventClassificationId>
+        <EventStatusId>5</EventStatusId>
+        <DisciplineId>1</DisciplineId>
+        <StartDate>
+            <Date>2019-07-27</Date>
+            <Clock>05:00:00</Clock>
+        </StartDate>
+        <FinishDate>
+            <Date>2019-07-27</Date>
+            <Clock>06:30:00</Clock>
+        </FinishDate>
+        <Organiser>
+            <OrganisationId>6</OrganisationId>
+        </Organiser>
+        <ClassTypeId>2</ClassTypeId>
+        <EventRace raceLightCondition="Day" raceDistance="Middle">
+            <EventRaceId>8897</EventRaceId>
+            <EventId>8587</EventId>
+            <Name></Name>
+            <RaceDate>
+                <Date>2019-07-27</Date>
+                <Clock>05:00:00</Clock>
+            </RaceDate>
+            <EventCenterPosition x="152.75207" y="-27.53992" unit="WGS-84" />
+        </EventRace>
+        <PunchingUnitType value="SI" />
+        <ModifyDate>
+            <Date>2019-07-01</Date>
+            <Clock>10:09:41</Clock>
+        </ModifyDate>
+        <ModifiedBy>
+            <PersonId>486</PersonId>
+        </ModifiedBy>
+        <HashTableEntry>
+            <Key>Eventor_Message</Key>
+            <Value>Race 2 of the Qld Schools Orienteering Championships is a Hagaby-style race (1-person relay) at Kholo Rd. MASS START AT 3:00PM. Briefing at 2.45pm. Join the challenge of the COUNTRY Vs CITY competition (The Red Shirts vs The Rest!). 
+
+DARLING DOWNS TEAM MEMBERS who are club members, will be entered by their team manager.  DARLING DOWNS TEAM MEMBERS WHO ARE NOT CLUB MEMBERS need to enter themselves. 
+
+In a “hagaby” event, the course is divided into loops.  There is a mass start. Each competitor completes all the loops, but not necessarily in the same order. 
+
+DIRECTIONS: Turn off the Warrego Highway north onto Kholo Rd. Cross the Brisbane river.  Continue to head north for two kms, look for o-signs.</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_PaymentEventId</Key>
+            <Value>1436</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_EntryChangeDeadlines</Key>
+            <Value>2019-07-17 13:59:00;EventClass,EventRaces,NumberOfCompetitors,Person,Organisation,PunchingCard,ServiceRequests</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_EntryTermsAndConditions</Key>
+            <Value>In entering this Orienteering event, I/we recognise that the sport of orienteering has certain inherent risks due to its conduct in the natural environment. Included in these risks are injury due to rough terrain and obstacles and the effects of heat, cold and exhaustion.  I/we are also aware there is no personal accident insurance on my participation in the sport and that I/we take part at my/our own risk.
+Privacy Statement: You may be photographed during this event. If you do not agree to having your photograph published, please advise the event organiser.</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_EventClassChangeKeepsEntryDate</Key>
+            <Value>1</Value>
+        </HashTableEntry>
+    </Event>
+    <Event eventForm="IndSingleDay">
+        <EventId>8632</EventId>
+        <Name>Perseverance Dam coaching</Name>
+        <EventClassificationId>5</EventClassificationId>
+        <EventStatusId>5</EventStatusId>
+        <DisciplineId>1</DisciplineId>
+        <StartDate>
+            <Date>2019-07-21</Date>
+            <Clock>00:30:00</Clock>
+        </StartDate>
+        <FinishDate>
+            <Date>2019-07-21</Date>
+            <Clock>00:30:00</Clock>
+        </FinishDate>
+        <Organiser>
+            <OrganisationId>42</OrganisationId>
+        </Organiser>
+        <ClassTypeId>2</ClassTypeId>
+        <EventRace raceLightCondition="Day" raceDistance="Long">
+            <EventRaceId>8946</EventRaceId>
+            <EventId>8632</EventId>
+            <Name></Name>
+            <RaceDate>
+                <Date>2019-07-21</Date>
+                <Clock>00:30:00</Clock>
+            </RaceDate>
+            <EventCenterPosition x="152.12715" y="-27.28772" unit="WGS-84" />
+        </EventRace>
+        <PunchingUnitType value="SI" />
+        <ModifyDate>
+            <Date>2019-07-14</Date>
+            <Clock>23:51:22</Clock>
+        </ModifyDate>
+        <ModifiedBy>
+            <PersonId>484</PersonId>
+        </ModifiedBy>
+        <HashTableEntry>
+            <Key>Eventor_EntryTermsAndConditions</Key>
+            <Value>In entering this Orienteering event, I/we recognise that the sport of orienteering has certain inherent risks due to its conduct in the natural environment. Included in these risks are injury due to rough terrain and obstacles and the effects of heat, cold and exhaustion. I/we are also aware there is no personal accident insurance on my participation in the sport and that I/we take part at my/our own risk.
+Privacy Statement
+You may be photographed during this event. If you do not agree to having this photograph published, please advise the event organiser </Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_Message</Key>
+            <Value>Coaching available for all navigational levels, beginners to advanced.  There will be a Hagaby event, with a mass start at 11am.  Ensure you arrive by 10.30 to be ready for this mass start if you wish to participate.</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_EntryOnTheDay</Key>
+            <Value>1</Value>
+        </HashTableEntry>
+    </Event>
+    <Event eventForm="IndSingleDay">
+        <EventId>8647</EventId>
+        <Name>BendigO-Ringen</Name>
+        <EventClassificationId>5</EventClassificationId>
+        <EventStatusId>5</EventStatusId>
+        <DisciplineId>1</DisciplineId>
+        <StartDate>
+            <Date>2019-07-28</Date>
+            <Clock>00:00:00</Clock>
+        </StartDate>
+        <FinishDate>
+            <Date>2019-07-28</Date>
+            <Clock>02:30:00</Clock>
+        </FinishDate>
+        <Organiser>
+            <OrganisationId>65</OrganisationId>
+        </Organiser>
+        <EventRace raceLightCondition="Day" raceDistance="Middle">
+            <EventRaceId>8961</EventRaceId>
+            <EventId>8647</EventId>
+            <Name></Name>
+            <RaceDate>
+                <Date>2019-07-28</Date>
+                <Clock>00:00:00</Clock>
+            </RaceDate>
+            <EventCenterPosition x="144.24944" y="-36.73358" unit="WGS-84" />
+        </EventRace>
+        <PunchingUnitType value="SI" />
+        <ModifyDate>
+            <Date>2019-07-11</Date>
+            <Clock>05:19:18</Clock>
+        </ModifyDate>
+        <ModifiedBy>
+            <PersonId>182</PersonId>
+        </ModifiedBy>
+        <HashTableEntry>
+            <Key>Eventor_EntryChangeDeadlines</Key>
+            <Value>2019-07-25 13:59:00;EventClass,EventRaces,NumberOfCompetitors,Person,Organisation,PunchingCard,ServiceRequests</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_Message</Key>
+            <Value>Please read information sheet for details of the event format.
+
+Initial assembly at California Gully Primary School, Staley St California Gully.
+
+General regulations for events organised by Bendigo Orienteers:
+- Dogs are not permitted to attend or participate.
+- In areas managed by Parks Victoria or DELWP (Forests, reserves, and national, state and regional parks) cars must only be parked on roadways or in designated parking areas.
+
+Starts between 10:00am and 11:00am. Courses close at 12:30pm.
+
+Entry Fees
+Course 1 Adults $13, juniors $ 8. 
+Course 2 – Adults $ 12, juniors $7.
+Course 3 – Adults $11, juniors $6
+Course 4 – Adults $ 10. Juniors $5
+SI Stick hire: $5
+
+</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_PaymentEventId</Key>
+            <Value>1500</Value>
+        </HashTableEntry>
+    </Event>
+    <Event eventForm="IndSingleDay">
+        <EventId>8653</EventId>
+        <Name> Seven Hills, Bush</Name>
+        <EventClassificationId>5</EventClassificationId>
+        <EventStatusId>9</EventStatusId>
+        <DisciplineId>1</DisciplineId>
+        <StartDate>
+            <Date>2019-07-18</Date>
+            <Clock>01:00:00</Clock>
+        </StartDate>
+        <FinishDate>
+            <Date>2019-07-18</Date>
+            <Clock>02:30:00</Clock>
+        </FinishDate>
+        <Organiser>
+            <OrganisationId>6</OrganisationId>
+        </Organiser>
+        <EventRace raceLightCondition="Day" raceDistance="Long">
+            <EventRaceId>8967</EventRaceId>
+            <EventId>8653</EventId>
+            <Name></Name>
+            <RaceDate>
+                <Date>2019-07-18</Date>
+                <Clock>01:00:00</Clock>
+            </RaceDate>
+            <EventCenterPosition x="153.08766" y="-27.47683" unit="WGS-84" />
+        </EventRace>
+        <WebURL>https://oq.orienteering.asn.au/</WebURL>
+        <PunchingUnitType value="manual" />
+        <ModifyDate>
+            <Date>2019-07-18</Date>
+            <Clock>04:43:38</Clock>
+        </ModifyDate>
+        <ModifiedBy>
+            <PersonId>9182</PersonId>
+        </ModifiedBy>
+        <HashTableEntry>
+            <Key>Eventor_EntryOnTheDay</Key>
+            <Value>1</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_EntryTermsAndConditions</Key>
+            <Value>In entering this Orienteering event, I/we recognise that the sport of orienteering has certain inherent risks due to its conduct in the natural environment. Included in these risks are injury due to rough terrain and obstacles and the effects of heat, cold and exhaustion. I/we are also aware there is no personal accident insurance on my participation in the sport and that I/we take part at my/our own risk.</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_Message</Key>
+            <Value>Bush Event in very good area. Organiser: Murray Haines. Cost $5 Member $7 Non Member $12 Family Member $15 Family Non Member. Starts 11.00 -11.30 or a bit earlier. Assembly area: At the end of Dalrello St, Carina. The courses lengths will be: Short 1.8 km Med 2.8 Long 4.0.</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>officialResult_8967</Key>
+            <Value>2019-07-18 04:43:38</Value>
+        </HashTableEntry>
+    </Event>
+    <Event eventForm="IndSingleDay">
+        <EventId>8668</EventId>
+        <Name>Springfield Central - Robelle Domain Scout Leaders Experience #2</Name>
+        <EventClassificationId>4</EventClassificationId>
+        <EventStatusId>4</EventStatusId>
+        <DisciplineId>6</DisciplineId>
+        <StartDate>
+            <Date>2019-07-24</Date>
+            <Clock>09:00:00</Clock>
+        </StartDate>
+        <FinishDate>
+            <Date>2019-07-24</Date>
+            <Clock>11:00:00</Clock>
+        </FinishDate>
+        <Organiser>
+            <OrganisationId>6</OrganisationId>
+        </Organiser>
+        <EventRace raceLightCondition="Day" raceDistance="Sprint">
+            <EventRaceId>8991</EventRaceId>
+            <EventId>8668</EventId>
+            <Name></Name>
+            <RaceDate>
+                <Date>2019-07-24</Date>
+                <Clock>09:00:00</Clock>
+            </RaceDate>
+            <EventCenterPosition x="152.90436" y="-27.67971" unit="WGS-84" />
+        </EventRace>
+        <WebURL>http://www.mtbo.com.au</WebURL>
+        <PunchingUnitType value="SI" />
+        <PunchingUnitType value="manual" />
+        <ModifyDate>
+            <Date>2019-06-12</Date>
+            <Clock>02:53:35</Clock>
+        </ModifyDate>
+        <ModifiedBy>
+            <PersonId>6010</PersonId>
+        </ModifiedBy>
+        <HashTableEntry>
+            <Key>Eventor_EntryTermsAndConditions</Key>
+            <Value>In entering this Orienteering event, I/we recognise that the sport of orienteering has certain inherent risks due to its conduct in the natural environment. Included in these risks are injury due to rough terrain and obstacles and the effects of heat, cold and exhaustion. I/we are also aware there is no personal accident insurance on my participation in the sport and that I/we take part at my/our own risk.</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_Message</Key>
+            <Value>Privacy Statement
+You may be photographed during this event. If you do not agree to having your photograph published, please advise the event organiser.</Value>
+        </HashTableEntry>
+    </Event>
+    <Event eventForm="IndSingleDay">
+        <EventId>8670</EventId>
+        <Name>Chermside - 7th Brigade Park - Coot-tha MTB Club Bike O Afternoon</Name>
+        <EventClassificationId>5</EventClassificationId>
+        <EventStatusId>4</EventStatusId>
+        <DisciplineId>2</DisciplineId>
+        <DisciplineId>6</DisciplineId>
+        <StartDate>
+            <Date>2019-07-21</Date>
+            <Clock>04:00:00</Clock>
+        </StartDate>
+        <FinishDate>
+            <Date>2019-07-21</Date>
+            <Clock>06:00:00</Clock>
+        </FinishDate>
+        <Organiser>
+            <OrganisationId>6</OrganisationId>
+        </Organiser>
+        <EventRace raceLightCondition="Day" raceDistance="Sprint">
+            <EventRaceId>8993</EventRaceId>
+            <EventId>8670</EventId>
+            <Name></Name>
+            <RaceDate>
+                <Date>2019-07-21</Date>
+                <Clock>04:00:00</Clock>
+            </RaceDate>
+            <EventCenterPosition x="153.04083" y="-27.37801" unit="WGS-84" />
+        </EventRace>
+        <WebURL>http://www.mtbo.com.au</WebURL>
+        <PunchingUnitType value="SI" />
+        <ModifyDate>
+            <Date>2019-07-01</Date>
+            <Clock>02:16:59</Clock>
+        </ModifyDate>
+        <ModifiedBy>
+            <PersonId>6010</PersonId>
+        </ModifiedBy>
+        <HashTableEntry>
+            <Key>Eventor_Message</Key>
+            <Value>Privacy Statement
+You may be photographed during this event. If you do not agree to having your photograph published, please advise the event organiser.</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_ConsultationPerformed</Key>
+            <Value>1</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_EntryTermsAndConditions</Key>
+            <Value>In entering this Orienteering event, I/we recognise that the sport of orienteering has certain inherent risks due to its conduct in the natural environment. Included in these risks are injury due to rough terrain and obstacles and the effects of heat, cold and exhaustion. I/we are also aware there is no personal accident insurance on my participation in the sport and that I/we take part at my/our own risk.</Value>
+        </HashTableEntry>
+    </Event>
+    <Event eventForm="IndSingleDay">
+        <EventId>8675</EventId>
+        <Name>NSW Junior Development Camp Belanglo SF (All welcome)</Name>
+        <EventClassificationId>4</EventClassificationId>
+        <EventStatusId>5</EventStatusId>
+        <DisciplineId>1</DisciplineId>
+        <DisciplineId>6</DisciplineId>
+        <StartDate>
+            <Date>2019-07-17</Date>
+            <Clock>14:00:00</Clock>
+        </StartDate>
+        <FinishDate>
+            <Date>2019-07-20</Date>
+            <Clock>14:00:00</Clock>
+        </FinishDate>
+        <Organiser>
+            <OrganisationId>5</OrganisationId>
+        </Organiser>
+        <EventRace raceLightCondition="Day" raceDistance="Middle">
+            <EventRaceId>8998</EventRaceId>
+            <EventId>8675</EventId>
+            <Name></Name>
+            <RaceDate>
+                <Date>2019-07-17</Date>
+                <Clock>14:00:00</Clock>
+            </RaceDate>
+            <EventCenterPosition x="150.25859" y="-34.53198" unit="WGS-84" />
+        </EventRace>
+        <PunchingUnitType value="SI" />
+        <PunchingUnitType value="manual" />
+        <ModifyDate>
+            <Date>2019-06-24</Date>
+            <Clock>03:24:16</Clock>
+        </ModifyDate>
+        <ModifiedBy>
+            <PersonId>5505</PersonId>
+        </ModifiedBy>
+        <HashTableEntry>
+            <Key>Eventor_ConsultationPerformed</Key>
+            <Value>1</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_EntryChangeDeadlines</Key>
+            <Value>2019-07-16 13:59:59;EventClass,EventRaces,NumberOfCompetitors,Person,Organisation,PunchingCard,ServiceRequests</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_EntryOnTheDay</Key>
+            <Value>1</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_EntryTermsAndConditions</Key>
+            <Value>Risk Waiver
+We have read the general risk warning and the specific risk warning in the Event Information  for this event. We are aware that orienteering is a recreational activity that can be dangerous, accept that there is a degree of risk and acknowledge that we participate in this event at our own risk.
+We are aware of, and will comply with Orienteering NSW’s Competitors’ Rules.
+We release Orienteering NSW, its affiliated clubs, members and all other parties associated with organising the event from any responsibility or legal liability associated with our  presence at, and participation in, this orienteering event.
+To the extent that the Competition and Consumer Act 2010 applies this release is limited to responsibility and legal liability for death or personal injury and does not apply to significant personal injury caused by reckless conduct by Orienteering NSW, its affiliated clubs, members and all other parties associated with organising the event.
+General Risk Warning
+Competing in an orienteering event is subject to risks. These include death, serious injury or illness due to:
+•	rough terrain and obstacles;
+•	overexertion;
+•	heat, cold or other adverse weather conditions; 
+•	plant and animal life; and
+•	accidents with vehicles, other competitors or pedestrians.
+
+There are also risks:
+•	that access to medical, evacuation or search services might be slow; and
+•	of damage to, or loss of, your personal property.
+Statements
+1.	We are aware there is no health, accident, ambulance, disability or life insurance provided.
+2.	We allow the free use of our names and photo in entry information, results, news, marketing and promotional material pertaining to the event or orienteering. This does not extend to publishing a photo of a person under 18 with their name.
+3.	We will ensure that any children under our control at the event are appropriately supervised at all times. We acknowledge that parents and guardians are responsible for deciding whether their children are capable of orienteering by themselves at each event.
+</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_Message</Key>
+            <Value>Location: Belanglo State Forest (ONSW Property/Hut)
+
+The camp is aimed at allowing juniors to enjoy the squad environment to encourage the social element of orienteering, as well as providing juniors with the fundamental skills required to enjoy the sport of orienteering. For those who will be competing at the Australian Schools Orienteering champs, the camp has the additional focus of preparing the team for the unique challenges of the carnival technically, mentally and physically. 
+
+The camp is intended for anyone aged 12-20 who is interested in orienteering as a sport. Orienteers who are older than 20 years old but would like to assist in the camp are welcome to attend as well.  
+
+Cost approximately $100-160 per child. 
+
+</Value>
+        </HashTableEntry>
+    </Event>
+    <Event eventForm="IndSingleDay">
+        <EventId>8687</EventId>
+        <Name>Carrolls Spring</Name>
+        <EventClassificationId>5</EventClassificationId>
+        <EventStatusId>5</EventStatusId>
+        <DisciplineId>1</DisciplineId>
+        <StartDate>
+            <Date>2019-07-21</Date>
+            <Clock>01:00:00</Clock>
+        </StartDate>
+        <FinishDate>
+            <Date>2019-07-21</Date>
+            <Clock>02:00:00</Clock>
+        </FinishDate>
+        <Organiser>
+            <OrganisationId>69</OrganisationId>
+        </Organiser>
+        <ClassTypeId>4</ClassTypeId>
+        <ClassTypeId>2</ClassTypeId>
+        <EventRace raceLightCondition="Day" raceDistance="Middle">
+            <EventRaceId>9010</EventRaceId>
+            <EventId>8687</EventId>
+            <Name></Name>
+            <RaceDate>
+                <Date>2019-07-21</Date>
+                <Clock>01:00:00</Clock>
+            </RaceDate>
+            <EventCenterPosition x="144.1702" y="-37.49728" unit="WGS-84" />
+        </EventRace>
+        <PunchingUnitType value="SI" />
+        <ModifyDate>
+            <Date>2019-07-14</Date>
+            <Clock>01:39:25</Clock>
+        </ModifyDate>
+        <ModifiedBy>
+            <PersonId>3</PersonId>
+        </ModifiedBy>
+        <HashTableEntry>
+            <Key>Eventor_ConsultationPerformed</Key>
+            <Value>1</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_EntryChangeDeadlines</Key>
+            <Value>2019-07-08 13:59:00;EventClass,EventRaces,NumberOfCompetitors,Person,Organisation,PunchingCard,ServiceRequests</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_EntryOnTheDay</Key>
+            <Value>1</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_Message</Key>
+            <Value>Probably the most beautiful bit of forest on an orienteering map in Victoria, with the lovely Werribee River bisecting the map.  It is an unusual orienteering challenge.  Subtle spur gully will require accurate compass work, but large fallen trees and areas of thicker vegetation make travelling in a straight line difficult.
+
+Head north for 13 km from the Ballan exit on the Western Freeway to the former Mineral Springs Hotel.  Turn right into the Spargo Blakeville Road and continue for 1.4 km to McGees Road.  Turn right and follow McGees Road for 2.7 km to Carrolls Track.  Turn right again and continue for 500 metres to the assembly area.  Do not try to come in on Carrolls Track from the west unless you have a serious 4WD and intend to use it.  
+
+Long hard, short hard and moderate courses on offer.  The forest is sometimes slow, and courses will be a bit longer than they seem.  The long hard course will cross the knee deep Werribee River.  Other minor creeks are also flowing.  Expect to get wet feet! 
+
+Pre-enter please to help with map numbers and pay on the day.</Value>
+        </HashTableEntry>
+    </Event>
+    <Event eventForm="IndSingleDay">
+        <EventId>8690</EventId>
+        <Name>Night Nav - Chelmer</Name>
+        <EventClassificationId>5</EventClassificationId>
+        <EventStatusId>4</EventStatusId>
+        <DisciplineId>1</DisciplineId>
+        <DisciplineId>6</DisciplineId>
+        <StartDate>
+            <Date>2019-07-23</Date>
+            <Clock>08:30:00</Clock>
+        </StartDate>
+        <FinishDate>
+            <Date>2019-07-23</Date>
+            <Clock>09:30:00</Clock>
+        </FinishDate>
+        <Organiser>
+            <OrganisationId>46</OrganisationId>
+        </Organiser>
+        <EventRace raceLightCondition="Night" raceDistance="Long">
+            <EventRaceId>9013</EventRaceId>
+            <EventId>8690</EventId>
+            <Name></Name>
+            <RaceDate>
+                <Date>2019-07-23</Date>
+                <Clock>08:30:00</Clock>
+            </RaceDate>
+            <EventCenterPosition x="152.98517" y="-27.51842" unit="WGS-84" />
+        </EventRace>
+        <WebURL>http://facebook.com/brisbanenightnav</WebURL>
+        <PunchingUnitType value="SI" />
+        <ModifyDate>
+            <Date>2019-06-25</Date>
+            <Clock>12:22:35</Clock>
+        </ModifyDate>
+        <ModifiedBy>
+            <PersonId>3234</PersonId>
+        </ModifiedBy>
+        <HashTableEntry>
+            <Key>Eventor_EntryOnTheDay</Key>
+            <Value>1</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_Message</Key>
+            <Value>Meet at Faulkner Park Playground. Park at the end of Waratah Ave, Graceville.
+Arrive around 6.10pm for registration and instructions then a 6.30pm mass start.
+
+40 minute Score Event. Course setter: Paul Fleming
+
+Use the App and a Map to run, jog or walk through local parks and streets in the cool of the evening. Download the latest version of maprun app on your smartphone before you arrive and your phone will register the checkpoints you visit. (See links on this page to obtain the App).
+
+All ages and fitness levels catered for. Compete individually or participate in a group. Children under 14 must be accompanied by an adult. Bring a small torch or head lamp. Full instructions given.
+
+Detailed results will be available via the links provided on this page.
+
+$5 per person or $12 per family. Courses close at 7.30pm.</Value>
+        </HashTableEntry>
+    </Event>
+    <Event eventForm="IndSingleDay">
+        <EventId>8701</EventId>
+        <Name>Boronia Heights, Park &amp; Street</Name>
+        <EventClassificationId>5</EventClassificationId>
+        <EventStatusId>4</EventStatusId>
+        <DisciplineId>1</DisciplineId>
+        <DisciplineId>6</DisciplineId>
+        <StartDate>
+            <Date>2019-07-25</Date>
+            <Clock>01:00:00</Clock>
+        </StartDate>
+        <FinishDate>
+            <Date>2019-07-25</Date>
+            <Clock>02:30:00</Clock>
+        </FinishDate>
+        <Organiser>
+            <OrganisationId>6</OrganisationId>
+        </Organiser>
+        <EventRace raceLightCondition="Day" raceDistance="Long">
+            <EventRaceId>9024</EventRaceId>
+            <EventId>8701</EventId>
+            <Name></Name>
+            <RaceDate>
+                <Date>2019-07-25</Date>
+                <Clock>01:00:00</Clock>
+            </RaceDate>
+            <EventCenterPosition x="153.02706" y="-27.69304" unit="WGS-84" />
+        </EventRace>
+        <WebURL>http://oq.orienteering.asn.au/</WebURL>
+        <PunchingUnitType value="manual" />
+        <ModifyDate>
+            <Date>2019-07-02</Date>
+            <Clock>06:08:03</Clock>
+        </ModifyDate>
+        <ModifiedBy>
+            <PersonId>9182</PersonId>
+        </ModifiedBy>
+        <HashTableEntry>
+            <Key>Eventor_EntryTermsAndConditions</Key>
+            <Value>In entering this Orienteering event, I/we recognise that the sport of orienteering has certain inherent risks due to its conduct in the natural environment. Included in these risks are injury due to rough terrain and obstacles and the effects of heat, cold and exhaustion. I/we are also aware there is no personal accident insurance on my participation in the sport and that I/we take part at my/our own risk.
+Privacy Statement
+You may be photographed during this event. If you do not agree to having your photograph published, please advise the event organiser.</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_Message</Key>
+            <Value>Great bit of Bush. Organisers: Neil Simson. Cost Members/Non-Members $5/$7, Families $12/$15. Starts 11.00 to 11.30am, at the shelter in the centre of the Park off Conlon Street, Boronia Heights.</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_EntryOnTheDay</Key>
+            <Value>1</Value>
+        </HashTableEntry>
+    </Event>
+    <Event eventForm="IndSingleDay">
+        <EventId>8702</EventId>
+        <Name>Fiona Calabro Memorial event - Stockyard Creek, Burbank</Name>
+        <EventClassificationId>5</EventClassificationId>
+        <EventStatusId>5</EventStatusId>
+        <DisciplineId>1</DisciplineId>
+        <StartDate>
+            <Date>2019-07-20</Date>
+            <Clock>23:00:00</Clock>
+        </StartDate>
+        <FinishDate>
+            <Date>2019-07-21</Date>
+            <Clock>02:00:00</Clock>
+        </FinishDate>
+        <Organiser>
+            <OrganisationId>44</OrganisationId>
+        </Organiser>
+        <EventRace raceLightCondition="Day" raceDistance="Long">
+            <EventRaceId>9025</EventRaceId>
+            <EventId>8702</EventId>
+            <Name></Name>
+            <RaceDate>
+                <Date>2019-07-20</Date>
+                <Clock>23:00:00</Clock>
+            </RaceDate>
+            <EventCenterPosition x="153.16391" y="-27.57064" unit="WGS-84" />
+        </EventRace>
+        <WebURL>http://oq.orienteering.asn.au/</WebURL>
+        <PunchingUnitType value="SI" />
+        <ModifyDate>
+            <Date>2019-07-16</Date>
+            <Clock>01:35:07</Clock>
+        </ModifyDate>
+        <ModifiedBy>
+            <PersonId>2526</PersonId>
+        </ModifiedBy>
+        <HashTableEntry>
+            <Key>Eventor_Message</Key>
+            <Value>Directions: Stockyard Creek, Brisbane Koala Bushland, 137 Alperton Road, Burbank. 
+
+Courses: 
+Hard 1 - 6.2 km; 
+Hard 2 - 4.2km
+Hard 3 - 2.4km; 
+Moderate - 2.9km; 
+Easy - 1.6km; 
+Very Easy - 1.2km. 
+
+Event fees - Adult - $10 for members, $13 for non members. Junior $6 for members, $9 for non members; Family $26. NEWCOMERS WELCOME. 
+
+Starts between 9:00am-10:30am. Course closure at 12:00am. 
+
+Toohey Forest will be running a cake stall on the day with all proceeds going to the Cure Brain Cancer Foundation.</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_EntryChangeDeadlines</Key>
+            <Value>2019-07-18 13:59:00;EventClass,EventRaces,NumberOfCompetitors,Person,Organisation,PunchingCard,ServiceRequests</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_EntryOnTheDay</Key>
+            <Value>1</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_EntryTermsAndConditions</Key>
+            <Value>In entering this Orienteering event, I/we recognize that the sport of orienteering has certain inherent risks due to its conduct in the natural environment. Included in these risks are injury due to rough terrain and obstacles and the effects of heat, cold and exhaustion. I/we are also aware there is no personal accident insurance on my participation in the sport and that I/we take part at my/our own risk.</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_EventClassChangeKeepsEntryDate</Key>
+            <Value>1</Value>
+        </HashTableEntry>
+    </Event>
+    <Event eventForm="IndSingleDay">
+        <EventId>8703</EventId>
+        <Name>SWOT Bush 3 Evedon</Name>
+        <EventClassificationId>5</EventClassificationId>
+        <EventStatusId>4</EventStatusId>
+        <DisciplineId>1</DisciplineId>
+        <StartDate>
+            <Date>2019-07-28</Date>
+            <Clock>04:30:00</Clock>
+        </StartDate>
+        <FinishDate>
+            <Date>2019-07-28</Date>
+            <Clock>04:30:00</Clock>
+        </FinishDate>
+        <Organiser>
+            <OrganisationId>77</OrganisationId>
+        </Organiser>
+        <EventRace raceLightCondition="Day" raceDistance="Middle">
+            <EventRaceId>9026</EventRaceId>
+            <EventId>8703</EventId>
+            <Name></Name>
+            <RaceDate>
+                <Date>2019-07-28</Date>
+                <Clock>04:30:00</Clock>
+            </RaceDate>
+            <EventCenterPosition x="115.85044" y="-33.33463" unit="WGS-84" />
+        </EventRace>
+        <WebURL>https://wa.orienteering.asn.au/clubs/swot</WebURL>
+        <PunchingUnitType value="manual" />
+        <ModifyDate>
+            <Date>2019-06-27</Date>
+            <Clock>08:07:50</Clock>
+        </ModifyDate>
+        <ModifiedBy>
+            <PersonId>1697</PersonId>
+        </ModifiedBy>
+        <HashTableEntry>
+            <Key>Eventor_EntryOnTheDay</Key>
+            <Value>1</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_EntryTermsAndConditions</Key>
+            <Value>Event Fees: Full Members: $5 (adult), $3 (school-age child), $12 (family) Casual Members: $10 (adult), $5 (school age), $20(family).</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_Message</Key>
+            <Value>Registration from 12.30am. Start times from 1.00pm.</Value>
+        </HashTableEntry>
+    </Event>
+    <Event eventForm="IndSingleDay">
+        <EventId>8726</EventId>
+        <Name>Kuitpo Forest MTBO</Name>
+        <EventClassificationId>5</EventClassificationId>
+        <EventStatusId>5</EventStatusId>
+        <DisciplineId>2</DisciplineId>
+        <StartDate>
+            <Date>2019-07-21</Date>
+            <Clock>01:00:00</Clock>
+        </StartDate>
+        <FinishDate>
+            <Date>2019-07-21</Date>
+            <Clock>04:00:00</Clock>
+        </FinishDate>
+        <Organiser>
+            <OrganisationId>7</OrganisationId>
+        </Organiser>
+        <EventRace raceLightCondition="Day" raceDistance="Long">
+            <EventRaceId>9054</EventRaceId>
+            <EventId>8726</EventId>
+            <Name></Name>
+            <RaceDate>
+                <Date>2019-07-21</Date>
+                <Clock>01:00:00</Clock>
+            </RaceDate>
+            <EventCenterPosition x="138.70097" y="-35.2153" unit="WGS-84" />
+        </EventRace>
+        <PunchingUnitType value="manual" />
+        <ModifyDate>
+            <Date>2019-07-17</Date>
+            <Clock>03:35:21</Clock>
+        </ModifyDate>
+        <ModifiedBy>
+            <PersonId>194</PersonId>
+        </ModifiedBy>
+        <HashTableEntry>
+            <Key>Eventor_EntryOnTheDay</Key>
+            <Value>1</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_EntryTermsAndConditions</Key>
+            <Value>RISK STATEMENT:  In entering this event you should recognise that the event is a recreational activity that may involve significant risk of physical harm and has certain inherent and obvious risks due to its conduct in both urban and natural environments. Included in these risks are injury due to: rough terrain and obstacles; the effects of heat, cold and other adverse weather conditions; plant and animal life; vehicular traffic; and remoteness to medical services or evacuation difficulties if you become disabled.
+ You should recognise that orienteering can be a dangerous recreational activity and the enjoyment of orienteering is derived in part from the inherent and obvious risks associated with the activity. You should be aware that there is no personal accident insurance on your participation in the sport and you participate at your own risk. It is the responsibility of parents and guardians to decide whether their children are capable of orienteering by themselves at each event. Parents and guardians should ensure that their children are supervised at all times. 
+DISCLAIMER: To the extent permitted by law, Orienteering SA Incorporated  and its member clubs, council members, event organisers, controllers, planners, volunteers, officials, fellow members and all parties associated with organising the event (together the “Associated Entities”) excludes all: • liability (including for negligence) to you or anyone else in respect of any death, bodily injury, loss or damage (including property damage) howsoever caused which may be sustained or incurred by you as a result of your participation in or being present at an orienteering event supplied or organised by Orienteering SA Incorporated  and/or the Associated Entities; and • warranties or representations, whether express or implied, that the services of Orienteering SA Incorporated  and the Associated Entities will be rendered with reasonable care and skill or that any materials provided by Orienteering SA Incorporated  will be fit for the purpose for which they are supplied
+</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_Message</Key>
+            <Value>Fantastic riding on single tracks and 4WD tracks. Individual or team entry. Newcomers welcome.
+9.45am - Registration starts.
+10.10am - Map release
+10.30am – Mass Start (pre-start briefing at 10.25am)
+1:30pm – Finish time with 5 points deducted per minute of late return.
+DNF if more than 30 minutes late.
+ 
+Entry fees are per person and include ForestrySA levies. Pay on day :
+Senior &gt;21 Member $15, non-member $20
+Junior &lt;21yo Member $10, non-member $15
+‘Member’ means current orienteering club membership as recognised under Orienteering SA.
+Some rotating map holders will be available for hire at $5.
+Please be aware that this event uses public roads and all road rules apply.
+A risk indemnity form must be signed at the event with payment before you get your map.
+Click to enter on line or email entry details to pmayer4@me.com</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_ConsultationPerformed</Key>
+            <Value>1</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_EntryChangeDeadlines</Key>
+            <Value>2019-07-17 14:29:00;EventClass,EventRaces,NumberOfCompetitors,Person,Organisation,PunchingCard,ServiceRequests</Value>
+        </HashTableEntry>
+    </Event>
+    <Event eventForm="IndSingleDay">
+        <EventId>8742</EventId>
+        <Name>Orienteering Victoria Youth Camp - Payment</Name>
+        <EventClassificationId>5</EventClassificationId>
+        <EventStatusId>5</EventStatusId>
+        <DisciplineId>1</DisciplineId>
+        <StartDate>
+            <Date>2019-07-24</Date>
+            <Clock>14:00:00</Clock>
+        </StartDate>
+        <FinishDate>
+            <Date>2019-07-24</Date>
+            <Clock>14:00:00</Clock>
+        </FinishDate>
+        <Organiser>
+            <OrganisationId>9</OrganisationId>
+        </Organiser>
+        <ClassTypeId>2</ClassTypeId>
+        <EventRace raceLightCondition="Day" raceDistance="Long">
+            <EventRaceId>9070</EventRaceId>
+            <EventId>8742</EventId>
+            <Name></Name>
+            <RaceDate>
+                <Date>2019-07-24</Date>
+                <Clock>14:00:00</Clock>
+            </RaceDate>
+            <EventCenterPosition x="145.13534" y="-37.74418" unit="WGS-84" />
+        </EventRace>
+        <PunchingUnitType value="manual" />
+        <ModifyDate>
+            <Date>2019-07-11</Date>
+            <Clock>05:04:59</Clock>
+        </ModifyDate>
+        <ModifiedBy>
+            <PersonId>2292</PersonId>
+        </ModifiedBy>
+        <HashTableEntry>
+            <Key>Eventor_Message</Key>
+            <Value>This is not an actual event - it is a payment page for the OV Youth Camp that occurred at the beginning of July.</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_PaymentEventId</Key>
+            <Value>1499</Value>
+        </HashTableEntry>
+    </Event>
+    <Event eventForm="IndSingleDay">
+        <EventId>8756</EventId>
+        <Name>SWOT Junior Training - Evedon (Offer)</Name>
+        <EventClassificationId>5</EventClassificationId>
+        <EventStatusId>5</EventStatusId>
+        <DisciplineId>1</DisciplineId>
+        <StartDate>
+            <Date>2019-07-18</Date>
+            <Clock>06:00:00</Clock>
+        </StartDate>
+        <FinishDate>
+            <Date>2019-07-18</Date>
+            <Clock>09:00:00</Clock>
+        </FinishDate>
+        <Organiser>
+            <OrganisationId>77</OrganisationId>
+        </Organiser>
+        <ClassTypeId>2</ClassTypeId>
+        <EventRace raceLightCondition="Day" raceDistance="Middle">
+            <EventRaceId>9084</EventRaceId>
+            <EventId>8756</EventId>
+            <Name></Name>
+            <RaceDate>
+                <Date>2019-07-18</Date>
+                <Clock>06:00:00</Clock>
+            </RaceDate>
+            <EventCenterPosition x="115.8678" y="-33.34412" unit="WGS-84" />
+        </EventRace>
+        <WebURL>https://wa.orienteering.asn.au/clubs/swot</WebURL>
+        <PunchingUnitType value="manual" />
+        <ModifyDate>
+            <Date>2019-07-15</Date>
+            <Clock>10:32:30</Clock>
+        </ModifyDate>
+        <ModifiedBy>
+            <PersonId>1717</PersonId>
+        </ModifiedBy>
+        <HashTableEntry>
+            <Key>Eventor_EntryChangeDeadlines</Key>
+            <Value>2019-07-17 15:59:59;EventClass,EventRaces,NumberOfCompetitors,Person,Organisation,PunchingCard,ServiceRequests</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_EntryOnTheDay</Key>
+            <Value>1</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_Message</Key>
+            <Value>Bring O-Kit, water, gaiters/long pants, notebook and pen</Value>
+        </HashTableEntry>
+    </Event>
+    <Event eventForm="IndSingleDay">
+        <EventId>8757</EventId>
+        <Name>SWOT Junior Training - route choice/attack points</Name>
+        <EventClassificationId>5</EventClassificationId>
+        <EventStatusId>5</EventStatusId>
+        <DisciplineId>1</DisciplineId>
+        <StartDate>
+            <Date>2019-07-25</Date>
+            <Clock>10:00:00</Clock>
+        </StartDate>
+        <FinishDate>
+            <Date>2019-07-25</Date>
+            <Clock>11:30:00</Clock>
+        </FinishDate>
+        <Organiser>
+            <OrganisationId>77</OrganisationId>
+        </Organiser>
+        <ClassTypeId>2</ClassTypeId>
+        <EventRace raceLightCondition="Night" raceDistance="Middle">
+            <EventRaceId>9085</EventRaceId>
+            <EventId>8757</EventId>
+            <Name></Name>
+            <RaceDate>
+                <Date>2019-07-25</Date>
+                <Clock>10:00:00</Clock>
+            </RaceDate>
+            <EventCenterPosition x="115.6949" y="-33.3344" unit="WGS-84" />
+        </EventRace>
+        <WebURL>https://wa.orienteering.asn.au/clubs/swot</WebURL>
+        <PunchingUnitType value="manual" />
+        <ModifyDate>
+            <Date>2019-07-15</Date>
+            <Clock>10:41:34</Clock>
+        </ModifyDate>
+        <ModifiedBy>
+            <PersonId>1717</PersonId>
+        </ModifiedBy>
+        <HashTableEntry>
+            <Key>Eventor_EntryChangeDeadlines</Key>
+            <Value>2019-07-24 15:59:59;EventClass,EventRaces,NumberOfCompetitors,Person,Organisation,PunchingCard,ServiceRequests</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_EntryOnTheDay</Key>
+            <Value>1</Value>
+        </HashTableEntry>
+        <HashTableEntry>
+            <Key>Eventor_Message</Key>
+            <Value>Bring O-Kit, notebook and pen. Pizza will be provided.</Value>
+        </HashTableEntry>
+    </Event>
+</EventList>

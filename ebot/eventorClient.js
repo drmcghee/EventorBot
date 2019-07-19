@@ -1,11 +1,13 @@
 var querystring = require('querystring');
 var https = require('https');
 
-module.exports = {
-    executeSearch: function (query, callback) {
-        this.loadData('/api/events?q=fromDate=2019-01-01&toDate=2019-01-30',callback); 
 
-       //this.loadData('/api/events?q=' + querystring.escape(query), callback);
+module.exports = {
+    eventSearch: function (query, callback) {
+        this.loadData('/api/events?fromDate=2019-01-01&toDate=2019-01-30',callback); 
+    },
+    stateSearch: function(query, callback) {
+        var orgs = this.loadData('/api/organisations', callback)
     },
 
     loadData: function (path, callback) {
@@ -24,13 +26,27 @@ module.exports = {
         };
         var profile;
         var request = https.request(options, function (response) {
-            var data = '';
-            response.on('data', function (chunk) { data += chunk; });
+            var xml = '';
+            response.on('data', function (chunk) { xml += chunk; });
             response.on('end', function () {
-                console.log('data =%s', data);
-                callback(JSON.parse(data));
+                //console.log('xml data =%s', xml);
+
+                var xml2js = require('xml2js');
+                var parser = new xml2js.Parser({explicitArray : false});
+
+                result = parser.parseString(xml, function (err, result) {
+                    //console.log('json result =%s',JSON.stringify(result));
+                    callback(result);
+                });
+
+            
+                // TODO: XML parrse
+                //callback(JSON.stringify(result));
+                //callback(result)
             });
         });
         request.end();
     }
+
+    
 }
