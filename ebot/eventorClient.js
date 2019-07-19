@@ -3,15 +3,15 @@ var https = require('https');
 
 
 module.exports = {
-    eventSearch: function (fromDate, toDate, callback) {
+     eventSearch: async function (fromDate, toDate, callback) {
         query = `/api/events?fromDate=${fromDate}&toDate=${toDate}`
         this.loadData(query,callback); 
     },
-    orgSearch: function(callback) {
+    orgSearch: async function(callback) {
         var orgs = this.loadData('/api/organisations', callback)
     },
 
-    loadData: function (path, callback) {
+    loadData: async function (path, callback) {
         // need some way to save the api key secretely
         // could use Azure Key vault but really just need something localy  
 

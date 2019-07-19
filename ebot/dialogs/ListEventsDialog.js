@@ -1,4 +1,5 @@
-var eventorClient = require('../eventorClient.js');
+const eventorClient = require('../eventorClient');
+const { eventSearch } = require('../helpers');
 
 const {
     ChoiceFactory,
@@ -26,6 +27,9 @@ class ListEventsDialog extends ComponentDialog {
     constructor(userState) {
         super('ListEventsDialog');
 
+        this.self = this;
+        //something = this;
+        
         this.addDialog(new ChoicePrompt(STATE_PROMPT));
         this.addDialog(new ChoicePrompt(TIME_PROMPT));
         this.addDialog(new WaterfallDialog(WATERFALL_DIALOG, [
@@ -60,31 +64,59 @@ class ListEventsDialog extends ComponentDialog {
     async orgSearch() {
         eventorClient.orgSearch(query, function(orgsFound)
             {
-                var len = orgsFound.OrganisationList["Organisation"].length
-                var eventmessage = `Found ${len} Organisations!`
-                console.log(eventmessage)
+                // var len = orgsFound.OrganisationList["Organisation"].length
+                // var eventmessage = `Found ${len} Organisations!`
+                // console.log(eventmessage)
+
+                // // get a list of organisations that are in Australia only 
+                // // ie. in XML this would be Organisation/ParentOrganisation/Organisation = 2
+
+                // var orgs = orgsFound.OrganisationList["Organisation"]
+
+                // // loop through orgs 
+                // foreach org in orgs
+                // {
+                //     org.
+                // }
+
+                // // XPATH in node.JS?
+                //list.filter(function (item) { return item.foo == 'bar'})
+
+                // //obj.items.filter 
+                // // npm PACKAGE UNDERSCORE 
+                // var filtered = _.where(orgs, {ParentOrganisation{Organisation: "2"});
+
+                // return orgsFound
             })
     }
 
-    async eventSearch() {
-        eventorClient.eventSearch("2019-07-18", "2019-07-30", function(eventsFound)
-            {
-                //console.log('IN json result =%s',JSON.stringify(eventsFound))
-                var len = eventsFound.EventList["Event"].length
-                var eventmessage = `Found ${len} Events!`
-                console.log(eventmessage)
-
-                return  eventsFound
-            })
-    }
+    async searchByKey(key) {
+        for (var i = 0, l = arr.length; i < l; i++){
+          if (arr[i]['Key'] === key) {
+            return arr[i]['Values'];
+          }
+        }
+        return false;
+      }
 
     async listStep(step) {
+        //remember state slected
         step.values.state = step.result.value;
 
-        var events = this.eventSearch();
-        var len = eventsFound.EventList["Event"].length
-        var eventmessage = `Found ${len} Events!`
-        step.context.sendActivity(eventmessage);
+        // wait for event search to return and then updat the event message
+        await eventorClient.eventSearch("2019-07-18", "2019-07-30", await function(eventsFound)
+        {
+            //console.log('IN json result =%s',JSON.stringify(eventsFound))
+            var len = eventsFound.EventList["Event"].length
+            var eventmessage = `Found ${len} Events!`
+            console.log(eventmessage)
+
+            console.log("sending message")
+            step.context.sendActivity(eventmessage);
+        })
+
+        // looks like this is dying and therefore the step has gone!
+
     }
 }
 
