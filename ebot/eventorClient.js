@@ -1,17 +1,28 @@
 var querystring = require('querystring');
 var https = require('https');
-
+var helpers  = require('./helpers.js');
 
 module.exports = {
-     eventSearch: async function (fromDate, toDate, callback) {
+
+    anyfunc: function(hello){
+        console.log(`hello ${hello}`)
+    },
+
+    eventSearch2: function(fromDate, toDate) {
+        return new Promise(resolve => {
+            eventSearch.on(fromDate, toDate, callback => resolve(callback));
+        });
+    },
+
+     eventSearch: function (fromDate, toDate, callback) {
         query = `/api/events?fromDate=${fromDate}&toDate=${toDate}`
         this.loadData(query,callback); 
     },
-    orgSearch: async function(callback) {
-        var orgs = this.loadData('/api/organisations', callback)
+    orgSearch: function(callback) {
+        this.loadData('/api/organisations', callback)
     },
 
-    loadData: async function (path, callback) {
+    loadData: function (path, callback) {
         // need some way to save the api key secretely
         // could use Azure Key vault but really just need something localy  
 
@@ -25,13 +36,15 @@ module.exports = {
                 'ApiKey': process.env.EventorAPIKey
             }
         };
-        var profile;
-        var request = https.request(options, function (response) {
+
+        var request =  https.request(options, function (response) {
             var xml = '';
             response.on('data', function (chunk) { xml += chunk; });
             response.on('end', function () {
                 //console.log('xml data =%s', xml);
 
+            
+                // Xml to JSON object
                 var xml2js = require('xml2js');
                 var parser = new xml2js.Parser({explicitArray : false});
 
@@ -40,14 +53,8 @@ module.exports = {
                     callback(result);
                 });
 
-            
-                // TODO: XML parrse
-                //callback(JSON.stringify(result));
-                //callback(result)
             });
         });
         request.end();
-    }
-
-    
+    },
 }

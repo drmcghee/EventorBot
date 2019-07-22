@@ -1,16 +1,156 @@
-const eventorClient = require('./eventorClient.js');
+//const eventorClient = require('./eventorClient.js');
+const https = require('https');
+var $myStates = {}
 
-const eventSearch = (fromDate, toDate, callback) => {
-    eventorClient.eventSearch("2019-07-18", "2019-07-30", function(eventsFound)
-        {
-            //console.log('IN json result =%s',JSON.stringify(eventsFound))
-            var len = eventsFound.EventList["Event"].length
-            var eventmessage = `Found ${len} Events!`
-            console.log(eventmessage)
+async function eventSearchToday(state)
+{
+    var dt = new Date(); // current date of week
+    today = dt.toISOString().substring(0,10);
+  
+    return eventSearch(today, today, state)
+}
 
-            return  eventsFound
-        })
+async function eventSearchWeek(state)
+{
+    var dt = new Date(); // current date of week
+    var currentWeekDay = dt.getDay();
+    var lessDays = currentWeekDay == 0 ? 6 : currentWeekDay - 1;
+    var wkStart = new Date(new Date(dt).setDate(dt.getDate() - lessDays));
+    var wkEnd = new Date(new Date(wkStart).setDate(wkStart.getDate() + 6));
+
+    fromDate = wkStart.toISOString().substring(0,10);
+    toDate = wkEnd.toISOString().substring(0,10);
+
+    return eventSearch(fromDate, toDate, state)
+}
+
+async function eventSearch (fromDate, toDate, state)
+{
+        stateId = $myStates[state]
+
+        query = `/api/events?fromDate=${fromDate}&toDate=${toDate}&OrganisationIds=${stateId}`;
+        var result = await eventorRequest(query);
+        return result;
+
+}
+
+async function listSubOrganisations(OrganisationId)
+{
+    myStates = {};
+    query = '/api/organisations';
+    
+    console.log("search request");
+    var result = await eventorRequest(query);
+    console.log(`search result =${result}`);
+ 
+    // Look for all children of organisation
+        //OrganisationList / OrganisationId / ParentOrganisationId
+ 
+    orgs = result.OrganisationList.Organisation;
+    
+    for(var i = 0; i < orgs.length; i++)
+    {
+        var checkOrg = orgs[i];
+
+        if (checkOrg.hasOwnProperty("ParentOrganisation") ) {
+            var parentOrg = checkOrg.ParentOrganisation.OrganisationId;
+
+            if (parentOrg ==OrganisationId){
+
+                $myStates[`${checkOrg.ShortName}`] = checkOrg.OrganisationId
+                // short name
+                // OrganisationId
+
+            }
+        }
+    }
+}
+
+// function searchByKey(key) {
+//     for (var i = 0, l = arr.length; i < l; i++){
+//       if (arr[i]['Key'] === key) {
+//         return arr[i]['Values'];
+//       }
+//     }
+//     return false;
+//   }
+
+function eventorRequest (path) {
+   // need to wrap this in a promise to block until processed
+   return new Promise(resolve => {
+    console.log(`eventor request path = ${path}`);
+
+       var options = {
+           host: 'eventor.orienteering.asn.au',
+           port: 443,
+           path: path,
+           method: 'GET',
+           headers: {
+               'User-Agent': 'eventor-bot',
+               'ApiKey': process.env.EventorAPIKey
+           }
+       };
+
+       var request =  https.request(options, function (response) {
+           var xml = '';
+           response.on('data', function (chunk) { xml += chunk; });
+           response.on('end', async function () {
+               //console.log('xml data =%s', xml);
+
+               // resolve xml parse
+               var json = await xml2json(xml)
+               console.log(`eventor json response =${json}`);
+               resolve(json)
+           });
+       });
+       request.end();
+
+
+   });
 }
 
 
+
+ function xml2json (xml)  {
+    return  new Promise((resolve, reject) => {
+        var xml2js = require('xml2js');
+        var parser = new xml2js.Parser({explicitArray : false});
+
+        parser.parseString(xml, function (err, json) {
+            if (err)
+                reject(err)
+            else
+                resolve(json)
+        }); 
+    });   
+}
+
+// function getMonday( date ) {
+//     var day = date.getDay() || 7;  
+//     if( day !== 1 ) 
+//         date.setHours(-24 * (day - 1)); 
+//     return date;
+// }
+
+// function getSunday( date ) {
+//     var day = date.getDay() || 7;  
+//     if( day !== 7 ) 
+//         date.setHours(-24 * (day - 7)); 
+//     return date;
+// }
+
+function isEmpty(obj) {
+    for(var key in obj) {
+        if(obj.hasOwnProperty(key))
+            return false;
+    }
+    return true;
+}
+
+module.exports.eventorRequest = eventorRequest;
 module.exports.eventSearch = eventSearch;
+module.exports.xml2json = xml2json;
+module.exports.eventSearchToday = eventSearchToday;
+module.exports.eventSearchWeek = eventSearchWeek;
+module.exports.listSubOrganisations = listSubOrganisations;
+module.exports.isEmpty = isEmpty;

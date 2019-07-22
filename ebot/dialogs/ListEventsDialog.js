@@ -1,5 +1,7 @@
-const eventorClient = require('../eventorClient');
-const { eventSearch } = require('../helpers');
+//const eventorClient = require('../eventorClient');
+const  helpers = require('../helpers');
+// const util = require('util');
+const util = require('moment');
 
 const {
     ChoiceFactory,
@@ -42,6 +44,10 @@ class ListEventsDialog extends ComponentDialog {
     }
 
      async stateStep(step) {
+        // bring back the sub orgs  -- at a later date this should be moved
+        if (helpers.isEmpty(helpers.$mystate))
+            await helpers.listSubOrganisations(2)
+
         // WaterfallStep always finishes with the end of the Waterfall or with another dialog; here it is a Prompt Dialog.
         // Running a prompt here means the next WaterfallStep will be run when the users response is received.
         return await step.prompt( STATE_PROMPT, {
@@ -57,66 +63,39 @@ class ListEventsDialog extends ComponentDialog {
         // Running a prompt here means the next WaterfallStep will be run when the users response is received.
         return await step.prompt(TIME_PROMPT, {
             prompt:`List \r${step.values.state}\r events for what time period?`,
-            choices: ChoiceFactory.toChoices(['This Week', 'This Month', 'Next Week', 'Next Month'])
+            choices: ChoiceFactory.toChoices(['Today', 'This Week', 'This Month', 'Next Week', 'Next Month'])
         });
     }   
 
-    async orgSearch() {
-        eventorClient.orgSearch(query, function(orgsFound)
-            {
-                // var len = orgsFound.OrganisationList["Organisation"].length
-                // var eventmessage = `Found ${len} Organisations!`
-                // console.log(eventmessage)
-
-                // // get a list of organisations that are in Australia only 
-                // // ie. in XML this would be Organisation/ParentOrganisation/Organisation = 2
-
-                // var orgs = orgsFound.OrganisationList["Organisation"]
-
-                // // loop through orgs 
-                // foreach org in orgs
-                // {
-                //     org.
-                // }
-
-                // // XPATH in node.JS?
-                //list.filter(function (item) { return item.foo == 'bar'})
-
-                // //obj.items.filter 
-                // // npm PACKAGE UNDERSCORE 
-                // var filtered = _.where(orgs, {ParentOrganisation{Organisation: "2"});
-
-                // return orgsFound
-            })
-    }
-
-    async searchByKey(key) {
-        for (var i = 0, l = arr.length; i < l; i++){
-          if (arr[i]['Key'] === key) {
-            return arr[i]['Values'];
-          }
-        }
-        return false;
-      }
-
     async listStep(step) {
-        //remember state slected
-        step.values.state = step.result.value;
 
-        // wait for event search to return and then updat the event message
-        await eventorClient.eventSearch("2019-07-18", "2019-07-30", await function(eventsFound)
-        {
-            //console.log('IN json result =%s',JSON.stringify(eventsFound))
-            var len = eventsFound.EventList["Event"].length
-            var eventmessage = `Found ${len} Events!`
-            console.log(eventmessage)
+        var result;
+        switch (step.result.value) {
+            case "Today":
+                result  = await helpers.eventSearchToday(step.values.state)
+                break;
+            case "This Week":
+                result  = await helpers.eventSearchWeek(step.values.state)
+                break;
+            case "This Month":
+                console.log("Not implemented");
+        }
 
-            console.log("sending message")
+        var eventmessage = `Result: ${result}!`;
+        console.log(eventmessage);
+
+        //todo: Order the events by day - add URL for eventor and put into an adaptive card
+        if (typeof(result.EventList["Event"]) == "undefined") {
+            return step.context.sendActivity(`No events found in ${step.values.state} ${step.result.value}`);
+        } else { 
+            var len = result.EventList["Event"].length;
+            eventmessage = `Found ${len} Events!`;
+            console.log(eventmessage);
             step.context.sendActivity(eventmessage);
-        })
-
-        // looks like this is dying and therefore the step has gone!
-
+            for(var i = 0; i <result.EventList["Event"].length; i++)
+                step.context.sendActivity(`[${result.EventList["Event"][i].Name}](${result.EventList["Event"][i].WebURL})`);
+            return;
+        }
     }
 }
 
