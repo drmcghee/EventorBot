@@ -39,6 +39,8 @@ class ListEventsDialog extends ComponentDialog {
             this.listStep
         ]));
 
+
+
         this.initialDialogId = WATERFALL_DIALOG;
     }
 
@@ -127,9 +129,9 @@ class ListEventsDialog extends ComponentDialog {
                 // add the card to the attachments
                 attachments.push(eventAdaptiveCard)
             }
-            return step.context.sendActivity(MessageFactory.carousel(attachments));
+            await step.context.sendActivity(MessageFactory.carousel(attachments));
+            return step.endDialog()
         }
     }
 }
-
 module.exports.ListEventsDialog = ListEventsDialog;

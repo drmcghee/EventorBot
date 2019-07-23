@@ -60,14 +60,10 @@ function getOrganisationName(OrganisationId)
 
 async function listSubOrganisations(OrganisationId)
 {
+    // get states and organisations
     myStates = {};
     query = '/api/organisations';
-    
-    console.log("search request");
     var result = await eventorRequest(query);
-    console.log(`search result =${result}`);
-
-    // Add all orgs to global myorgs
     $myOrgs = result
  
     // Look for all children of organisation
@@ -82,24 +78,11 @@ async function listSubOrganisations(OrganisationId)
             var parentOrg = checkOrg.ParentOrganisation.OrganisationId;
 
             if (parentOrg ==OrganisationId){
-
                 $myStates[`${checkOrg.ShortName}`] = checkOrg.OrganisationId
-                // short name
-                // OrganisationId
-
             }
         }
     }
 }
-
-// function searchByKey(key) {
-//     for (var i = 0, l = arr.length; i < l; i++){
-//       if (arr[i]['Key'] === key) {
-//         return arr[i]['Values'];
-//       }
-//     }
-//     return false;
-//   }
 
 function eventorRequest (path) {
    // need to wrap this in a promise to block until processed

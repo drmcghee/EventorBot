@@ -3,10 +3,12 @@
 const { ActivityHandler } = require('botbuilder');
 const { DialogSet, ChoicePrompt, WaterfallDialog } = require('botbuilder-dialogs');
 const { ListEventsDialog } = require('../dialogs/ListEventsDialog');
+const { EventDetailDialog } = require('../dialogs/EventDetailDialog');
 
 const MENU_DIALOG = 'menuDialog';
 const MENU_PROMPT = 'menuPrompt';
 const LIST_EVENTS_DIALOG = 'ListEventsDialog';
+const EVENT_DETAIL_DIALOG = 'EventDetailDialog';
 
 const  helpers = require('../helpers');
 
@@ -23,22 +25,26 @@ class EventorBot extends ActivityHandler {
         this.dialogs = new DialogSet(this.dialogState);
         this.dialogs.add(new ChoicePrompt(MENU_PROMPT));
         this.dialogs.add(new ListEventsDialog(LIST_EVENTS_DIALOG));
+        this.dialogs.add(new EventDetailDialog(EVENT_DETAIL_DIALOG));
 
         // Adds a waterfall dialog that prompts users for the top level menu to the dialog set
         this.dialogs.add(new WaterfallDialog(MENU_DIALOG, [
             this.promptForMenu,
             this.handleMenuResult,
+            this.handleEnd,
         ]));
         
         // See https://aka.ms/about-bot-activity-message to learn more about the message and other activity types.
         this.onMessage(async (context, next) => {
             const dialogContext = await this.dialogs.createContext(context);
 
+
             //if (context.activity.type === ActivityTypes.Message) {
                 if (dialogContext.activeDialog) {
                     await dialogContext.continueDialog();
                 } else {
                     await dialogContext.beginDialog(MENU_DIALOG);
+
                 }
             //} 
             // else if (context.activity.type === ActivityTypes.ConversationUpdate) {
@@ -79,6 +85,7 @@ class EventorBot extends ActivityHandler {
             // Save any state changes. The load happened during the execution of the Dialog.
             //await this.conversationState.saveChanges(context, false);
             //await this.userState.saveChanges(context, false);
+            console.log("on message")
             await next();
         });
 
@@ -94,7 +101,7 @@ class EventorBot extends ActivityHandler {
      */
     async promptForMenu(step) {
         return step.prompt(MENU_PROMPT, {
-            choices: ["List Events", "Event Detail", "Help"],
+            choices: ["List Events", "Event Detail"],
             prompt: "What event action do you want to take?",
             retryPrompt: "I'm sorry, that wasn't a valid response. Please select one of the options"
         });
@@ -106,15 +113,22 @@ class EventorBot extends ActivityHandler {
      * @param step Waterfall Dialog Step 
      */
     async handleMenuResult(step) {
-        // const text = context.activity.text;
-        // await context.sendActivity(`Helping you '${ text }'`);
-
         switch (step.result.value) {
             case "List Events":
                 return step.beginDialog(LIST_EVENTS_DIALOG);
+            case "Event Detail":
+                return step.beginDialog(EVENT_DETAIL_DIALOG);
         }
-        return step.next();
+        
+        console.log("unexpected menu item - end menu dialog")
+        return step.endDialog();    
     }
+
+    async handleEnd(step) {
+        await step.endDialog();    
+        await step.beginDialog(MENU_DIALOG);
+    }
+
 
 }
 
