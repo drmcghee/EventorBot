@@ -1,0 +1,60 @@
+{
+    "$schema": "https://microsoft.github.io/AdaptiveCards/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.0",
+    "body": [
+      {
+        "speak": "<s>Eventor event details</s>",
+        "type": "ColumnSet",
+        "columns": [
+          {
+            "type": "Column",
+            "width": "4",
+            "items": [
+              {
+                "type": "TextBlock",
+                "text": "Event 6891",
+                "weight": "bolder",
+                "size": "Large"
+              },
+              {
+                "type": "TextBlock",
+                "text": "2018 State League #14 (Long)",
+                "weight": "bolder",
+                "wrap": true
+              },
+              {
+                "type": "TextBlock",
+                "text": "Goldseekers Orienteers / Orienteering NSW",
+                "wrap": true
+              },
+              {
+                "type": "TextBlock",
+                "text": "Event date: Sunday 19 August 2018",
+                "color": "warning",
+                "wrap": true
+              }
+            ]
+          },
+          {
+            "type": "Column",
+            "width": "1",
+            "items": [
+              {
+                "type": "Image",
+                "url": "http://www.orange-nsw.com/files/LogoLinks/ExperienceOrangeExpo/GoldseekersOrienteering_Llk.gif",
+                "size": "auto"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "type": "Action.OpenUrl",
+        "title": "Goto Event",
+        "url": "http://adaptivecards.io"
+      }
+    ]
+  }

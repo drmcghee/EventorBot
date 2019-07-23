@@ -1,7 +1,5 @@
-//const eventorClient = require('../eventorClient');
 const  helpers = require('../helpers');
-// const util = require('util');
-const util = require('moment');
+const { AdaptiveCard, CardFactory, MessageFactory } = require("botbuilder");
 
 const {
     ChoiceFactory,
@@ -14,6 +12,7 @@ const {
     //TextPrompt,
     WaterfallDialog
 } = require('botbuilder-dialogs');
+
 
 //const { UserProfile } = require('../userProfile');
 
@@ -44,9 +43,6 @@ class ListEventsDialog extends ComponentDialog {
     }
 
      async stateStep(step) {
-        // bring back the sub orgs  -- at a later date this should be moved
-        if (helpers.isEmpty(helpers.$mystate))
-            await helpers.listSubOrganisations(2)
 
         // WaterfallStep always finishes with the end of the Waterfall or with another dialog; here it is a Prompt Dialog.
         // Running a prompt here means the next WaterfallStep will be run when the users response is received.
@@ -63,7 +59,7 @@ class ListEventsDialog extends ComponentDialog {
         // Running a prompt here means the next WaterfallStep will be run when the users response is received.
         return await step.prompt(TIME_PROMPT, {
             prompt:`List \r${step.values.state}\r events for what time period?`,
-            choices: ChoiceFactory.toChoices(['Today', 'This Week', 'This Month', 'Next Week', 'Next Month'])
+            choices: ChoiceFactory.toChoices(['Today', 'This Week', 'Next Week'])
         });
     }   
 
@@ -75,10 +71,13 @@ class ListEventsDialog extends ComponentDialog {
                 result  = await helpers.eventSearchToday(step.values.state)
                 break;
             case "This Week":
-                result  = await helpers.eventSearchWeek(step.values.state)
+                result  = await helpers.eventSearchWeekDate(step.values.state, new Date())
                 break;
-            case "This Month":
-                console.log("Not implemented");
+            case "Next Week":
+                var dt = new Date();
+                dt.setDate(dt.getDate() + 7)
+                result  = await helpers.eventSearchWeekDate(step.values.state, dt)
+                break;
         }
 
         var eventmessage = `Result: ${result}!`;
@@ -88,13 +87,47 @@ class ListEventsDialog extends ComponentDialog {
         if (typeof(result.EventList["Event"]) == "undefined") {
             return step.context.sendActivity(`No events found in ${step.values.state} ${step.result.value}`);
         } else { 
-            var len = result.EventList["Event"].length;
-            eventmessage = `Found ${len} Events!`;
-            console.log(eventmessage);
+            var events = result.EventList["Event"]
+            eventmessage = `Found ${events.length} events in ${step.values.state} ${step.result.value}:`;
             step.context.sendActivity(eventmessage);
-            for(var i = 0; i <result.EventList["Event"].length; i++)
-                step.context.sendActivity(`[${result.EventList["Event"][i].Name}](${result.EventList["Event"][i].WebURL})`);
-            return;
+
+            var attachments = [];
+
+            // display the cards
+            for(var i = 0; i < events.length; i++){
+
+                var sourceEventCard = require('../resources/eventCard.json');
+                
+                // create clone of adaptive card
+                //var displayEventCard = Object.assign({}, sourceEventCard);
+                var displayEventCard =JSON.parse(JSON.stringify(sourceEventCard));
+                
+                var displayEvent = events[i];
+
+                // get the organisation id
+                var eventOrganiserId = displayEvent.Organiser.OrganisationId;
+                var eventOrganiserName = helpers.getOrganisationName(eventOrganiserId);
+                var body =  displayEventCard.body[0]
+
+                //  Change the event card
+                body.columns[0].items[0].text = displayEvent.EventId // Event Number
+                body.columns[0].items[1].text = displayEvent.Name // Event name
+                body.columns[0].items[2].text = eventOrganiserName // Organiser
+                body.columns[0].items[3].text = displayEvent.StartDate.Date // Event Date
+
+                // Logo
+                body.columns[1].items[0].url = `https://eventor.orienteering.asn.au/Organisation/Logotype/${eventOrganiserId}?type=LargeIcon`
+
+
+                // buttonon url
+                displayEventCard.actions[0].url = `https://eventor.orienteering.asn.au/Events/Show/${displayEvent.EventId}`
+                
+                var eventAdaptiveCard = CardFactory.adaptiveCard(displayEventCard);
+
+                // add the card to the attachments
+                attachments.push(eventAdaptiveCard)
+            }
+            return step.context.sendActivity(MessageFactory.carousel(attachments));
         }
     }
 }

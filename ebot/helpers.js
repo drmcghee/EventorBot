@@ -1,6 +1,6 @@
-//const eventorClient = require('./eventorClient.js');
 const https = require('https');
 var $myStates = {}
+var $myOrgs = ""
 
 async function eventSearchToday(state)
 {
@@ -24,6 +24,19 @@ async function eventSearchWeek(state)
     return eventSearch(fromDate, toDate, state)
 }
 
+async function eventSearchWeekDate(state, dt)
+{    
+    var weekDay = dt.getDay();
+    var lessDays = weekDay == 0 ? 6 : weekDay - 1;
+    var wkStart = new Date(dt.setDate(dt.getDate() - lessDays));
+    var wkEnd = new Date(new Date(wkStart).setDate(wkStart.getDate() + 6));
+
+    fromDate = wkStart.toISOString().substring(0,10);
+    toDate = wkEnd.toISOString().substring(0,10);
+
+    return eventSearch(fromDate, toDate, state)
+}
+
 async function eventSearch (fromDate, toDate, state)
 {
         stateId = $myStates[state]
@@ -31,7 +44,18 @@ async function eventSearch (fromDate, toDate, state)
         query = `/api/events?fromDate=${fromDate}&toDate=${toDate}&OrganisationIds=${stateId}`;
         var result = await eventorRequest(query);
         return result;
+}
 
+function getOrganisationName(OrganisationId)
+{
+    orgs = $myOrgs.OrganisationList.Organisation;
+
+    for(var i = 0; i < orgs.length; i++) {
+        var checkOrg = orgs[i];
+        if (checkOrg.OrganisationId == OrganisationId)
+            return checkOrg.Name
+    }
+    return "Missing Name";
 }
 
 async function listSubOrganisations(OrganisationId)
@@ -42,10 +66,12 @@ async function listSubOrganisations(OrganisationId)
     console.log("search request");
     var result = await eventorRequest(query);
     console.log(`search result =${result}`);
+
+    // Add all orgs to global myorgs
+    $myOrgs = result
  
     // Look for all children of organisation
         //OrganisationList / OrganisationId / ParentOrganisationId
- 
     orgs = result.OrganisationList.Organisation;
     
     for(var i = 0; i < orgs.length; i++)
@@ -109,9 +135,7 @@ function eventorRequest (path) {
    });
 }
 
-
-
- function xml2json (xml)  {
+function xml2json (xml)  {
     return  new Promise((resolve, reject) => {
         var xml2js = require('xml2js');
         var parser = new xml2js.Parser({explicitArray : false});
@@ -152,5 +176,7 @@ module.exports.eventSearch = eventSearch;
 module.exports.xml2json = xml2json;
 module.exports.eventSearchToday = eventSearchToday;
 module.exports.eventSearchWeek = eventSearchWeek;
+module.exports.eventSearchWeekDate = eventSearchWeekDate;
 module.exports.listSubOrganisations = listSubOrganisations;
+module.exports.getOrganisationName = getOrganisationName;
 module.exports.isEmpty = isEmpty;

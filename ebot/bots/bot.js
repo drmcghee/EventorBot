@@ -8,6 +8,8 @@ const MENU_DIALOG = 'menuDialog';
 const MENU_PROMPT = 'menuPrompt';
 const LIST_EVENTS_DIALOG = 'ListEventsDialog';
 
+const  helpers = require('../helpers');
+
 class EventorBot extends ActivityHandler {
     constructor(conversationState) {
         super();
@@ -54,8 +56,17 @@ class EventorBot extends ActivityHandler {
             const membersAdded = context.activity.membersAdded;
             for (let cnt = 0; cnt < membersAdded.length; ++cnt) {
                 if (membersAdded[cnt].id !== context.activity.recipient.id) {
+
+
                     await context.sendActivity("Hello and welcome to the Eventor Australia bot!")
+
+                     // bring back the sub orgs  -- at a later date this should be moved
+                    if (helpers.isEmpty(helpers.$mystate))
+                        await helpers.listSubOrganisations(2)
+
                     await dialogContext.beginDialog(MENU_DIALOG);
+
+                    
                 }
             }
 
