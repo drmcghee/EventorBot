@@ -5,6 +5,9 @@ const dotenv = require('dotenv');
 const path = require('path');
 const restify = require('restify');
 
+const appInsights = require('applicationinsights');
+appInsights.setup(process.env.InstrumentationKey).start();
+
 // Import required bot services.
 // See https://aka.ms/bot-services to learn more about the different parts of a bot.
 //const { BotFrameworkAdapter } = require('botbuilder');

@@ -17,6 +17,7 @@
         "url": "https://github.com"
     },
     "dependencies": {
+        "applicationinsights": "^1.4.0",
         "botbuilder": "~4.4.0",
         "botbuilder-dialogs": "^4.4.0",
         "dotenv": "^7.0.0",
