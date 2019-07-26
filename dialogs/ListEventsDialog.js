@@ -1,4 +1,5 @@
 const  helpers = require('../helpers');
+var dateFormat = require('dateformat');
 const { AdaptiveCard, CardFactory, MessageFactory } = require("botbuilder");
 
 const {
@@ -38,8 +39,6 @@ class ListEventsDialog extends ComponentDialog {
             this.timeStep,
             this.listStep
         ]));
-
-
 
         this.initialDialogId = WATERFALL_DIALOG;
     }
@@ -85,6 +84,7 @@ class ListEventsDialog extends ComponentDialog {
         var eventmessage = `Result: ${result}!`;
         console.log(eventmessage);
 
+
         //todo: Order the events by day - add URL for eventor and put into an adaptive card
         if (typeof(result.EventList["Event"]) == "undefined") {
             return step.context.sendActivity(`No events found in ${step.values.state} ${step.result.value}`);
@@ -93,46 +93,200 @@ class ListEventsDialog extends ComponentDialog {
             eventmessage = `Found ${events.length} events in ${step.values.state} ${step.result.value}:`;
             step.context.sendActivity(eventmessage);
 
-            var attachments = [];
-
-            // display the cards
-            for(var i = 0; i < events.length; i++){
-
-                var sourceEventCard = require('../resources/eventCard.json');
-                
-                // create clone of adaptive card
-                //var displayEventCard = Object.assign({}, sourceEventCard);
-                var displayEventCard =JSON.parse(JSON.stringify(sourceEventCard));
-                
-                var displayEvent = events[i];
-
-                // get the organisation id
-                var eventOrganiserId = displayEvent.Organiser.OrganisationId;
-                var eventOrganiserName = helpers.getOrganisationName(eventOrganiserId);
-                var body =  displayEventCard.body[0]
-
-                //  Change the event card
-                body.columns[0].items[0].text = displayEvent.EventId // Event Number
-                body.columns[0].items[1].text = displayEvent.Name // Event name
-                body.columns[0].items[2].text = eventOrganiserName // Organiser
-                body.columns[0].items[3].text = displayEvent.StartDate.Date // Event Date
-
-                // Logo
-                body.columns[1].items[0].url = `https://eventor.orienteering.asn.au/Organisation/Logotype/${eventOrganiserId}?type=LargeIcon`
-
-
-                // buttonon url
-                displayEventCard.actions[0].url = `https://eventor.orienteering.asn.au/Events/Show/${displayEvent.EventId}`
-                
-                var eventAdaptiveCard = CardFactory.adaptiveCard(displayEventCard);
-
-                // add the card to the attachments
-                attachments.push(eventAdaptiveCard)
+            if (step.context.channel == "messenger")
+            {
+                var mdtable = createEventTable(events);
+                await step.context.sendActivity(mdtable);
             }
-            await step.context.sendActivity(MessageFactory.carousel(attachments));
+            else
+                var attachments = createEventAttachments(events);
+                //await step.context.sendActivity(MessageFactory.list(attachments));
+                await step.context.sendActivity(MessageFactory.carousel(attachments));
+            }
             return step.endDialog()
         }
     }
+
+
+function findFirst(events)
+{
+    var first = 0;
+    var check = events[first];
+
+    // loop through the events and order by date
+    for(var i = 1; i < events.length-1; i++){
+        // if the event start date is after the next event, make a note of who is now first 
+        if (events[i].StartDate.Date<check.StartDate.Date)
+        {
+            first=i;
+            check = events[first];
+        }
+    }
+
+    return first;
+}
+
+function createEventTable(events)
+{
+
+
+    // order the events
+    var orderedEvents = []
+    eventsCopy = JSON.parse(JSON.stringify(events));
+    for(var i = 0; i < events.length; i++){
+        var first = findFirst(eventsCopy);
+        orderedEvents.push(eventsCopy[first]);
+        eventsCopy.splice(first, 1);
+    }
+
+    // display the cards
+    var eventMarkdown = "| | | | |\n|-|-|-|-|\n";
+    for(var i = 0; i < orderedEvents.length; i++){
+
+        var displayEvent = orderedEvents[i];
+
+        // get the organisation id
+        var eventOrganiserId = displayEvent.Organiser.OrganisationId;
+        var eventOrganiserName = helpers.getOrganisationName(eventOrganiserId);
+
+        //  Change the event card
+        var title = `${displayEvent.EventId}: ${helpers.getDayOfWeek(displayEvent.StartDate.Date)}, ${displayEvent.StartDate.Date} ${displayEvent.Name}`;
+        var eventurl = `https://eventor.orienteering.asn.au/Events/Show/${displayEvent.EventId}`;
+        var imageurl = `https://eventor.orienteering.asn.au/Organisation/Logotype/${eventOrganiserId}?type=SmallIcon`;
+        var nicedate = dateFormat(displayEvent.StartDate.Date, "d mmm")
+        var niceday = helpers.getDayOfWeek(displayEvent.StartDate.Date).substring(0,3)
+
+        eventMarkdown += `|__${displayEvent.EventId}__| ${niceday}, ${nicedate} | ${displayEvent.Name} | [link](${eventurl})|\n`;
+    }
+    return eventMarkdown
+}
+
+function createHeroEventAttachments(events)
+{
+    var attachments = [];
+
+    // display the cards
+    for(var i = 0; i < events.length; i++){
+
+        var displayEvent = events[i];
+
+        // get the organisation id
+        var eventOrganiserId = displayEvent.Organiser.OrganisationId;
+        var eventOrganiserName = helpers.getOrganisationName(eventOrganiserId);
+
+        //  Change the event card
+        var title = `${displayEvent.EventId}: ${helpers.getDayOfWeek(displayEvent.StartDate.Date)}, ${displayEvent.StartDate.Date} ${displayEvent.Name}`;
+        var eventurl = `https://eventor.orienteering.asn.au/Events/Show/${displayEvent.EventId}`;
+        var imageurl = `https://eventor.orienteering.asn.au/Organisation/Logotype/${eventOrganiserId}?type=SmallIcon`;
+
+        
+        var heroEventCard =  CardFactory.heroCard(
+            `${title}`,
+            null,
+             CardFactory.actions([
+                {
+                    displayText: `${title}`,
+                    type: 'openUrl',
+                    title: 'Goto Event',
+                    value: `'${eventurl}'`
+                }
+            ])
+        );
+
+        // order the event card in the attachments array
+        if (attachments.length==0){
+            // add the card to the attachments
+            attachments.push(heroEventCard)
+        } else {
+            // loop through all current attachements
+            for (var a = 0; a < attachments.length; a++){
+                var cardDate = attachments[a].content.title.split(" ")[2];
+
+                // is the comparison card date is before, or the same, as new events date
+                if(Date.parse(cardDate) <= Date.parse(displayEvent.StartDate.Date)){
+                    // if we are at the end of the total number of cards then push else continue
+                    if (a==attachments.length-1){ 
+                        attachments.push(heroEventCard);
+                        break;
+                    } 
+                }else{
+                    //end is less than start
+                    attachments.splice( a, 0, heroEventCard);
+                    break;
+                }
+            }
+        }
+
+    }
+    return attachments;
+}
+
+
+
+
+function createEventAttachments(events)
+{
+    var attachments = [];
+
+    // display the cards
+    for(var i = 0; i < events.length; i++){
+
+        var sourceEventCard = require('../resources/eventCard.json');
+        
+        // create clone of adaptive card
+        //var displayEventCard = Object.assign({}, sourceEventCard);
+        var displayEventCard =JSON.parse(JSON.stringify(sourceEventCard));
+        
+        var displayEvent = events[i];
+
+        // get the organisation id
+        var eventOrganiserId = displayEvent.Organiser.OrganisationId;
+        var eventOrganiserName = helpers.getOrganisationName(eventOrganiserId);
+        var body =  displayEventCard.body[0]
+
+        //  Change the event card
+        body.columns[0].items[0].text = displayEvent.EventId // Event Number
+        body.columns[0].items[1].text = displayEvent.Name // Event name
+        body.columns[0].items[2].text = eventOrganiserName // Organiser
+        body.columns[0].items[3].text = helpers.getDayOfWeek(displayEvent.StartDate.Date) + " " + displayEvent.StartDate.Date // Event Date
+
+        // Logo
+        body.columns[1].items[0].url = `https://eventor.orienteering.asn.au/Organisation/Logotype/${eventOrganiserId}?type=LargeIcon`
+
+        // button url
+        displayEventCard.actions[0].url = `https://eventor.orienteering.asn.au/Events/Show/${displayEvent.EventId}`
+        
+        var eventAdaptiveCard = CardFactory.adaptiveCard(displayEventCard);
+
+        // decide where to put the event card in the attachments array
+        if (attachments.length==0){
+            // add the card to the attachments
+            attachments.push(eventAdaptiveCard)
+        } else {
+            // loop through all current attachements
+            for (var a = 0; a < attachments.length; a++){
+                var cardDate = attachments[a].content.body[0].columns[0].items[3].text
+                cardDate = cardDate.split(" ")[1];
+
+                // is the comparison card date is before, or the same, as new events date
+                if(Date.parse(cardDate) <= Date.parse(displayEvent.StartDate.Date)){
+                    // if we are at the end of the total number of cards then push else continue
+                    if (a==attachments.length-1){ 
+                        attachments.push(eventAdaptiveCard);
+                        break;
+                    } 
+                  }else{
+                    //end is less than start
+                    attachments.splice( a, 0, eventAdaptiveCard);
+                    break;
+                  }
+            }
+        }
+    }
+    return attachments;
 }
 
 module.exports.ListEventsDialog = ListEventsDialog;
+module.exports.createEventAttachments = createEventAttachments;
+module.exports.createHeroEventAttachments = createHeroEventAttachments;
+module.exports.createEventTable = createEventTable;

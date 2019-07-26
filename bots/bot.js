@@ -62,8 +62,6 @@ class EventorBot extends ActivityHandler {
             const membersAdded = context.activity.membersAdded;
             for (let cnt = 0; cnt < membersAdded.length; ++cnt) {
                 if (membersAdded[cnt].id !== context.activity.recipient.id) {
-
-
                     await context.sendActivity("Hello and welcome to the Eventor Australia bot!")
 
                      // bring back the sub orgs  -- at a later date this should be moved
@@ -125,8 +123,9 @@ class EventorBot extends ActivityHandler {
     }
 
     async handleEnd(step) {
+        console.log("handling end of dialog")
         await step.endDialog();    
-        await step.beginDialog(MENU_DIALOG);
+        //await step.beginDialog(MENU_DIALOG);
     }
 
 
