@@ -134,4 +134,5 @@ class ListEventsDialog extends ComponentDialog {
         }
     }
 }
+
 module.exports.ListEventsDialog = ListEventsDialog;

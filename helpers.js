@@ -1,6 +1,6 @@
 const https = require('https');
-var $myStates = {}
-var $myOrgs = ""
+var $myStates = {} // could be hardcoded but best to read dynamically
+var $myOrgs = "" // keep the list of all organisations
 
 async function eventSearchToday(state)
 {

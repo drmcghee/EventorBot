@@ -13,7 +13,6 @@ module.exports = {
             eventSearch.on(fromDate, toDate, callback => resolve(callback));
         });
     },
-
      eventSearch: function (fromDate, toDate, callback) {
         query = `/api/events?fromDate=${fromDate}&toDate=${toDate}`
         this.loadData(query,callback); 
