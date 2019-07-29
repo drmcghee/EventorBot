@@ -103,7 +103,7 @@ class ListEventsDialog extends ComponentDialog {
             var eventmessage = `Found ${events.length} events in ${step.values.state} ${step.result.value} ${eventaddendum} :`;
             step.context.sendActivity(eventmessage);
 
-            if (step.context.channel == "messenger") {
+            if (step.context.channel == "facebook") {
                 var mdtable = createEventTable(events);
                 await step.context.sendActivity(mdtable);
             }
