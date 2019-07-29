@@ -67,25 +67,40 @@ class ListEventsDialog extends ComponentDialog {
     async listStep(step) {
 
         var result;
+        var week;
+        var dt = new Date(); // current date of week
+
         switch (step.result.value) {
             case "Today":
-                result  = await helpers.eventSearchToday(step.values.state)
+                result  = await helpers.eventSearchDay(step.values.state, dt)
                 break;
             case "This Week":
-                result  = await helpers.eventSearchWeekDate(step.values.state, new Date())
+                week = helpers.defineWeek(dt)
+                result  = await helpers.eventSearchWeek(step.values.state, week)
                 break;
             case "Next Week":
-                var dt = new Date();
                 dt.setDate(dt.getDate() + 7)
-                result  = await helpers.eventSearchWeekDate(step.values.state, dt)
+                week = helpers.defineWeek(dt)
+                result  = await helpers.eventSearchWeek(step.values.state, week)
                 break;
         }
 
+        // display date on messages
+        var eventaddendum="";
+        if (week==null){
+            eventaddendum += `(${dateFormat(dt, "d mmm")})`;
+        }
+        else {
+            eventaddendum += `(${dateFormat(week.start, "d mmm")}-${dateFormat(week.end, "d mmm")})`;
+        }
+
+        // if results found or not
         if (typeof(result.EventList["Event"]) == "undefined") {
-            return step.context.sendActivity(`No events found in ${step.values.state} ${step.result.value}`);
+            var eventmessage = `No events found in ${step.values.state} ${step.result.value} ${eventaddendum}`;
+            return step.context.sendActivity(eventmessage);
         } else { 
             var events = result.EventList["Event"]
-            var eventmessage = `Found ${events.length} events in ${step.values.state} ${step.result.value}:`;
+            var eventmessage = `Found ${events.length} events in ${step.values.state} ${step.result.value} ${eventaddendum} :`;
             step.context.sendActivity(eventmessage);
 
             if (step.context.channel == "messenger") {
@@ -93,9 +108,9 @@ class ListEventsDialog extends ComponentDialog {
                 await step.context.sendActivity(mdtable);
             }
             else {
-                //var attachments = createEventAttachments(events);
+                var attachments = createEventAttachments(events);
                 //await step.context.sendActivity(MessageFactory.list(attachments));
-                //await step.context.sendActivity(MessageFactory.carousel(attachments));
+                await step.context.sendActivity(MessageFactory.carousel(attachments));
             }
             return step.endDialog()
         }
@@ -231,7 +246,7 @@ function createEventAttachments(events)
         body.columns[0].items[0].text = displayEvent.EventId // Event Number
         body.columns[0].items[1].text = displayEvent.Name // Event name
         body.columns[0].items[2].text = eventOrganiserName // Organiser
-        body.columns[0].items[3].text = helpers.getDayOfWeek(displayEvent.StartDate.Date) + " " + displayEvent.StartDate.Date // Event Date
+        body.columns[0].items[3].text = helpers.getDayOfWeek(displayEvent.StartDate.Date) + " " + dateFormat(displayEvent.StartDate.Date, "d mmm");
 
         // Logo
         body.columns[1].items[0].url = `https://eventor.orienteering.asn.au/Organisation/Logotype/${eventOrganiserId}?type=LargeIcon`

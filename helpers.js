@@ -2,24 +2,20 @@ const https = require('https');
 var $myStates = {} // could be hardcoded but best to read dynamically
 var $myOrgs = "" // keep the list of all organisations
 
-async function eventSearchToday(state)
+async function eventSearchDay(state, day)
 {
-    var dt = new Date(); // current date of week
-    today = dt.toISOString().substring(0,10);
+    shortday = day.toISOString().substring(0,10);
   
-    return eventSearch(today, today, state)
+    return eventSearch(shortday, shortday, state)
 }
 
-async function eventSearchWeek(state)
+async function eventSearchWeek(state, week)
 {
-    var dt = new Date(); // current date of week
-    var currentWeekDay = dt.getDay();
-    var lessDays = currentWeekDay == 0 ? 6 : currentWeekDay - 1;
-    var wkStart = new Date(new Date(dt).setDate(dt.getDate() - lessDays));
-    var wkEnd = new Date(new Date(wkStart).setDate(wkStart.getDate() + 6));
+    fromDate = week.start.toISOString().substring(0,10);
+    toDate =  week.end.toISOString().substring(0,10);
 
-    fromDate = wkStart.toISOString().substring(0,10);
-    toDate = wkEnd.toISOString().substring(0,10);
+    fromDate = week.start.toISOString().substring(0,10);
+    toDate = week.end.toISOString().substring(0,10);
 
     return eventSearch(fromDate, toDate, state)
 }
@@ -30,26 +26,26 @@ function getDayOfWeek(date) {
     return isNaN(dayOfWeek) ? null : ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][dayOfWeek];
 }
 
-async function eventSearchWeekDate(state, dt)
+
+function defineWeek(week)
 {    
+    var dt = new Date();
+
     var weekDay = dt.getDay();
     var lessDays = weekDay == 0 ? 6 : weekDay - 1;
-    var wkStart = new Date(dt.setDate(dt.getDate() - lessDays));
-    var wkEnd = new Date(new Date(wkStart).setDate(wkStart.getDate() + 6));
-
-    fromDate = wkStart.toISOString().substring(0,10);
-    toDate = wkEnd.toISOString().substring(0,10);
-
-    return eventSearch(fromDate, toDate, state)
+    var start = new Date(dt.setDate(dt.getDate() - lessDays));
+    var end = new Date(new Date(start).setDate(start.getDate() + 6));
+    
+    return { start, end }
 }
 
 async function eventSearch (fromDate, toDate, state)
 {
-        stateId = $myStates[state]
+    stateId = $myStates[state]
 
-        query = `/api/events?fromDate=${fromDate}&toDate=${toDate}&OrganisationIds=${stateId}`;//&includeAttributes=true
-        var result = await eventorRequest(query);
-        return result;
+    query = `/api/events?fromDate=${fromDate}&toDate=${toDate}&OrganisationIds=${stateId}`;//&includeAttributes=true
+    var result = await eventorRequest(query);
+    return result;
 }
 
 function getOrganisationName(OrganisationId)
@@ -163,10 +159,10 @@ function isEmpty(obj) {
 module.exports.eventorRequest = eventorRequest;
 module.exports.eventSearch = eventSearch;
 module.exports.xml2json = xml2json;
-module.exports.eventSearchToday = eventSearchToday;
+module.exports.eventSearchDay = eventSearchDay;
 module.exports.eventSearchWeek = eventSearchWeek;
-module.exports.eventSearchWeekDate = eventSearchWeekDate;
 module.exports.listSubOrganisations = listSubOrganisations;
 module.exports.getOrganisationName = getOrganisationName;
 module.exports.isEmpty = isEmpty;
 module.exports.getDayOfWeek = getDayOfWeek;
+module.exports.defineWeek = defineWeek;
