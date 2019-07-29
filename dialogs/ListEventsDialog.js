@@ -81,32 +81,26 @@ class ListEventsDialog extends ComponentDialog {
                 break;
         }
 
-        var eventmessage = `Result: ${result}!`;
-        console.log(eventmessage);
-
-
-        //todo: Order the events by day - add URL for eventor and put into an adaptive card
         if (typeof(result.EventList["Event"]) == "undefined") {
             return step.context.sendActivity(`No events found in ${step.values.state} ${step.result.value}`);
         } else { 
             var events = result.EventList["Event"]
-            eventmessage = `Found ${events.length} events in ${step.values.state} ${step.result.value}:`;
+            var eventmessage = `Found ${events.length} events in ${step.values.state} ${step.result.value}:`;
             step.context.sendActivity(eventmessage);
 
-            if (step.context.channel == "messenger")
-            {
+            if (step.context.channel == "messenger") {
                 var mdtable = createEventTable(events);
                 await step.context.sendActivity(mdtable);
             }
-            else
-                var attachments = createEventAttachments(events);
+            else {
+                //var attachments = createEventAttachments(events);
                 //await step.context.sendActivity(MessageFactory.list(attachments));
-                await step.context.sendActivity(MessageFactory.carousel(attachments));
+                //await step.context.sendActivity(MessageFactory.carousel(attachments));
             }
             return step.endDialog()
         }
     }
-
+}
 
 function findFirst(events)
 {
@@ -126,24 +120,31 @@ function findFirst(events)
     return first;
 }
 
-function createEventTable(events)
+function orderEvents(events)
 {
-
-
     // order the events
     var orderedEvents = []
     eventsCopy = JSON.parse(JSON.stringify(events));
     for(var i = 0; i < events.length; i++){
         var first = findFirst(eventsCopy);
+        // push the copy to new events
         orderedEvents.push(eventsCopy[first]);
+        // remove the event from the copy
         eventsCopy.splice(first, 1);
     }
 
+    return orderedEvents;
+}
+
+function createEventTable(events)
+{
+    events = orderEvents(events)
+
     // display the cards
     var eventMarkdown = "| | | | |\n|-|-|-|-|\n";
-    for(var i = 0; i < orderedEvents.length; i++){
+    for(var i = 0; i < events.length; i++){
 
-        var displayEvent = orderedEvents[i];
+        var displayEvent = events[i];
 
         // get the organisation id
         var eventOrganiserId = displayEvent.Organiser.OrganisationId;
@@ -156,13 +157,19 @@ function createEventTable(events)
         var nicedate = dateFormat(displayEvent.StartDate.Date, "d mmm")
         var niceday = helpers.getDayOfWeek(displayEvent.StartDate.Date).substring(0,3)
 
-        eventMarkdown += `|__${displayEvent.EventId}__| ${niceday}, ${nicedate} | ${displayEvent.Name} | [link](${eventurl})|\n`;
+        var name = displayEvent.Name
+        if (displayEvent.Name.length>40){
+            name  = name.substring(0,37) + "..."
+        }
+
+        eventMarkdown += `|__${displayEvent.EventId}__| ${niceday}, ${nicedate} | ${name} | [link](${eventurl})|\n`;
     }
     return eventMarkdown
 }
 
 function createHeroEventAttachments(events)
 {
+    events = orderEvents(events)
     var attachments = [];
 
     // display the cards
@@ -193,39 +200,15 @@ function createHeroEventAttachments(events)
             ])
         );
 
-        // order the event card in the attachments array
-        if (attachments.length==0){
-            // add the card to the attachments
-            attachments.push(heroEventCard)
-        } else {
-            // loop through all current attachements
-            for (var a = 0; a < attachments.length; a++){
-                var cardDate = attachments[a].content.title.split(" ")[2];
-
-                // is the comparison card date is before, or the same, as new events date
-                if(Date.parse(cardDate) <= Date.parse(displayEvent.StartDate.Date)){
-                    // if we are at the end of the total number of cards then push else continue
-                    if (a==attachments.length-1){ 
-                        attachments.push(heroEventCard);
-                        break;
-                    } 
-                }else{
-                    //end is less than start
-                    attachments.splice( a, 0, heroEventCard);
-                    break;
-                }
-            }
-        }
-
+        // push the completed card into 
+        attachments.push(heroEventCard)
     }
     return attachments;
 }
 
-
-
-
 function createEventAttachments(events)
 {
+    events = orderEvents(events)
     var attachments = [];
 
     // display the cards
@@ -258,30 +241,8 @@ function createEventAttachments(events)
         
         var eventAdaptiveCard = CardFactory.adaptiveCard(displayEventCard);
 
-        // decide where to put the event card in the attachments array
-        if (attachments.length==0){
-            // add the card to the attachments
-            attachments.push(eventAdaptiveCard)
-        } else {
-            // loop through all current attachements
-            for (var a = 0; a < attachments.length; a++){
-                var cardDate = attachments[a].content.body[0].columns[0].items[3].text
-                cardDate = cardDate.split(" ")[1];
-
-                // is the comparison card date is before, or the same, as new events date
-                if(Date.parse(cardDate) <= Date.parse(displayEvent.StartDate.Date)){
-                    // if we are at the end of the total number of cards then push else continue
-                    if (a==attachments.length-1){ 
-                        attachments.push(eventAdaptiveCard);
-                        break;
-                    } 
-                  }else{
-                    //end is less than start
-                    attachments.splice( a, 0, eventAdaptiveCard);
-                    break;
-                  }
-            }
-        }
+        // push the completed card into 
+        attachments.push(eventAdaptiveCard)
     }
     return attachments;
 }

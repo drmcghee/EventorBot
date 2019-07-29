@@ -47,7 +47,7 @@ async function eventSearch (fromDate, toDate, state)
 {
         stateId = $myStates[state]
 
-        query = `/api/events?fromDate=${fromDate}&toDate=${toDate}&OrganisationIds=${stateId}`;
+        query = `/api/events?fromDate=${fromDate}&toDate=${toDate}&OrganisationIds=${stateId}`;//&includeAttributes=true
         var result = await eventorRequest(query);
         return result;
 }
