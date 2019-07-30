@@ -165,8 +165,15 @@ function createEventAdaptiveCard(displayEvent) {
     var displayEventCard =JSON.parse(JSON.stringify(sourceEventCard));
 
     // get the organisation id
-    var eventOrganiserId = displayEvent.Organiser.OrganisationId;
-    var eventOrganiserName = getOrganisationName(eventOrganiserId)
+    var eventOrganiserId;
+    var eventOrganiserName;
+    if (displayEvent.Organiser.hasOwnProperty('OrganisationId')) {
+        eventOrganiserId = displayEvent.Organiser.OrganisationId;
+        eventOrganisationName = getOrganisationName(eventOrganiserId)
+    } else {
+        eventOrganiserId = displayEvent.Organiser.Organisation.OrganisationId;
+        eventOrganiserName = displayEvent.Organiser.Organisation.Name
+    }
     var body =  displayEventCard.body[0]
 
     //  Change the event card
@@ -257,6 +264,13 @@ function createSingleEntryEventTable(displayEvent){
     return eventMarkdown
 }
 
+function createEventAttachment(event)
+{
+    var attachments = [];
+    attachments.push(createEventAdaptiveCard(event))
+    return attachments;
+}
+
 function createEventAttachments(events)
 {
     var events = orderEvents(events)
@@ -282,3 +296,4 @@ module.exports.defineWeek = defineWeek;
 module.exports.createEventTable = createEventTable;
 module.exports.createSingleEntryEventTable = createSingleEntryEventTable;
 module.exports.createEventAttachments =createEventAttachments;
+module.exports.createEventAttachment = createEventAttachment

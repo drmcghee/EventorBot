@@ -101,7 +101,7 @@ class ListEventsDialog extends ComponentDialog {
         } else { 
             var events = result.EventList["Event"]
             var eventmessage = `Found ${events.length} events in ${step.values.state} ${step.result.value.toLowerCase()} ${eventaddendum} :`;
-            step.context.sendActivity(eventmessage);
+            await step.context.sendActivity(eventmessage);
 
             if (step.context.channel == "facebook") {
                 var mdtable = helpers.createEventTable(events);

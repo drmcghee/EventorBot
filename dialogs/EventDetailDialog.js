@@ -63,8 +63,8 @@ class EventDetailDialog extends ComponentDialog {
             }
             else
             {
-                eventAttachments = helpers.createEventAttachments(result.Event);
-                await step.context.sendActivity(eventAttachments);
+                var eventAttachments = helpers.createEventAttachment(result.Event);
+                await step.context.sendActivity({attachments: eventAttachments});
             }
             
             return await step.endDialog()

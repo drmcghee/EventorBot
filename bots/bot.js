@@ -43,7 +43,6 @@ class EventorBot extends ActivityHandler {
                 await dialogContext.continueDialog();
             } else {
                 await dialogContext.beginDialog(MENU_DIALOG);
-
             }
             //} 
             // else if (context.activity.type === ActivityTypes.ConversationUpdate) {
