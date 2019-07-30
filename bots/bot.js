@@ -61,12 +61,9 @@ class EventorBot extends ActivityHandler {
             for (let cnt = 0; cnt < membersAdded.length; ++cnt) {
                 if (membersAdded[cnt].id !== context.activity.recipient.id) {
 
-                    var welcomeMessage = "Hello and welcome to the Eventor Australia bot!"
+                    var welcomeMessage = `Hello and welcome ${context.activity.channelId} user to the Eventor Australia bot!`
                     if (typeof(context.activity.from.Name) != "undefined") {
-                        welcomemessage = `Hello ${context.activity.from.Name} and welcome to the Eventor Australia bot!`
-                    }
-                    if (typeof(context.channel) != "undefined") {
-                        welcomemessage += `(${context.channel})`
+                        welcomeMessage = `Hello ${context.activity.from.Name} from ${context.activity.channelId} and welcome to the Eventor Australia bot!`
                     }
                     await context.sendActivity(welcomeMessage);
 

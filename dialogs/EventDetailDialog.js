@@ -56,8 +56,7 @@ class EventDetailDialog extends ComponentDialog {
         if (typeof(result) == "undefined") {
             return step.context.sendActivity(`No events found for id ${step.result.value}`);
         } else { 
-
-            if (step.context.channel == "facebook") {
+            if (step.context.activity.channelId == "facebook") {
                 var mdtable = helpers.createEventTable(result.Event);
                 await step.context.sendActivity(mdtable);
             }
