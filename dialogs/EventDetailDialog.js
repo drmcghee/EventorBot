@@ -54,10 +54,10 @@ class EventDetailDialog extends ComponentDialog {
   
         //todo: Order the events by day - add URL for eventor and put into an adaptive card
         if (typeof(result) == "undefined") {
-            return step.context.sendActivity(`No events found for id ${step.result.value}`);
+            return step.context.sendActivity(`No event found for id ${step.result.value}`);
         } else { 
             if (step.context.activity.channelId == "facebook") {
-                var mdtable = helpers.createSingleEntryMarkdownEventTable(result.Event);
+                var mdtable = helpers.createSingleEntryEventMarkdownTable(result.Event);
                 await step.context.sendActivity(mdtable);
             }
             else

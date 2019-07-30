@@ -279,14 +279,14 @@ function createEventMarkdownTableLine(displayEvent){
         name  = name.substring(0,37) + "..."
     }
 
-    return `**${displayEvent.EventId}** | ${niceday}, ${nicedate} | ${name} | [link](${eventurl})\n`;
+    return `**${displayEvent.EventId}** | ${niceday}, ${nicedate} | ${name} | [link](${eventurl})  \n`;
 }
 
 function createEventMarkdownTable(events){
     events = orderEvents(events)
 
     // display the cards
-    var eventMarkdown = " Title | Date | Event | Link" // "| | | | |\n|-|-|-|-|\n";
+    var eventMarkdown = " Title | Date | Event | Link  \n" // "| | | | |\n|-|-|-|-|\n";
     for(var i = 0; i < events.length; i++){
         var displayEvent = events[i];
         eventMarkdown += createEventMarkdownTableLine(displayEvent)
@@ -296,7 +296,7 @@ function createEventMarkdownTable(events){
 
 function createSingleEntryEventMarkdownTable(displayEvent){
     // display the cards
-    var eventMarkdown = " Title | Date | Event | Link"  //  "| | | | |\n|-|-|-|-|\n";
+    var eventMarkdown = " Title | Date | Event | Link  \n"  //  "| | | | |\n|-|-|-|-|\n";
     eventMarkdown += createEventMarkdownTableLine(displayEvent)
     return eventMarkdown
 }
