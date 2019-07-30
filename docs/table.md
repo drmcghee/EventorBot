@@ -1,6 +1,4 @@
 
-
-
 | | | |
 |-|-|-|
 |__Bold Key__ | Value1 | [link](ABC) |

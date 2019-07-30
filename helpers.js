@@ -225,7 +225,7 @@ function orderEvents(events)
     return orderedEvents;
 }
 
-function createEventTableLine(displayEvent){
+function createEventFacebookLine(displayEvent){
     // get the organisation id
     var eventOrganiserId = displayEvent.Organiser.OrganisationId;
     var eventOrganiserName = getOrganisationName(eventOrganiserId);
@@ -242,25 +242,62 @@ function createEventTableLine(displayEvent){
         name  = name.substring(0,37) + "..."
     }
 
-    return `|__${displayEvent.EventId}__| ${niceday}, ${nicedate} | ${name} | [link](${eventurl})|\n`;
+    return `* **${displayEvent.EventId}**  ${niceday}, ${nicedate} ${name} [link](${eventurl})\u000A`;
 }
 
-function createEventTable(events){
+
+function createEventListFacebook(events){
     events = orderEvents(events)
 
     // display the cards
-    var eventMarkdown = "| | | | |\n|-|-|-|-|\n";
+    var eventList = "";
     for(var i = 0; i < events.length; i++){
         var displayEvent = events[i];
-        eventMarkdown += createEventTableLine(displayEvent)
+        eventList += createEventMarkdownTableLine(displayEvent)
     }
     return eventMarkdown
 }
 
-function createSingleEntryEventTable(displayEvent){
+///////////////////
+// MARKDOWN
+//////////////////
+
+function createEventMarkdownTableLine(displayEvent){
+    // get the organisation id
+    var eventOrganiserId = displayEvent.Organiser.OrganisationId;
+    var eventOrganiserName = getOrganisationName(eventOrganiserId);
+
+    //  Change the event card
+    var title = `${displayEvent.EventId}: ${getDayOfWeek(displayEvent.StartDate.Date)}, ${displayEvent.StartDate.Date} ${displayEvent.Name}`;
+    var eventurl = `https://eventor.orienteering.asn.au/Events/Show/${displayEvent.EventId}`;
+    var imageurl = `https://eventor.orienteering.asn.au/Organisation/Logotype/${eventOrganiserId}?type=SmallIcon`;
+    var nicedate = dateFormat(displayEvent.StartDate.Date, "d mmm")
+    var niceday = getDayOfWeek(displayEvent.StartDate.Date).substring(0,3)
+
+    var name = displayEvent.Name
+    if (displayEvent.Name.length>40){
+        name  = name.substring(0,37) + "..."
+    }
+
+    return `**${displayEvent.EventId}** | ${niceday}, ${nicedate} | ${name} | [link](${eventurl})\n`;
+}
+
+function createEventMarkdownTable(events){
+    events = orderEvents(events)
+
     // display the cards
-    var eventMarkdown = "| | | | |\n|-|-|-|-|\n";
-    eventMarkdown += createEventTableLine(displayEvent)
+    var eventMarkdown = " Title | Date | Event | Link" // "| | | | |\n|-|-|-|-|\n";
+    for(var i = 0; i < events.length; i++){
+        var displayEvent = events[i];
+        eventMarkdown += createEventMarkdownTableLine(displayEvent)
+    }
+    return eventMarkdown
+}
+
+function createSingleEntryEventMarkdownTable(displayEvent){
+    // display the cards
+    var eventMarkdown = " Title | Date | Event | Link"  //  "| | | | |\n|-|-|-|-|\n";
+    eventMarkdown += createEventMarkdownTableLine(displayEvent)
     return eventMarkdown
 }
 
@@ -293,7 +330,7 @@ module.exports.getOrganisationName = getOrganisationName;
 module.exports.isEmpty = isEmpty;
 module.exports.getDayOfWeek = getDayOfWeek;
 module.exports.defineWeek = defineWeek;
-module.exports.createEventTable = createEventTable;
-module.exports.createSingleEntryEventTable = createSingleEntryEventTable;
+module.exports.createEventMarkdownTable = createEventMarkdownTable;
+module.exports.createSingleEntryEventMarkdownTable = createSingleEntryEventMarkdownTable;
 module.exports.createEventAttachments =createEventAttachments;
 module.exports.createEventAttachment = createEventAttachment

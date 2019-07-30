@@ -103,7 +103,7 @@ class EventorBot extends ActivityHandler {
 
         var message = "What event action do you want to take?"
         if (process.env.Diagnostic == "true")
-            message += `\n (Bot Version=${process.env.BotVersion}, Channel=${step.context.activity.channelId})`;
+            message += ` (Bot Version=${process.env.BotVersion}, Channel=${step.context.activity.channelId})`;
         return step.prompt(MENU_PROMPT, {
             choices: ["List Events", "Event Detail"],
             prompt: message,
