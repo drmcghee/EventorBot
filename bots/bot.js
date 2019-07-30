@@ -61,9 +61,9 @@ class EventorBot extends ActivityHandler {
             for (let cnt = 0; cnt < membersAdded.length; ++cnt) {
                 if (membersAdded[cnt].id !== context.activity.recipient.id) {
 
-                    var welcomeMessage = `Hello and welcome ${context.activity.channelId} user to the Eventor Australia bot!`
+                    var welcomeMessage = `Hello and welcome to the Eventor Australia bot!`
                     if (typeof(context.activity.from.Name) != "undefined") {
-                        welcomeMessage = `Hello ${context.activity.from.Name} from ${context.activity.channelId} and welcome to the Eventor Australia bot!`
+                        welcomeMessage = `Hello ${context.activity.from.Name} and welcome to the Eventor Australia bot!`
                     }
                     await context.sendActivity(welcomeMessage);
 
@@ -100,9 +100,13 @@ class EventorBot extends ActivityHandler {
      * @param step Waterfall dialog step
      */
     async promptForMenu(step) {
+
+        var message = "What event action do you want to take?"
+        if (process.env.Diagnostic == "true")
+            message += `\n (Bot Version=${process.env.BotVersion}, Channel=${step.context.activity.channelId})`;
         return step.prompt(MENU_PROMPT, {
             choices: ["List Events", "Event Detail"],
-            prompt: "What event action do you want to take?",
+            prompt: message,
             retryPrompt: "I'm sorry, that wasn't a valid response. Please select one of the options"
         });
     }
