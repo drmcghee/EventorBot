@@ -117,8 +117,6 @@ class ListEventsDialog extends ComponentDialog {
     }
 }
 
-
-
 function createHeroEventAttachments(events)
 {
     events = orderEvents(events)
@@ -157,7 +155,6 @@ function createHeroEventAttachments(events)
     }
     return attachments;
 }
-
 
 
 module.exports.ListEventsDialog = ListEventsDialog;
