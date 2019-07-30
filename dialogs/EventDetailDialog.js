@@ -56,32 +56,18 @@ class EventDetailDialog extends ComponentDialog {
         if (typeof(result) == "undefined") {
             return step.context.sendActivity(`No events found for id ${step.result.value}`);
         } else { 
-            var sourceEventCard = require('../resources/eventCard.json');
 
-            // create clone of adaptive card
-            var displayEventCard =JSON.parse(JSON.stringify(sourceEventCard));
-            var displayEvent = result.Event;
-
-            // get the organisation id
-            var eventOrganiserId = displayEvent.Organiser.Organisation.OrganisationId;
-            var eventOrganiserName =  displayEvent.Organiser.Organisation.Name;
-            var body =  displayEventCard.body[0]
-
-            //  Change the event card
-            body.columns[0].items[0].text = displayEvent.EventId // Event Number
-            body.columns[0].items[1].text = displayEvent.Name // Event name
-            body.columns[0].items[2].text = eventOrganiserName // Organiser
-            body.columns[0].items[3].text = displayEvent.StartDate.Date // Event Date
-
-            // Logo
-            body.columns[1].items[0].url = `https://eventor.orienteering.asn.au/Organisation/Logotype/${eventOrganiserId}?type=LargeIcon`
-
-
-            // buttonon url
-            displayEventCard.actions[0].url = `https://eventor.orienteering.asn.au/Events/Show/${displayEvent.EventId}`
+            if (step.context.channel == "facebook") {
+                var mdtable = helpers.createEventTable(result.Event);
+                await step.context.sendActivity(mdtable);
+            }
+            else
+            {
+                eventAttachments = helpers.createEventAttachments(result.Event);
+                await step.context.sendActivity(eventAttachments);
+            }
             
-            await step.context.sendActivity({attachments: [CardFactory.adaptiveCard(displayEventCard)]});
-            return step.endDialog()
+            return await step.endDialog()
         }
     }
 }

@@ -38,14 +38,13 @@ class EventorBot extends ActivityHandler {
         this.onMessage(async (context, next) => {
             const dialogContext = await this.dialogs.createContext(context);
 
-
             //if (context.activity.type === ActivityTypes.Message) {
-                if (dialogContext.activeDialog) {
-                    await dialogContext.continueDialog();
-                } else {
-                    await dialogContext.beginDialog(MENU_DIALOG);
+            if (dialogContext.activeDialog) {
+                await dialogContext.continueDialog();
+            } else {
+                await dialogContext.beginDialog(MENU_DIALOG);
 
-                }
+            }
             //} 
             // else if (context.activity.type === ActivityTypes.ConversationUpdate) {
             //     if (this.memberJoined(turnContext.activity)) {
@@ -62,21 +61,28 @@ class EventorBot extends ActivityHandler {
             const membersAdded = context.activity.membersAdded;
             for (let cnt = 0; cnt < membersAdded.length; ++cnt) {
                 if (membersAdded[cnt].id !== context.activity.recipient.id) {
-                    await context.sendActivity("Hello and welcome to the Eventor Australia bot!")
+
+                    var welcomeMessage = "Hello and welcome to the Eventor Australia bot!"
+                    if (typeof(context.activity.from.Name) != "undefined") {
+                        welcomemessage = `Hello ${context.activity.from.Name} and welcome to the Eventor Australia bot!`
+                    }
+                    if (typeof(context.channel) != "undefined") {
+                        welcomemessage += `(${context.channel})`
+                    }
+                    await context.sendActivity(welcomeMessage);
 
                      // bring back the sub orgs  -- at a later date this should be moved
                     if (helpers.isEmpty(helpers.$mystate))
                         await helpers.listSubOrganisations(2)
 
                     await dialogContext.beginDialog(MENU_DIALOG);
-
-                    
                 }
             }
 
             await this.conversationState.saveChanges(context);
+
             // By calling next() you ensure that the next BotHandler is run.
-            //await next();
+            await next();
         });
 
         this.onDialog(async (context, next) => {
@@ -127,8 +133,6 @@ class EventorBot extends ActivityHandler {
         await step.endDialog();    
         //await step.beginDialog(MENU_DIALOG);
     }
-
-
 }
 
 module.exports.EventorBot = EventorBot;
