@@ -17,7 +17,9 @@
         "url": "https://github.com"
     },
     "dependencies": {
+        "adal-node": "^0.1.28",
         "applicationinsights": "^1.4.0",
+        "azure-keyvault": "^3.0.4",
         "botbuilder": "~4.4.0",
         "botbuilder-dialogs": "^4.4.0",
         "dateformat": "^3.0.3",

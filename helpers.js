@@ -22,12 +22,27 @@ async function eventSearchWeek(state, week)
     return eventSearch(fromDate, toDate, state)
 }
 
+function addDays(date, days) {
+    const copy = new Date(Number(date))
+    copy.setDate(date.getDate() + days)
+    return copy
+  }
+
+async function eventSearchDays(state, daysfromToday)
+{
+    today = new Date();
+    fromDate = today.toISOString().substring(0,10);
+    endDate = addDays(today, daysfromToday)
+    toDate = endDate.toISOString().substring(0,10);
+
+    return eventSearch(fromDate, toDate, state)
+}
+
 // Accepts a Date object or date string that is recognized by the Date.parse() method
 function getDayOfWeek(date) {
     var dayOfWeek = new Date(date).getDay();    
     return isNaN(dayOfWeek) ? null : ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][dayOfWeek];
 }
-
 
 function defineWeek(week)
 {    
@@ -45,7 +60,7 @@ async function eventSearch (fromDate, toDate, state)
 {
     stateId = $myStates[state]
 
-    query = `/api/events?fromDate=${fromDate}&toDate=${toDate}&OrganisationIds=${stateId}`;//&includeAttributes=true
+    query = `/api/events?fromDate=${fromDate}&toDate=${toDate}&OrganisationIds=${stateId}&includeEntryBreaks=true`
     var result = await eventorRequest(query);
     return result;
 }
@@ -225,38 +240,6 @@ function orderEvents(events)
     return orderedEvents;
 }
 
-function createEventFacebookLine(displayEvent){
-    // get the organisation id
-    var eventOrganiserId = displayEvent.Organiser.OrganisationId;
-    var eventOrganiserName = getOrganisationName(eventOrganiserId);
-
-    //  Change the event card
-    var title = `${displayEvent.EventId}: ${getDayOfWeek(displayEvent.StartDate.Date)}, ${displayEvent.StartDate.Date} ${displayEvent.Name}`;
-    var eventurl = `https://eventor.orienteering.asn.au/Events/Show/${displayEvent.EventId}`;
-    var imageurl = `https://eventor.orienteering.asn.au/Organisation/Logotype/${eventOrganiserId}?type=SmallIcon`;
-    var nicedate = dateFormat(displayEvent.StartDate.Date, "d mmm")
-    var niceday = getDayOfWeek(displayEvent.StartDate.Date).substring(0,3)
-
-    var name = displayEvent.Name
-    if (displayEvent.Name.length>40){
-        name  = name.substring(0,37) + "..."
-    }
-
-    return `* **${displayEvent.EventId}**  ${niceday}, ${nicedate} ${name} [link](${eventurl})\u000A`;
-}
-
-
-function createEventListFacebook(events){
-    events = orderEvents(events)
-
-    // display the cards
-    var eventList = "";
-    for(var i = 0; i < events.length; i++){
-        var displayEvent = events[i];
-        eventList += createEventMarkdownTableLine(displayEvent)
-    }
-    return eventMarkdown
-}
 
 ///////////////////
 // MARKDOWN
@@ -279,14 +262,14 @@ function createEventMarkdownTableLine(displayEvent){
         name  = name.substring(0,37) + "..."
     }
 
-    return `**${displayEvent.EventId}** | ${niceday}, ${nicedate} | ${name} | [link](${eventurl})  \n`;
+    return `${displayEvent.EventId}: ${niceday}, ${nicedate} - ${name}. [link](${eventurl})  \n`;
 }
 
 function createEventMarkdownTable(events){
     events = orderEvents(events)
 
     // display the cards
-    var eventMarkdown = " Title | Date | Event | Link  \n" // "| | | | |\n|-|-|-|-|\n";
+    var eventMarkdown = "" //  Title | Date | Event | Link  \n" // "| | | | |\n|-|-|-|-|\n";
     for(var i = 0; i < events.length; i++){
         var displayEvent = events[i];
         eventMarkdown += createEventMarkdownTableLine(displayEvent)
@@ -296,7 +279,7 @@ function createEventMarkdownTable(events){
 
 function createSingleEntryEventMarkdownTable(displayEvent){
     // display the cards
-    var eventMarkdown = " Title | Date | Event | Link  \n"  //  "| | | | |\n|-|-|-|-|\n";
+    var eventMarkdown = "" // " Title | Date | Event | Link  \n"  //  "| | | | |\n|-|-|-|-|\n";
     eventMarkdown += createEventMarkdownTableLine(displayEvent)
     return eventMarkdown
 }
@@ -325,6 +308,9 @@ module.exports.eventSearch = eventSearch;
 module.exports.xml2json = xml2json;
 module.exports.eventSearchDay = eventSearchDay;
 module.exports.eventSearchWeek = eventSearchWeek;
+module.exports.eventSearchDays =eventSearchDays;
+module.exports.addDays = addDays;
+module.exports.orderEvents = orderEvents;
 module.exports.listSubOrganisations = listSubOrganisations;
 module.exports.getOrganisationName = getOrganisationName;
 module.exports.isEmpty = isEmpty;
@@ -333,4 +319,4 @@ module.exports.defineWeek = defineWeek;
 module.exports.createEventMarkdownTable = createEventMarkdownTable;
 module.exports.createSingleEntryEventMarkdownTable = createSingleEntryEventMarkdownTable;
 module.exports.createEventAttachments =createEventAttachments;
-module.exports.createEventAttachment = createEventAttachment
+module.exports.createEventAttachment = createEventAttachment;

@@ -4,11 +4,13 @@ const { ActivityHandler } = require('botbuilder');
 const { DialogSet, ChoicePrompt, WaterfallDialog } = require('botbuilder-dialogs');
 const { ListEventsDialog } = require('../dialogs/ListEventsDialog');
 const { EventDetailDialog } = require('../dialogs/EventDetailDialog');
+const { ClosingEventsDialog } = require('../dialogs/ClosingEventsDialog');
 
 const MENU_DIALOG = 'menuDialog';
 const MENU_PROMPT = 'menuPrompt';
 const LIST_EVENTS_DIALOG = 'ListEventsDialog';
 const EVENT_DETAIL_DIALOG = 'EventDetailDialog';
+const CLOSING_EVENTS_DIALOG = 'ClosingEventsDialog';
 
 const  helpers = require('../helpers');
 
@@ -26,6 +28,7 @@ class EventorBot extends ActivityHandler {
         this.dialogs.add(new ChoicePrompt(MENU_PROMPT));
         this.dialogs.add(new ListEventsDialog(LIST_EVENTS_DIALOG));
         this.dialogs.add(new EventDetailDialog(EVENT_DETAIL_DIALOG));
+        this.dialogs.add(new ClosingEventsDialog(CLOSING_EVENTS_DIALOG))
 
         // Adds a waterfall dialog that prompts users for the top level menu to the dialog set
         this.dialogs.add(new WaterfallDialog(MENU_DIALOG, [
@@ -105,7 +108,7 @@ class EventorBot extends ActivityHandler {
         if (process.env.Diagnostic == "true")
             message += ` (Bot Version=${process.env.BotVersion}, Channel=${step.context.activity.channelId})`;
         return step.prompt(MENU_PROMPT, {
-            choices: ["List Events", "Event Detail"],
+            choices: ["List Events", "Event Detail", "Closing Events"],
             prompt: message,
             retryPrompt: "I'm sorry, that wasn't a valid response. Please select one of the options"
         });
@@ -122,6 +125,8 @@ class EventorBot extends ActivityHandler {
                 return step.beginDialog(LIST_EVENTS_DIALOG);
             case "Event Detail":
                 return step.beginDialog(EVENT_DETAIL_DIALOG);
+            case "Closing Events":
+                return step.beginDialog(CLOSING_EVENTS_DIALOG); 
         }
         
         console.log("unexpected menu item - end menu dialog")

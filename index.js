@@ -15,14 +15,12 @@ const { BotFrameworkAdapter, UserState, MemoryStorage, ActivityHandler, Conversa
 
 // Import our custom bot class that provides a turn handling function.
 const { EventorBot } = require('./bots/bot');
-const { ListEventsDialog } = require('./dialogs/ListEventsDialog');
 
 // Import required bot configuration.
 const ENV_FILE = path.join(__dirname, '.env');
 dotenv.config({ path: ENV_FILE });
 
-// Create adapter.
-// See https://aka.ms/about-bot-adapter to learn more about how bots work.
+// Create adapter - See https://aka.ms/about-bot-adapter to learn more about how bots work.
 const adapter = new BotFrameworkAdapter({
     appId: process.env.MicrosoftAppId,
     appPassword: process.env.MicrosoftAppPassword
