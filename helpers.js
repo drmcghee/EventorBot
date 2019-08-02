@@ -1,20 +1,22 @@
+//@ts-check
+
 const https = require('https');
-var $myStates = {} // could be hardcoded but best to read dynamically
-var $myOrgs = "" // keep the list of all organisations
+var myStates = {} // could be hardcoded but best to read dynamically
+var myOrgs = "" // keep the list of all organisations
 const { CardFactory } = require("botbuilder");
 var dateFormat = require('dateformat');
 
 async function eventSearchDay(state, day)
 {
-    shortday = day.toISOString().substring(0,10);
+    var shortday = day.toISOString().substring(0,10);
   
     return eventSearch(shortday, shortday, state)
 }
 
 async function eventSearchWeek(state, week)
 {
-    fromDate = week.start.toISOString().substring(0,10);
-    toDate =  week.end.toISOString().substring(0,10);
+    var fromDate = week.start.toISOString().substring(0,10);
+    var toDate =  week.end.toISOString().substring(0,10);
 
     fromDate = week.start.toISOString().substring(0,10);
     toDate = week.end.toISOString().substring(0,10);
@@ -30,10 +32,10 @@ function addDays(date, days) {
 
 async function eventSearchDays(state, daysfromToday)
 {
-    today = new Date();
-    fromDate = today.toISOString().substring(0,10);
-    endDate = addDays(today, daysfromToday)
-    toDate = endDate.toISOString().substring(0,10);
+    var today = new Date();
+    var fromDate = today.toISOString().substring(0,10);
+    var endDate = addDays(today, daysfromToday)
+    var toDate = endDate.toISOString().substring(0,10);
 
     return eventSearch(fromDate, toDate, state)
 }
@@ -58,16 +60,16 @@ function defineWeek(week)
 
 async function eventSearch (fromDate, toDate, state)
 {
-    stateId = $myStates[state]
+    var stateId = myStates[state]
 
-    query = `/api/events?fromDate=${fromDate}&toDate=${toDate}&OrganisationIds=${stateId}&includeEntryBreaks=true`
+    var query = `/api/events?fromDate=${fromDate}&toDate=${toDate}&OrganisationIds=${stateId}&includeEntryBreaks=true`
     var result = await eventorRequest(query);
     return result;
 }
 
 function getOrganisationName(OrganisationId)
 {
-    orgs = $myOrgs.OrganisationList.Organisation;
+    var orgs = myOrgs.OrganisationList.Organisation;
 
     for(var i = 0; i < orgs.length; i++) {
         var checkOrg = orgs[i];
@@ -81,13 +83,13 @@ async function listSubOrganisations(OrganisationId)
 {
     // get states and organisations
     myStates = {};
-    query = '/api/organisations';
+    var query = '/api/organisations';
     var result = await eventorRequest(query);
-    $myOrgs = result
+    myOrgs = result
  
     // Look for all children of organisation
-        //OrganisationList / OrganisationId / ParentOrganisationId
-    orgs = result.OrganisationList.Organisation;
+    //OrganisationList / OrganisationId / ParentOrganisationId
+    var orgs = result.OrganisationList.Organisation;
     
     for(var i = 0; i < orgs.length; i++)
     {
@@ -184,7 +186,7 @@ function createEventAdaptiveCard(displayEvent) {
     var eventOrganiserName;
     if (displayEvent.Organiser.hasOwnProperty('OrganisationId')) {
         eventOrganiserId = displayEvent.Organiser.OrganisationId;
-        eventOrganisationName = getOrganisationName(eventOrganiserId)
+        eventOrganiserName = getOrganisationName(eventOrganiserId)
     } else {
         eventOrganiserId = displayEvent.Organiser.Organisation.OrganisationId;
         eventOrganiserName = displayEvent.Organiser.Organisation.Name
@@ -202,7 +204,7 @@ function createEventAdaptiveCard(displayEvent) {
 
     // buttonon url
     displayEventCard.actions[0].url = `https://eventor.orienteering.asn.au/Events/Show/${displayEvent.EventId}`
-    eventAdaptiveCard = CardFactory.adaptiveCard(displayEventCard);
+    var eventAdaptiveCard = CardFactory.adaptiveCard(displayEventCard);
 
     return eventAdaptiveCard;
 }
@@ -228,7 +230,7 @@ function orderEvents(events)
 {
     // order the events
     var orderedEvents = []
-    eventsCopy = JSON.parse(JSON.stringify(events));
+    var eventsCopy = JSON.parse(JSON.stringify(events));
     for(var i = 0; i < events.length; i++){
         var first = findFirst(eventsCopy);
         // push the copy to new events
@@ -293,7 +295,7 @@ function createEventAttachment(event)
 
 function createEventAttachments(events)
 {
-    var events = orderEvents(events)
+    events = orderEvents(events)
     var attachments = [];
 
     // display the cards
