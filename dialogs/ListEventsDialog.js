@@ -1,3 +1,4 @@
+//@ts-check
 const  helpers = require('../helpers');
 var dateFormat = require('dateformat');
 const { AdaptiveCard, CardFactory, MessageFactory } = require("botbuilder");
@@ -103,6 +104,7 @@ class ListEventsDialog extends ComponentDialog {
             var eventmessage = `Found ${events.length} events in ${step.values.state} ${step.result.value.toLowerCase()} ${eventaddendum} :`;
             await step.context.sendActivity(eventmessage);
 
+
             if (step.context.activity.channelId == "facebook") {
                 var mdtable = helpers.createEventMarkdownTable(events);
                 await step.context.sendActivity(mdtable);
@@ -119,7 +121,7 @@ class ListEventsDialog extends ComponentDialog {
 
 function createHeroEventAttachments(events)
 {
-    events = orderEvents(events)
+    events = helpers.orderEvents(events)
     var attachments = [];
 
     // display the cards

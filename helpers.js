@@ -2,7 +2,8 @@
 
 const https = require('https');
 var myStates = {} // could be hardcoded but best to read dynamically
-var myOrgs = "" // keep the list of all organisations
+var myOrgs = {} // keep the list of all organisations
+
 const { CardFactory } = require("botbuilder");
 var dateFormat = require('dateformat');
 
@@ -99,7 +100,7 @@ async function listSubOrganisations(OrganisationId)
             var parentOrg = checkOrg.ParentOrganisation.OrganisationId;
 
             if (parentOrg ==OrganisationId){
-                $myStates[`${checkOrg.ShortName}`] = checkOrg.OrganisationId
+                myStates[`${checkOrg.ShortName}`] = checkOrg.OrganisationId
             }
         }
     }

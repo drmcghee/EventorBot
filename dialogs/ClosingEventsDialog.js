@@ -1,3 +1,4 @@
+//@ts-check
 const  helpers = require('../helpers');
 var dateFormat = require('dateformat');
 const { AdaptiveCard, CardFactory, MessageFactory } = require("botbuilder");
@@ -68,13 +69,17 @@ class ClosingEventsDialog extends ComponentDialog {
             if (event.hasOwnProperty("EntryBreak")){
                 if (event.EntryBreak.hasOwnProperty("length")){
                    for(var eb = 0; eb < event.EntryBreak.length; eb++) {
-                        var closingDate = event.EntryBreak[eb].ValidToDate.Date
-                        var closingTime = event.EntryBreak[eb].ValidToDate.Clock
+                       var eventBreak = event.EntryBreak[eb];
+                       if (eventBreak.hasOwnProperty("ValidToDate"))
+                       {
+                            var closingDate = eventBreak.ValidToDate.Date;
+                            //var closingTime = event.EntryBreak[eb].ValidToDate.Clock
 
-                        //Check if the closing date is within next closing days
-                        if (eventValidTo <closingDate) {
-                            closingEvents.push(event);
-                            break;
+                            //Check if the closing date is within next closing days
+                            if (eventValidTo <closingDate) {
+                                closingEvents.push(event);
+                                break;
+                            }
                         }
                    }
                 }
@@ -97,7 +102,7 @@ class ClosingEventsDialog extends ComponentDialog {
             var eventmessage = `No closing events found in ${step.values.state} in the next ${closingDays} days (search of ${searchDays} days)`;
             return step.context.sendActivity(eventmessage);
         } else { 
-            var eventmessage = `Found ${closingEvents.length} closing events in ${step.values.state} in the next ${closingDays} days (search of ${searchDays} days) :`;
+            var eventmessage = `Found ${closingEvents.length} closing events in ${step.values.state} in the next ${closingDays} days (searched events upto ${searchDays} days ahead) :`;
             await step.context.sendActivity(eventmessage);
 
             if (step.context.activity.channelId == "facebook") {

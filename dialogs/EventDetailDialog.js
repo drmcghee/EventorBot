@@ -1,3 +1,4 @@
+//@ts-check
 const  helpers = require('../helpers');
 const { AdaptiveCard, CardFactory, MessageFactory } = require("botbuilder");
 
@@ -49,10 +50,9 @@ class EventDetailDialog extends ComponentDialog {
     async eventStep(step) {
         step.values.eventId = step.result.value;
 
-        query = `/api/event/${step.result}`
+        var query = `/api/event/${step.result}`
         var result = await helpers.eventorRequest(query);
   
-        //todo: Order the events by day - add URL for eventor and put into an adaptive card
         if (typeof(result) == "undefined") {
             return step.context.sendActivity(`No event found for id ${step.result.value}`);
         } else { 

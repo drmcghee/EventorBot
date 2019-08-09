@@ -68,6 +68,8 @@ class EventorBot extends ActivityHandler {
                     if (typeof(context.activity.from.Name) != "undefined") {
                         welcomeMessage = `Hello ${context.activity.from.Name} and welcome to the Eventor Australia bot!`
                     }
+                    if (process.env.Diagnostic == "true")
+                         welcomeMessage += `\n (Bot Version=${process.env.BotVersion}, Channel=${context.activity.channelId})`;
                     await context.sendActivity(welcomeMessage);
 
                      // bring back the sub orgs  -- at a later date this should be moved
@@ -105,8 +107,6 @@ class EventorBot extends ActivityHandler {
     async promptForMenu(step) {
 
         var message = "What event action do you want to take?"
-        if (process.env.Diagnostic == "true")
-            message += ` (Bot Version=${process.env.BotVersion}, Channel=${step.context.activity.channelId})`;
         return step.prompt(MENU_PROMPT, {
             choices: ["List Events", "Event Detail", "Closing Events"],
             prompt: message,
