@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/b99d81c9-6823-403f-ba97-21dd41fa5bc2/resourceGroups/orienteering/providers/Microsoft.Web/sites/EventorBotLinux",
+    "appService.deploySubpath": ""
+}

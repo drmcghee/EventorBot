@@ -57,7 +57,7 @@ class EventorBot extends ActivityHandler {
             await this.conversationState.saveChanges(context);
         });
         
-
+        /// Note: Facebook Only when you connect to a new account for the first time, the OnMembersAddedAsync will be triggered. Hence, you cannot make the bot forget the previous conversation and start over on the facebook channel.
         this.onMembersAdded(async (context, next) => {
             const dialogContext = await this.dialogs.createContext(context);
             const membersAdded = context.activity.membersAdded;
@@ -71,10 +71,6 @@ class EventorBot extends ActivityHandler {
                     if (process.env.Diagnostic == "true")
                          welcomeMessage += `\n (Bot Version=${process.env.BotVersion}, Channel=${context.activity.channelId})`;
                     await context.sendActivity(welcomeMessage);
-
-                     // bring back the sub orgs  -- at a later date this should be moved
-                    if (helpers.isEmpty(helpers.$mystate))
-                        await helpers.listSubOrganisations(2)
 
                     await dialogContext.beginDialog(MENU_DIALOG);
                 }

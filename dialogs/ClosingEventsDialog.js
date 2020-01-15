@@ -58,63 +58,70 @@ class ClosingEventsDialog extends ComponentDialog {
 
         // get all events for the state in next 2 months
         var result = await helpers.eventSearchDays(step.values.state, searchDays);
-        var events = result.EventList["Event"];
-        events = helpers.orderEvents(events);
-        
-        // filter out those closing in next weeks
-        for(var i = 0; i < events.length; i++) {
-            var event = events[i];
-            //var entryBreakType = typeof(event.EntryBreak)
 
-            if (event.hasOwnProperty("EntryBreak")){
-                if (event.EntryBreak.hasOwnProperty("length")){
-                   for(var eb = 0; eb < event.EntryBreak.length; eb++) {
-                       var eventBreak = event.EntryBreak[eb];
-                       if (eventBreak.hasOwnProperty("ValidToDate"))
-                       {
-                            var closingDate = eventBreak.ValidToDate.Date;
-                            //var closingTime = event.EntryBreak[eb].ValidToDate.Clock
+        // if results found or not
+        if (typeof(result.EventList["Event"]) == "undefined") {
+            var eventmessage = `No closing events found in ${step.values.state}}`;
+            return step.context.sendActivity(eventmessage);
+        } else { 
+            var events = result.EventList["Event"];
+            events = helpers.orderEvents(events);
+            
+            // filter out those closing in next weeks
+            for(var i = 0; i < events.length; i++) {
+                var event = events[i];
+                //var entryBreakType = typeof(event.EntryBreak)
 
-                            //Check if the closing date is within next closing days
-                            if (eventValidTo <closingDate) {
-                                closingEvents.push(event);
-                                break;
+                if (event.hasOwnProperty("EntryBreak")){
+                    if (event.EntryBreak.hasOwnProperty("length")){
+                    for(var eb = 0; eb < event.EntryBreak.length; eb++) {
+                        var eventBreak = event.EntryBreak[eb];
+                        if (eventBreak.hasOwnProperty("ValidToDate"))
+                        {
+                                var closingDate = eventBreak.ValidToDate.Date;
+                                //var closingTime = event.EntryBreak[eb].ValidToDate.Clock
+
+                                //Check if the closing date is within next closing days
+                                if (eventValidTo <closingDate) {
+                                    closingEvents.push(event);
+                                    break;
+                                }
                             }
-                        }
-                   }
-                }
-                else
-                {
-                    var eventValidTo = event.EntryBreak.ValidToDate.Date
-                    var closingTime = event.EntryBreak.ValidToDate.Clock
+                    }
+                    }
+                    else
+                    {
+                        var eventValidTo = event.EntryBreak.ValidToDate.Date
+                        var closingTime = event.EntryBreak.ValidToDate.Clock
 
-                    //Check if the closing date is within next closing days
-                    if (eventValidTo <closingDate) {
-                        closingEvents.push(event);
-                        break;
+                        //Check if the closing date is within next closing days
+                        if (eventValidTo <closingDate) {
+                            closingEvents.push(event);
+                            break;
+                        }
                     }
                 }
             }
-        }
 
-        // if results found or not
-        if (closingEvents.length==0) {
-            var eventmessage = `No closing events found in ${step.values.state} in the next ${closingDays} days (search of ${searchDays} days)`;
-            return step.context.sendActivity(eventmessage);
-        } else { 
-            var eventmessage = `Found ${closingEvents.length} closing events in ${step.values.state} in the next ${closingDays} days (searched events upto ${searchDays} days ahead) :`;
-            await step.context.sendActivity(eventmessage);
+            // if results found or not
+            if (closingEvents.length==0) {
+                var eventmessage = `No closing events found in ${step.values.state} in the next ${closingDays} days (search of ${searchDays} days)`;
+                return step.context.sendActivity(eventmessage);
+            } else { 
+                var eventmessage = `Found ${closingEvents.length} closing events in ${step.values.state} in the next ${closingDays} days (searched events upto ${searchDays} days ahead) :`;
+                await step.context.sendActivity(eventmessage);
 
-            if (step.context.activity.channelId == "facebook") {
-                var mdtable = helpers.createEventMarkdownTable(closingEvents);
-                await step.context.sendActivity(mdtable);
+                if (step.context.activity.channelId == "facebook") {
+                    var mdtable = helpers.createEventMarkdownTable(closingEvents);
+                    await step.context.sendActivity(mdtable);
+                }
+                else {
+                    var attachments = helpers.createEventAttachments(closingEvents);
+                    //await step.context.sendActivity(MessageFactory.list(attachments));
+                    await step.context.sendActivity(MessageFactory.carousel(attachments));
+                }
+                return step.endDialog()
             }
-            else {
-                var attachments = helpers.createEventAttachments(closingEvents);
-                //await step.context.sendActivity(MessageFactory.list(attachments));
-                await step.context.sendActivity(MessageFactory.carousel(attachments));
-            }
-            return step.endDialog()
         }
     }
 }

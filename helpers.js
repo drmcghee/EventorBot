@@ -7,20 +7,48 @@ var myOrgs = {} // keep the list of all organisations
 const { CardFactory } = require("botbuilder");
 var dateFormat = require('dateformat');
 
+
+function toISOLocal(d) {
+    var z  = n =>  ('0' + n).slice(-2);
+    var zz = n => ('00' + n).slice(-3);
+    var off = d.getTimezoneOffset();
+    var sign = off < 0? '+' : '-';
+    off = Math.abs(off);
+  
+    return d.getFullYear() + '-'
+           + z(d.getMonth()+1) + '-' +
+           z(d.getDate()) + 'T' +
+           z(d.getHours()) + ':'  + 
+           z(d.getMinutes()) + ':' +
+           z(d.getSeconds()) + '.' +
+           zz(d.getMilliseconds()) +
+           sign + z(off/60|0) + ':' + z(off%60); 
+  }
+  
+
 async function eventSearchDay(state, day)
 {
-    var shortday = day.toISOString().substring(0,10);
+    var shortday = toISOLocal(day).substring(0,10);
   
     return eventSearch(shortday, shortday, state)
 }
 
+async function eventSearchMonth(state, month)
+{
+    var fromDate = toISOLocal(month.firstDay).substring(0,10);
+    var toDate =  toISOLocal(month.lastDay).substring(0,10);
+
+    return eventSearch(fromDate, toDate, state)
+}
+
+
 async function eventSearchWeek(state, week)
 {
-    var fromDate = week.start.toISOString().substring(0,10);
-    var toDate =  week.end.toISOString().substring(0,10);
+    var fromDate = toISOLocal(week.start).substring(0,10);
+    var toDate =  toISOLocal(week.end).substring(0,10);
 
-    fromDate = week.start.toISOString().substring(0,10);
-    toDate = week.end.toISOString().substring(0,10);
+    //fromDate = toISOLocal(week.start).substring(0,10);
+    //toDate = toISOLocal(week.end).substring(0,10);
 
     return eventSearch(fromDate, toDate, state)
 }
@@ -34,9 +62,9 @@ function addDays(date, days) {
 async function eventSearchDays(state, daysfromToday)
 {
     var today = new Date();
-    var fromDate = today.toISOString().substring(0,10);
+    var fromDate = toISOLocal(today).substring(0,10);
     var endDate = addDays(today, daysfromToday)
-    var toDate = endDate.toISOString().substring(0,10);
+    var toDate = toISOLocal(endDate).substring(0,10);
 
     return eventSearch(fromDate, toDate, state)
 }
@@ -59,8 +87,21 @@ function defineWeek(week)
     return { start, end }
 }
 
+function defineMonth(month)
+{
+    var date = new Date(), y = date.getFullYear(), m = date.getMonth();
+    var firstDay = new Date(y, m, 1);
+    var lastDay = new Date(y, m + 1, 0);
+
+    return { firstDay, lastDay }
+}
+
 async function eventSearch (fromDate, toDate, state)
 {
+    // bring back the sub orgs  -- at a later date this should be moved
+    if (isEmpty(myStates))
+        await listSubOrganisations(2)
+
     var stateId = myStates[state]
 
     var query = `/api/events?fromDate=${fromDate}&toDate=${toDate}&OrganisationIds=${stateId}&includeEntryBreaks=true`
@@ -311,6 +352,7 @@ module.exports.eventSearch = eventSearch;
 module.exports.xml2json = xml2json;
 module.exports.eventSearchDay = eventSearchDay;
 module.exports.eventSearchWeek = eventSearchWeek;
+module.exports.eventSearchMonth = eventSearchMonth;
 module.exports.eventSearchDays =eventSearchDays;
 module.exports.addDays = addDays;
 module.exports.orderEvents = orderEvents;
@@ -319,6 +361,7 @@ module.exports.getOrganisationName = getOrganisationName;
 module.exports.isEmpty = isEmpty;
 module.exports.getDayOfWeek = getDayOfWeek;
 module.exports.defineWeek = defineWeek;
+module.exports.defineMonth = defineMonth;
 module.exports.createEventMarkdownTable = createEventMarkdownTable;
 module.exports.createSingleEntryEventMarkdownTable = createSingleEntryEventMarkdownTable;
 module.exports.createEventAttachments =createEventAttachments;
